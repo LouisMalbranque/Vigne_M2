@@ -9612,6 +9612,148 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 35 "./LoRa_com.h" 2
 
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
+
+
+
+
+
+typedef void * va_list[1];
+
+
+
+
+typedef void * __isoc_va_list[1];
+# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long ssize_t;
+# 246 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef long long off_t;
+# 399 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct _IO_FILE FILE;
+# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 2 3
+# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
+typedef union _G_fpos64_t {
+ char __opaque[16];
+ double __align;
+} fpos_t;
+
+extern FILE *const stdin;
+extern FILE *const stdout;
+extern FILE *const stderr;
+
+
+
+
+
+FILE *fopen(const char *restrict, const char *restrict);
+FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
+int fclose(FILE *);
+
+int remove(const char *);
+int rename(const char *, const char *);
+
+int feof(FILE *);
+int ferror(FILE *);
+int fflush(FILE *);
+void clearerr(FILE *);
+
+int fseek(FILE *, long, int);
+long ftell(FILE *);
+void rewind(FILE *);
+
+int fgetpos(FILE *restrict, fpos_t *restrict);
+int fsetpos(FILE *, const fpos_t *);
+
+size_t fread(void *restrict, size_t, size_t, FILE *restrict);
+size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
+
+int fgetc(FILE *);
+int getc(FILE *);
+int getchar(void);
+int ungetc(int, FILE *);
+
+int fputc(int, FILE *);
+int putc(int, FILE *);
+int putchar(int);
+
+char *fgets(char *restrict, int, FILE *restrict);
+
+char *gets(char *);
+
+
+int fputs(const char *restrict, FILE *restrict);
+int puts(const char *);
+
+#pragma printf_check(printf) const
+#pragma printf_check(vprintf) const
+#pragma printf_check(sprintf) const
+#pragma printf_check(snprintf) const
+#pragma printf_check(vsprintf) const
+#pragma printf_check(vsnprintf) const
+
+int printf(const char *restrict, ...);
+int fprintf(FILE *restrict, const char *restrict, ...);
+int sprintf(char *restrict, const char *restrict, ...);
+int snprintf(char *restrict, size_t, const char *restrict, ...);
+
+int vprintf(const char *restrict, __isoc_va_list);
+int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
+int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
+
+int scanf(const char *restrict, ...);
+int fscanf(FILE *restrict, const char *restrict, ...);
+int sscanf(const char *restrict, const char *restrict, ...);
+int vscanf(const char *restrict, __isoc_va_list);
+int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
+int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
+
+void perror(const char *);
+
+int setvbuf(FILE *restrict, char *restrict, int, size_t);
+void setbuf(FILE *restrict, char *restrict);
+
+char *tmpnam(char *);
+FILE *tmpfile(void);
+
+
+
+
+FILE *fmemopen(void *restrict, size_t, const char *restrict);
+FILE *open_memstream(char **, size_t *);
+FILE *fdopen(int, const char *);
+FILE *popen(const char *, const char *);
+int pclose(FILE *);
+int fileno(FILE *);
+int fseeko(FILE *, off_t, int);
+off_t ftello(FILE *);
+int dprintf(int, const char *restrict, ...);
+int vdprintf(int, const char *restrict, __isoc_va_list);
+void flockfile(FILE *);
+int ftrylockfile(FILE *);
+void funlockfile(FILE *);
+int getc_unlocked(FILE *);
+int getchar_unlocked(void);
+int putc_unlocked(int, FILE *);
+int putchar_unlocked(int);
+ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
+ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
+int renameat(int, const char *, int, const char *);
+char *ctermid(char *);
+
+
+
+
+
+
+
+char *tempnam(const char *, const char *);
+# 36 "./LoRa_com.h" 2
+
+
+
 # 1 "./spi.h" 1
 # 14 "./spi.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
@@ -9702,7 +9844,7 @@ typedef uint32_t uint_fast32_t;
 void SPIInit(void);
 void SPITransfer (UINT8_T data_out);
 UINT8_T SPIReceive (UINT8_T data_out);
-# 36 "./LoRa_com.h" 2
+# 39 "./LoRa_com.h" 2
 
 # 1 "./uart.h" 1
 # 14 "./uart.h"
@@ -9712,7 +9854,7 @@ void UARTWriteByte(UINT8_T data);
 void UARTWriteStr(char *Str);
 void UARTWriteStrLn(char *Str);
 void UARTWriteByteHex(UINT8_T data);
-# 37 "./LoRa_com.h" 2
+# 40 "./LoRa_com.h" 2
 
 # 1 "./SX1272.h" 1
 # 248 "./SX1272.h"
@@ -9722,21 +9864,22 @@ void GetMode (void);
 void InitModule (void);
 void PrintSXRegContent(uint8_t address);
 void CheckConfiguration (void);
-# 38 "./LoRa_com.h" 2
+# 41 "./LoRa_com.h" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
 # 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);
-# 39 "./LoRa_com.h" 2
+# 42 "./LoRa_com.h" 2
 
 
 void init_LORA_communication();
-void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity,double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame);
+void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity);
+
 void set_TX_and_transmit(void);
-void has_transmitted(uint8_t reg_val);
-void reset_IRQs(uint8_t reg_val);
+void wait_for_transmission(void);
+void reset_IRQs(void);
 # 2 "LoRa_com.c" 2
 
 
@@ -9763,75 +9906,43 @@ void init_LORA_communication(){
     InitModule();
 }
 
-void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity, double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame){
+void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity){
 
-    int i=0;
-    uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
-    uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-    uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
-    uint8_t txMsg[6];
-    txMsg[0] = id_trame;
-    txMsg[1] = id_node;
-    txMsg[2] = id_reseau;
-    txMsg[3] = b_battery_voltage;
-    txMsg[4] = b_temperature;
-    txMsg[5] = b_humidity;
+        uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
+        uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
+        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
+        uint8_t txMsg[6];
 
+        WriteSXRegister(0x0D, ReadSXRegister(0x0E));
+        WriteSXRegister(0x22, 6);
 
-    strcpy(( char* )txBuffer, ( char* )txMsg);
-
-
-
-    UARTWriteStrLn(" ");
-    UARTWriteStrLn("step 1: load FIFO");
-    WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-    WriteSXRegister(0x22, 6);
-
-    for (i = 0; i < 6; i++) {
-        WriteSXRegister(0x00, txBuffer[i]);
-    }
+        txMsg[0] = 1;
+        txMsg[1] = id_node;
+        txMsg[2] = id_reseau;
+        txMsg[3] = b_battery_voltage;
+        txMsg[4] = b_temperature;
+        txMsg[5] = b_humidity;
+        for (int i = 0; i < 6; i++) {
+            WriteSXRegister(0x00, txMsg[i]);
+        }
 }
 
 void set_TX_and_transmit(void){
 
-        UARTWriteStrLn(" ");
-        UARTWriteStrLn("step 2: set mode to LoRa TX");
         WriteSXRegister(0x01, 0x83);
         _delay((unsigned long)((100)*(8000000UL/4000.0)));
-        GetMode();
+
 }
 
-void has_transmitted(uint8_t reg_val){
+void wait_for_transmission(){
 
-    reg_val = ReadSXRegister(0x12);
+    uint8_t reg_val = ReadSXRegister(0x12);
     while (reg_val & 0x08 == 0x00) {
         reg_val = ReadSXRegister(0x12);
     }
-    UARTWriteStrLn(" ");
-    UARTWriteStrLn("step 3: TxDone flag set");
-
-    _delay((unsigned long)((200)*(8000000UL/4000.0)));
-    GetMode();
 }
 
-void reset_IRQs(uint8_t reg_val){
-    int i=0;
-
-    UARTWriteStrLn(" ");
-    UARTWriteStrLn("step 4: clear flags");
-    reg_val = ReadSXRegister(0x12);
-    UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-    UARTWriteByteHex(reg_val);
+void reset_IRQs(){
 
     WriteSXRegister(0x12, 0xFF);
-
-
-    reg_val = ReadSXRegister(0x12);
-    UARTWriteStr("after clear: REG_IRQ_FLAGS = 0x");
-    UARTWriteByteHex(reg_val);
-
-
-    for (i = 0; i < 4; i++) {
-         _delay((unsigned long)((500)*(8000000UL/4000.0)));
-    }
 }

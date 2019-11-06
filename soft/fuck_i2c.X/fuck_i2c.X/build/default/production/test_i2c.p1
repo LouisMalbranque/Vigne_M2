@@ -3,8 +3,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "14 ./uart.h
 [; ;./uart.h: 14: void UARTInit(UINT16_T baudRate);
 [v _UARTInit `(v ~T0 @X0 0 ef1`ui ]
-"41 ./LoRa_com.h
-[; ;./LoRa_com.h: 41: void init_LORA_communication();
+"44 ./LoRa_com.h
+[; ;./LoRa_com.h: 44: void init_LORA_communication();
 [v _init_LORA_communication `(v ~T0 @X0 0 e? ]
 "35 ./i2c.h
 [; ;./i2c.h: 35: void i2c_init(void);
@@ -50,9 +50,18 @@ Version 4.0 HI-TECH Software Intermediate Code
 "164 test_i2c.c
 [; ;test_i2c.c: 164:     void measure_humidity_temp_HIH6021(void);
 [v _measure_humidity_temp_HIH6021 `(v ~T0 @X0 0 ef ]
-"250 ./SX1272.h
-[; ;./SX1272.h: 250: void GetMode (void);
-[v _GetMode `(v ~T0 @X0 0 ef ]
+"45 ./LoRa_com.h
+[; ;./LoRa_com.h: 45: void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity);
+[v _load_FIFO_with_temp_humidity_voltage `(v ~T0 @X0 0 ef6`uc`uc`uc`d`d`d ]
+"47
+[; ;./LoRa_com.h: 47: void set_TX_and_transmit(void);
+[v _set_TX_and_transmit `(v ~T0 @X0 0 ef ]
+"48
+[; ;./LoRa_com.h: 48: void wait_for_transmission(void);
+[v _wait_for_transmission `(v ~T0 @X0 0 ef ]
+"49
+[; ;./LoRa_com.h: 49: void reset_IRQs(void);
+[v _reset_IRQs `(v ~T0 @X0 0 ef ]
 "13617 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13617:     struct {
 [s S648 :1 `uc 1 :1 `uc 1 ]
@@ -1241,285 +1250,191 @@ Version 4.0 HI-TECH Software Intermediate Code
 "231
 [; ;test_i2c.c: 231:         measure_humidity_temp_HIH6021();
 [e ( _measure_humidity_temp_HIH6021 ..  ]
-"233
-[; ;test_i2c.c: 233:         uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
-[v _b_temperature `uc ~T0 @X0 1 a ]
-[e = _b_temperature -> / * + _temperature -> -> 30 `i `d -> -> 255 `i `d -> -> 70 `i `d `uc ]
-"234
-[; ;test_i2c.c: 234:         uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-[v _b_humidity `uc ~T0 @X0 1 a ]
-[e = _b_humidity -> / * _humidity -> -> 255 `i `d -> -> 100 `i `d `uc ]
-"235
-[; ;test_i2c.c: 235:         uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
-[v _b_battery_voltage `uc ~T0 @X0 1 a ]
-[e = _b_battery_voltage -> / * _battery_voltage -> -> 255 `i `d -> -> 3 `i `d `uc ]
-"246
-[; ;test_i2c.c: 246:         WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-[e ( _WriteSXRegister (2 , -> -> 13 `i `uc ( _ReadSXRegister (1 -> -> 14 `i `uc ]
+"238
+[; ;test_i2c.c: 238:         load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);
+[e ( _load_FIFO_with_temp_humidity_voltage (4 , , , , , -> -> 1 `i `uc _id_node _id_reseau _battery_voltage _temperature _humidity ]
+"241
+[; ;test_i2c.c: 241:         set_TX_and_transmit();
+[e ( _set_TX_and_transmit ..  ]
+"244
+[; ;test_i2c.c: 244:         wait_for_transmission();
+[e ( _wait_for_transmission ..  ]
 "247
-[; ;test_i2c.c: 247:         WriteSXRegister(0x22, 6);
-[e ( _WriteSXRegister (2 , -> -> 34 `i `uc -> -> 6 `i `uc ]
+[; ;test_i2c.c: 247:         reset_IRQs();
+[e ( _reset_IRQs ..  ]
 "249
-[; ;test_i2c.c: 249:         txMsg[0] = 1;
-[e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux -> -> 1 `i `uc ]
-"250
-[; ;test_i2c.c: 250:         txMsg[1] = id_node;
-[e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
-"251
-[; ;test_i2c.c: 251:         txMsg[2] = id_reseau;
-[e = *U + &U _txMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_reseau ]
-"252
-[; ;test_i2c.c: 252:         txMsg[3] = 3;
-[e = *U + &U _txMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _txMsg `ui `ux -> -> 3 `i `uc ]
-"253
-[; ;test_i2c.c: 253:         txMsg[4] = b_temperature;
-[e = *U + &U _txMsg * -> -> -> 4 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_temperature ]
-"254
-[; ;test_i2c.c: 254:         txMsg[5] = b_humidity;
-[e = *U + &U _txMsg * -> -> -> 5 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_humidity ]
-"255
-[; ;test_i2c.c: 255:         for (i = 0; i < 6; i++) {
-{
-[e = _i -> -> 0 `i `s ]
-[e $ < -> _i `i -> 6 `i 867  ]
-[e $U 868  ]
-[e :U 867 ]
-{
-"256
-[; ;test_i2c.c: 256:             WriteSXRegister(0x00, txMsg[i]);
-[e ( _WriteSXRegister (2 , -> -> 0 `i `uc *U + &U _txMsg * -> -> _i `us `ux -> -> # *U &U _txMsg `ui `ux ]
-"257
-[; ;test_i2c.c: 257:         }
-}
-[e ++ _i -> -> 1 `i `s ]
-[e $ < -> _i `i -> 6 `i 867  ]
-[e :U 868 ]
-}
-"259
-[; ;test_i2c.c: 259:         _delay((unsigned long)((2)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 2 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"262
-[; ;test_i2c.c: 262:         WriteSXRegister(0x01, 0x83);
-[e ( _WriteSXRegister (2 , -> -> 1 `i `uc -> -> 131 `i `uc ]
-"263
-[; ;test_i2c.c: 263:         _delay((unsigned long)((100)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"264
-[; ;test_i2c.c: 264:         GetMode();
-[e ( _GetMode ..  ]
-"267
-[; ;test_i2c.c: 267:         reg_val = ReadSXRegister(0x12);
-[e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"268
-[; ;test_i2c.c: 268:         while (reg_val & 0x08 == 0x00) {
-[e $U 870  ]
-[e :U 871 ]
-{
-"269
-[; ;test_i2c.c: 269:             reg_val = ReadSXRegister(0x12);
-[e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"270
-[; ;test_i2c.c: 270:         }
-}
-[e :U 870 ]
-"268
-[; ;test_i2c.c: 268:         while (reg_val & 0x08 == 0x00) {
-[e $ != & -> _reg_val `i -> == -> 8 `i -> 0 `i `i -> 0 `i 871  ]
-[e :U 872 ]
-"272
-[; ;test_i2c.c: 272:         _delay((unsigned long)((200)*(8000000UL/4000.0)));
+[; ;test_i2c.c: 249:         _delay((unsigned long)((200)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 200 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"276
-[; ;test_i2c.c: 276:         UARTWriteStrLn(" ");
-[e ( _UARTWriteStrLn (1 :s 4C ]
-"277
-[; ;test_i2c.c: 277:         UARTWriteStrLn("step 4: clear flags");
-[e ( _UARTWriteStrLn (1 :s 5C ]
-"278
-[; ;test_i2c.c: 278:         reg_val = ReadSXRegister(0x12);
-[e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"279
-[; ;test_i2c.c: 279:         UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-[e ( _UARTWriteStr (1 :s 6C ]
-"280
-[; ;test_i2c.c: 280:         UARTWriteByteHex(reg_val);
-[e ( _UARTWriteByteHex (1 _reg_val ]
-"282
-[; ;test_i2c.c: 282:         WriteSXRegister(0x12, 0xFF);
-[e ( _WriteSXRegister (2 , -> -> 18 `i `uc -> -> 255 `i `uc ]
-"286
-[; ;test_i2c.c: 286:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+"252
+[; ;test_i2c.c: 252:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"287
-[; ;test_i2c.c: 287:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+"253
+[; ;test_i2c.c: 253:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"288
-[; ;test_i2c.c: 288:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+"254
+[; ;test_i2c.c: 254:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"289
-[; ;test_i2c.c: 289:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+"255
+[; ;test_i2c.c: 255:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"290
-[; ;test_i2c.c: 290:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+"256
+[; ;test_i2c.c: 256:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"291
-[; ;test_i2c.c: 291:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+"257
+[; ;test_i2c.c: 257:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 10000 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"294
-[; ;test_i2c.c: 294:     }
+"260
+[; ;test_i2c.c: 260:     }
 }
 [e :U 864 ]
 [e $U 865  ]
 [e :U 866 ]
-"295
-[; ;test_i2c.c: 295:     return (0);
+"261
+[; ;test_i2c.c: 261:     return (0);
 [e ) -> 0 `i ]
 [e $UE 857  ]
-"296
-[; ;test_i2c.c: 296: }
+"262
+[; ;test_i2c.c: 262: }
 [e :UE 857 ]
 }
-"298
-[; ;test_i2c.c: 298: void measure_battery(void)
+"264
+[; ;test_i2c.c: 264: void measure_battery(void)
 [v _measure_battery `(v ~T0 @X0 1 ef ]
-"299
-[; ;test_i2c.c: 299: {
+"265
+[; ;test_i2c.c: 265: {
 {
 [e :U _measure_battery ]
 [f ]
-"306
-[; ;test_i2c.c: 306:     ADCON0bits.GO = 1;
+"272
+[; ;test_i2c.c: 272:     ADCON0bits.GO = 1;
 [e = . . _ADCON0bits 2 1 -> -> 1 `i `uc ]
-"308
-[; ;test_i2c.c: 308:     while (ADCON0bits.GO);
-[e $U 874  ]
-[e :U 875 ]
-[e :U 874 ]
-[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 875  ]
-[e :U 876 ]
-"309
-[; ;test_i2c.c: 309:     PIR1bits.ADIF = 0;
+"274
+[; ;test_i2c.c: 274:     while (ADCON0bits.GO);
+[e $U 868  ]
+[e :U 869 ]
+[e :U 868 ]
+[e $ != -> . . _ADCON0bits 2 1 `i -> 0 `i 869  ]
+[e :U 870 ]
+"275
+[; ;test_i2c.c: 275:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"314
-[; ;test_i2c.c: 314:     ADC_result = (ADRESH << 8 )|ADRESL;
+"280
+[; ;test_i2c.c: 280:     ADC_result = (ADRESH << 8 )|ADRESL;
 [e = _ADC_result -> | << -> _ADRESH `i -> 8 `i -> _ADRESL `i `ui ]
-"333
-[; ;test_i2c.c: 333:     volts = (2.048/1023)*ADC_result;
+"299
+[; ;test_i2c.c: 299:     volts = (2.048/1023)*ADC_result;
 [e = _volts * / .2.048 -> -> 1023 `i `d -> _ADC_result `d ]
-"334
-[; ;test_i2c.c: 334:     battery_voltage = volts *(2.115);
+"300
+[; ;test_i2c.c: 300:     battery_voltage = volts *(2.115);
 [e = _battery_voltage * _volts .2.115 ]
-"347
-[; ;test_i2c.c: 347:     accu_v = (UINT16_T)(battery_voltage * 100);
+"313
+[; ;test_i2c.c: 313:     accu_v = (UINT16_T)(battery_voltage * 100);
 [e = _accu_v -> * _battery_voltage -> -> 100 `i `d `ui ]
-"348
-[; ;test_i2c.c: 348:     accu_v2 = (UINT16_T)(battery_voltage*100);
+"314
+[; ;test_i2c.c: 314:     accu_v2 = (UINT16_T)(battery_voltage*100);
 [e = _accu_v2 -> * _battery_voltage -> -> 100 `i `d `ui ]
-"349
-[; ;test_i2c.c: 349:     bat_voltage_unit = (accu_v/100);
+"315
+[; ;test_i2c.c: 315:     bat_voltage_unit = (accu_v/100);
 [e = _bat_voltage_unit -> / _accu_v -> -> 100 `i `ui `uc ]
-"351
-[; ;test_i2c.c: 351:     bat_voltage_decim_part = ((accu_v2/10)%10 << 4) | (accu_v2 % 10);
+"317
+[; ;test_i2c.c: 317:     bat_voltage_decim_part = ((accu_v2/10)%10 << 4) | (accu_v2 % 10);
 [e = _bat_voltage_decim_part -> | << % / _accu_v2 -> -> 10 `i `ui -> -> 10 `i `ui -> 4 `i % _accu_v2 -> -> 10 `i `ui `uc ]
-"355
-[; ;test_i2c.c: 355:     _delay((unsigned long)((0.03)*(8000000UL/4000.0)));
+"321
+[; ;test_i2c.c: 321:     _delay((unsigned long)((0.03)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * .0.03 / -> -> 8000000 `ul `d .4000.0 `ul ]
-"356
-[; ;test_i2c.c: 356: }
-[e :UE 873 ]
+"322
+[; ;test_i2c.c: 322: }
+[e :UE 867 ]
 }
-"362
-[; ;test_i2c.c: 362: void measure_humidity_temp_HIH6021(void){
+"328
+[; ;test_i2c.c: 328: void measure_humidity_temp_HIH6021(void){
 [v _measure_humidity_temp_HIH6021 `(v ~T0 @X0 1 ef ]
 {
 [e :U _measure_humidity_temp_HIH6021 ]
 [f ]
-"363
-[; ;test_i2c.c: 363:     UINT8_T humidity_HIH6021_H = 0;
+"329
+[; ;test_i2c.c: 329:     UINT8_T humidity_HIH6021_H = 0;
 [v _humidity_HIH6021_H `uc ~T0 @X0 1 a ]
 [e = _humidity_HIH6021_H -> -> 0 `i `uc ]
-"364
-[; ;test_i2c.c: 364:     UINT8_T humidity_HIH6021_L = 0;
+"330
+[; ;test_i2c.c: 330:     UINT8_T humidity_HIH6021_L = 0;
 [v _humidity_HIH6021_L `uc ~T0 @X0 1 a ]
 [e = _humidity_HIH6021_L -> -> 0 `i `uc ]
-"365
-[; ;test_i2c.c: 365:     UINT8_T temperature_HIH6021_H = 0;
+"331
+[; ;test_i2c.c: 331:     UINT8_T temperature_HIH6021_H = 0;
 [v _temperature_HIH6021_H `uc ~T0 @X0 1 a ]
 [e = _temperature_HIH6021_H -> -> 0 `i `uc ]
-"366
-[; ;test_i2c.c: 366:     UINT8_T temperature_HIH6021_L = 0;
+"332
+[; ;test_i2c.c: 332:     UINT8_T temperature_HIH6021_L = 0;
 [v _temperature_HIH6021_L `uc ~T0 @X0 1 a ]
 [e = _temperature_HIH6021_L -> -> 0 `i `uc ]
-"369
-[; ;test_i2c.c: 369:     i2c_start();
+"335
+[; ;test_i2c.c: 335:     i2c_start();
 [e ( _i2c_start ..  ]
-"371
-[; ;test_i2c.c: 371:     i2c_write((0x27) << 1 | 0 );
+"337
+[; ;test_i2c.c: 337:     i2c_write((0x27) << 1 | 0 );
 [e ( _i2c_write (1 -> | << -> 39 `i -> 1 `i -> 0 `i `uc ]
-"372
-[; ;test_i2c.c: 372:     i2c_stop();
+"338
+[; ;test_i2c.c: 338:     i2c_stop();
 [e ( _i2c_stop ..  ]
-"374
-[; ;test_i2c.c: 374:     _delay((unsigned long)((40)*(8000000UL/4000.0)));
+"340
+[; ;test_i2c.c: 340:     _delay((unsigned long)((40)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 40 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"377
-[; ;test_i2c.c: 377:     i2c_start();
+"343
+[; ;test_i2c.c: 343:     i2c_start();
 [e ( _i2c_start ..  ]
-"378
-[; ;test_i2c.c: 378:     i2c_write((0x27) << 1 | 1);
+"344
+[; ;test_i2c.c: 344:     i2c_write((0x27) << 1 | 1);
 [e ( _i2c_write (1 -> | << -> 39 `i -> 1 `i -> 1 `i `uc ]
-"380
-[; ;test_i2c.c: 380:     __nop();
+"346
+[; ;test_i2c.c: 346:     __nop();
 [e ( ___nop ..  ]
-"381
-[; ;test_i2c.c: 381:     humidity_HIH6021_H = i2c_read();
+"347
+[; ;test_i2c.c: 347:     humidity_HIH6021_H = i2c_read();
 [e = _humidity_HIH6021_H ( _i2c_read ..  ]
-"382
-[; ;test_i2c.c: 382:     i2c_ACK();
+"348
+[; ;test_i2c.c: 348:     i2c_ACK();
 [e ( _i2c_ACK ..  ]
-"383
-[; ;test_i2c.c: 383:     humidity_HIH6021_L = i2c_read();
+"349
+[; ;test_i2c.c: 349:     humidity_HIH6021_L = i2c_read();
 [e = _humidity_HIH6021_L ( _i2c_read ..  ]
-"384
-[; ;test_i2c.c: 384:     i2c_ACK();
+"350
+[; ;test_i2c.c: 350:     i2c_ACK();
 [e ( _i2c_ACK ..  ]
-"385
-[; ;test_i2c.c: 385:     temperature_HIH6021_H = i2c_read();
+"351
+[; ;test_i2c.c: 351:     temperature_HIH6021_H = i2c_read();
 [e = _temperature_HIH6021_H ( _i2c_read ..  ]
-"386
-[; ;test_i2c.c: 386:     i2c_ACK();
+"352
+[; ;test_i2c.c: 352:     i2c_ACK();
 [e ( _i2c_ACK ..  ]
-"387
-[; ;test_i2c.c: 387:     temperature_HIH6021_L = i2c_read();
+"353
+[; ;test_i2c.c: 353:     temperature_HIH6021_L = i2c_read();
 [e = _temperature_HIH6021_L ( _i2c_read ..  ]
-"388
-[; ;test_i2c.c: 388:     i2c_NAK();
+"354
+[; ;test_i2c.c: 354:     i2c_NAK();
 [e ( _i2c_NAK ..  ]
-"389
-[; ;test_i2c.c: 389:     i2c_stop();
+"355
+[; ;test_i2c.c: 355:     i2c_stop();
 [e ( _i2c_stop ..  ]
-"393
-[; ;test_i2c.c: 393:     humidityHL = ((humidity_HIH6021_H & 0b00111111) << 8) | humidity_HIH6021_L;
+"359
+[; ;test_i2c.c: 359:     humidityHL = ((humidity_HIH6021_H & 0b00111111) << 8) | humidity_HIH6021_L;
 [e = _humidityHL -> | << & -> _humidity_HIH6021_H `i -> 63 `i -> 8 `i -> _humidity_HIH6021_L `i `ui ]
-"394
-[; ;test_i2c.c: 394:     temperatureHL = (temperature_HIH6021_H << 6 | temperature_HIH6021_L);
+"360
+[; ;test_i2c.c: 360:     temperatureHL = (temperature_HIH6021_H << 6 | temperature_HIH6021_L);
 [e = _temperatureHL -> | << -> _temperature_HIH6021_H `i -> 6 `i -> _temperature_HIH6021_L `i `ui ]
-"395
-[; ;test_i2c.c: 395:     temperatureHL >> 2;
+"361
+[; ;test_i2c.c: 361:     temperatureHL >> 2;
 [e >> _temperatureHL -> 2 `i ]
-"400
-[; ;test_i2c.c: 400:     humidity = ( ( (double)humidityHL ) / 16382 )*100;
+"366
+[; ;test_i2c.c: 366:     humidity = ( ( (double)humidityHL ) / 16382 )*100;
 [e = _humidity * / -> _humidityHL `d -> -> 16382 `i `d -> -> 100 `i `d ]
-"401
-[; ;test_i2c.c: 401:     temperature = ( ( ( (double)temperatureHL ) /16382 )*165 ) - 40;
+"367
+[; ;test_i2c.c: 367:     temperature = ( ( ( (double)temperatureHL ) /16382 )*165 ) - 40;
 [e = _temperature - * / -> _temperatureHL `d -> -> 16382 `i `d -> -> 165 `i `d -> -> 40 `i `d ]
-"403
-[; ;test_i2c.c: 403: }
-[e :UE 877 ]
+"369
+[; ;test_i2c.c: 369: }
+[e :UE 871 ]
 }
 [a 3C 98 101 102 111 114 101 32 99 108 101 97 114 58 32 82 69 71 95 73 82 81 95 70 76 65 71 83 32 61 32 48 120 0 ]
-[a 6C 98 101 102 111 114 101 32 99 108 101 97 114 58 32 82 69 71 95 73 82 81 95 70 76 65 71 83 32 61 32 48 120 0 ]
 [a 2C 115 116 101 112 32 52 58 32 99 108 101 97 114 32 102 108 97 103 115 0 ]
-[a 5C 115 116 101 112 32 52 58 32 99 108 101 97 114 32 102 108 97 103 115 0 ]
 [a 1C 32 0 ]
-[a 4C 32 0 ]

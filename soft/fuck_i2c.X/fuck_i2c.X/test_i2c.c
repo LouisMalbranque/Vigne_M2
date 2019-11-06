@@ -230,59 +230,25 @@ int main(int argc, char** argv) {
     while(1){
         measure_humidity_temp_HIH6021();
         
-        uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
-        uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
+
         
         //measure_battery();
-        //load_FIFO_with_temp_humidity_voltage(temperature,humidity,battery_voltage,txBuffer,id_node,id_reseau,1);
-        //set_TX_and_transmit();
-        //has_transmitted(reg_val);
-        //reset_IRQs(reg_val);
         
+        // load fifo with data
+        load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);
         
+        // set Lora mode in TX mode to send data
+        set_TX_and_transmit();
         
+        // wait for the end of transmission
+        wait_for_transmission();
         
-        WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
-        WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
-
-        txMsg[0] = 1;
-        txMsg[1] = id_node;
-        txMsg[2] = id_reseau;
-        txMsg[3] = 3;//b_battery_voltage;
-        txMsg[4] = b_temperature;
-        txMsg[5] = b_humidity;
-        for (i = 0; i < PAYLOAD_LENGTH_1; i++) {
-            WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
-        }
-        
-        __delay_ms(2);
-        
-        // set mode to LoRa TX
-        WriteSXRegister(REG_OP_MODE, LORA_TX_MODE);
-        __delay_ms(100);                                    // delay required to start oscillator and PLL
-        GetMode();
-        
-        // wait end of transmission
-        reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-        while (reg_val & 0x08 == 0x00) {                    // wait for end of transmission (wait until TxDone is set)
-            reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-        }
-        
+        // reset interrupts 
+        reset_IRQs();
+      
         __delay_ms(200);        // delay is required before checking mode: it takes some time to go from TX mode to STDBY mode
-        //GetMode();              // check that mode is back to STDBY
-        
-        // reset all IRQs
-        UARTWriteStrLn(" ");
-        UARTWriteStrLn("step 4: clear flags");
-        reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-        UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-        UARTWriteByteHex(reg_val);
-        
-        WriteSXRegister(REG_IRQ_FLAGS, 0xFF);           // clear flags: writing 1 clears flag
 
-        // wait before next transmission
-
+        // sleep for some time
         __delay_ms(10000);
         __delay_ms(10000);
         __delay_ms(10000);

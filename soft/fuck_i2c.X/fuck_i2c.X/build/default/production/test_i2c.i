@@ -9819,7 +9819,7 @@ typedef int INT16_T;
 # 102 "test_i2c.c" 2
 
 # 1 "./LoRa_com.h" 1
-# 36 "./LoRa_com.h"
+# 39 "./LoRa_com.h"
 # 1 "./spi.h" 1
 # 14 "./spi.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
@@ -9910,7 +9910,7 @@ typedef uint32_t uint_fast32_t;
 void SPIInit(void);
 void SPITransfer (UINT8_T data_out);
 UINT8_T SPIReceive (UINT8_T data_out);
-# 36 "./LoRa_com.h" 2
+# 39 "./LoRa_com.h" 2
 
 # 1 "./uart.h" 1
 # 14 "./uart.h"
@@ -9920,7 +9920,7 @@ void UARTWriteByte(UINT8_T data);
 void UARTWriteStr(char *Str);
 void UARTWriteStrLn(char *Str);
 void UARTWriteByteHex(UINT8_T data);
-# 37 "./LoRa_com.h" 2
+# 40 "./LoRa_com.h" 2
 
 # 1 "./SX1272.h" 1
 # 248 "./SX1272.h"
@@ -9930,21 +9930,22 @@ void GetMode (void);
 void InitModule (void);
 void PrintSXRegContent(uint8_t address);
 void CheckConfiguration (void);
-# 38 "./LoRa_com.h" 2
+# 41 "./LoRa_com.h" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
 # 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);
-# 39 "./LoRa_com.h" 2
+# 42 "./LoRa_com.h" 2
 
 
 void init_LORA_communication();
-void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity,double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame);
+void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity);
+
 void set_TX_and_transmit(void);
-void has_transmitted(uint8_t reg_val);
-void reset_IRQs(uint8_t reg_val);
+void wait_for_transmission(void);
+void reset_IRQs(void);
 # 103 "test_i2c.c" 2
 
 # 1 "./i2c.h" 1
@@ -10103,48 +10104,23 @@ int main(int argc, char** argv) {
     while(1){
         measure_humidity_temp_HIH6021();
 
-        uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
-        uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
-# 246 "test_i2c.c"
-        WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-        WriteSXRegister(0x22, 6);
-
-        txMsg[0] = 1;
-        txMsg[1] = id_node;
-        txMsg[2] = id_reseau;
-        txMsg[3] = 3;
-        txMsg[4] = b_temperature;
-        txMsg[5] = b_humidity;
-        for (i = 0; i < 6; i++) {
-            WriteSXRegister(0x00, txMsg[i]);
-        }
-
-        _delay((unsigned long)((2)*(8000000UL/4000.0)));
 
 
-        WriteSXRegister(0x01, 0x83);
-        _delay((unsigned long)((100)*(8000000UL/4000.0)));
-        GetMode();
 
 
-        reg_val = ReadSXRegister(0x12);
-        while (reg_val & 0x08 == 0x00) {
-            reg_val = ReadSXRegister(0x12);
-        }
+
+        load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);
+
+
+        set_TX_and_transmit();
+
+
+        wait_for_transmission();
+
+
+        reset_IRQs();
 
         _delay((unsigned long)((200)*(8000000UL/4000.0)));
-
-
-
-        UARTWriteStrLn(" ");
-        UARTWriteStrLn("step 4: clear flags");
-        reg_val = ReadSXRegister(0x12);
-        UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-        UARTWriteByteHex(reg_val);
-
-        WriteSXRegister(0x12, 0xFF);
-
 
 
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
@@ -10176,10 +10152,10 @@ void measure_battery(void)
 
 
     ADC_result = (ADRESH << 8 )|ADRESL;
-# 333 "test_i2c.c"
+# 299 "test_i2c.c"
     volts = (2.048/1023)*ADC_result;
     battery_voltage = volts *(2.115);
-# 347 "test_i2c.c"
+# 313 "test_i2c.c"
     accu_v = (UINT16_T)(battery_voltage * 100);
     accu_v2 = (UINT16_T)(battery_voltage*100);
     bat_voltage_unit = (accu_v/100);
