@@ -1,189 +1,229 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"8515 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
+"16052 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16052:     struct {
+[s S761 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S761 . SCS HFIOFS OSTS IRCF IDLEN ]
+"16059
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16059:     struct {
+[s S762 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S762 . SCS0 SCS1 IOFS . IRCF0 IRCF1 IRCF2 ]
+"16051
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16051: typedef union {
+[u S760 `S761 1 `S762 1 ]
+[n S760 . . . ]
+"16069
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16069: extern volatile OSCCONbits_t OSCCONbits __attribute__((address(0xFD3)));
+[v _OSCCONbits `VS760 ~T0 @X0 0 e@4051 ]
+"16046
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16046: extern volatile unsigned char OSCCON __attribute__((address(0xFD3)));
+[v _OSCCON `Vuc ~T0 @X0 0 e@4051 ]
+"8071
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8071:     struct {
+[s S390 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S390 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 TRISA6 TRISA7 ]
+"8081
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8081:     struct {
+[s S391 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S391 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"8070
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8070: typedef union {
+[u S389 `S390 1 `S391 1 ]
+[n S389 . . . ]
+"8092
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8092: extern volatile TRISAbits_t TRISAbits __attribute__((address(0xF92)));
+[v _TRISAbits `VS389 ~T0 @X0 0 e@3986 ]
+"8737
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8737:     struct {
+[s S408 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S408 . TRISD0 TRISD1 TRISD2 TRISD3 TRISD4 TRISD5 TRISD6 TRISD7 ]
+"8747
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8747:     struct {
+[s S409 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S409 . RD0 RD1 RD2 RD3 RD4 RD5 RD6 RD7 ]
+"8736
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8736: typedef union {
+[u S407 `S408 1 `S409 1 ]
+[n S407 . . . ]
+"8758
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8758: extern volatile TRISDbits_t TRISDbits __attribute__((address(0xF95)));
+[v _TRISDbits `VS407 ~T0 @X0 0 e@3989 ]
+"8515
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8515:     struct {
-[s S407 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S407 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+[s S402 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S402 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
 "8525
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8525:     struct {
-[s S408 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S408 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+[s S403 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S403 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
 "8514
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8514: typedef union {
-[u S406 `S407 1 `S408 1 ]
-[n S406 . . . ]
+[u S401 `S402 1 `S403 1 ]
+[n S401 . . . ]
 "8536
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8536: extern volatile TRISCbits_t TRISCbits __attribute__((address(0xF94)));
-[v _TRISCbits `VS406 ~T0 @X0 0 e@3988 ]
-"153
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 153:     struct {
-[s S11 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S11 . . ANSC2 ANSC3 ANSC4 ANSC5 ANSC6 ANSC7 ]
-"152
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 152: typedef union {
-[u S10 `S11 1 ]
-[n S10 . . ]
-"163
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 163: extern volatile ANSELCbits_t ANSELCbits __attribute__((address(0xF3A)));
-[v _ANSELCbits `VS10 ~T0 @X0 0 e@3898 ]
-"14148
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14148:     struct {
-[s S671 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S671 . SSPM CKP SSPEN SSPOV WCOL ]
-"14155
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14155:     struct {
-[s S672 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S672 . SSPM0 SSPM1 SSPM2 SSPM3 ]
-"14161
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14161:     struct {
-[s S673 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S673 . SSPM01 SSPM11 SSPM21 SSPM31 CKP1 SSPEN1 SSPOV1 WCOL1 ]
-"14147
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14147: typedef union {
-[u S670 `S671 1 `S672 1 `S673 1 ]
-[n S670 . . . . ]
-"14172
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14172: extern volatile SSP1CON1bits_t SSP1CON1bits __attribute__((address(0xFC6)));
-[v _SSP1CON1bits `VS670 ~T0 @X0 0 e@4038 ]
-"50 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
-[v ___nop `(v ~T0 @X0 0 ef ]
-[p i ___nop ]
-"15005 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 15005: extern volatile unsigned char SSP1ADD __attribute__((address(0xFC8)));
-[v _SSP1ADD `Vuc ~T0 @X0 0 e@4040 ]
-"14386
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14386:     struct {
-[s S679 :2 `uc 1 :1 `uc 1 ]
-[n S679 . . R_NOT_W ]
-"14390
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14390:     struct {
-[s S680 :5 `uc 1 :1 `uc 1 ]
-[n S680 . . D_NOT_A ]
-"14394
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14394:     struct {
-[s S681 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S681 . BF UA R_nW S P D_nA CKE SMP ]
-"14404
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14404:     struct {
-[s S682 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S682 . . R . D ]
-"14410
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14410:     struct {
-[s S683 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S683 . . W . A ]
-"14416
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14416:     struct {
-[s S684 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S684 . . nW . nA ]
-"14422
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14422:     struct {
-[s S685 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S685 . . R_W . D_A ]
-"14428
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14428:     struct {
-[s S686 :2 `uc 1 :1 `uc 1 ]
-[n S686 . . NOT_WRITE ]
-"14432
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14432:     struct {
-[s S687 :5 `uc 1 :1 `uc 1 ]
-[n S687 . . NOT_ADDRESS ]
-"14436
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14436:     struct {
-[s S688 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S688 . . nWRITE . nADDRESS ]
-"14442
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14442:     struct {
-[s S689 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S689 . BF1 UA1 I2C_READ I2C_START I2C_STOP DA CKE1 SMP1 ]
-"14452
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14452:     struct {
-[s S690 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S690 . . READ_WRITE START STOP DA1 ]
-"14459
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14459:     struct {
-[s S691 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S691 . . RW START1 STOP1 DATA_ADDRESS ]
-"14466
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14466:     struct {
-[s S692 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
-[n S692 . . RW1 . I2C_DAT ]
-"14472
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14472:     struct {
-[s S693 :2 `uc 1 :1 `uc 1 ]
-[n S693 . . NOT_W ]
-"14476
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14476:     struct {
-[s S694 :5 `uc 1 :1 `uc 1 ]
-[n S694 . . NOT_A ]
-"14385
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14385: typedef union {
-[u S678 `S679 1 `S680 1 `S681 1 `S682 1 `S683 1 `S684 1 `S685 1 `S686 1 `S687 1 `S688 1 `S689 1 `S690 1 `S691 1 `S692 1 `S693 1 `S694 1 ]
-[n S678 . . . . . . . . . . . . . . . . . ]
-"14481
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 14481: extern volatile SSP1STATbits_t SSP1STATbits __attribute__((address(0xFC7)));
-[v _SSP1STATbits `VS678 ~T0 @X0 0 e@4039 ]
+[v _TRISCbits `VS401 ~T0 @X0 0 e@3988 ]
+"8060
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8060: extern volatile unsigned char TRISA __attribute__((address(0xF92)));
+[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
+"8282
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8282: extern volatile unsigned char TRISB __attribute__((address(0xF93)));
+[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
+"8504
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 8504: extern volatile unsigned char TRISC __attribute__((address(0xF94)));
+[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
+"705
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 705:     struct {
+[s S32 :4 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S32 . . FVRS FVRST FVREN ]
+"711
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 711:     struct {
+[s S33 :4 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S33 . . FVRS0 FVRS1 ]
+"704
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 704: typedef union {
+[u S31 `S32 1 `S33 1 ]
+[n S31 . . . ]
+"717
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 717: extern volatile VREFCON0bits_t VREFCON0bits __attribute__((address(0xF42)));
+[v _VREFCON0bits `VS31 ~T0 @X0 0 e@3906 ]
+"13478
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13478:     struct {
+[s S636 :3 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S636 . ADCS ACQT . ADFM ]
+"13484
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13484:     struct {
+[s S637 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S637 . ADCS0 ADCS1 ADCS2 ACQT0 ACQT1 ACQT2 ]
+"13477
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13477: typedef union {
+[u S635 `S636 1 `S637 1 ]
+[n S635 . . . ]
+"13493
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13493: extern volatile ADCON2bits_t ADCON2bits __attribute__((address(0xFC0)));
+[v _ADCON2bits `VS635 ~T0 @X0 0 e@4032 ]
+"13617
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13617:     struct {
+[s S643 :1 `uc 1 :1 `uc 1 ]
+[n S643 . . GO_NOT_DONE ]
+"13621
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13621:     struct {
+[s S644 :1 `uc 1 :1 `uc 1 :5 `uc 1 ]
+[n S644 . ADON GO_nDONE CHS ]
+"13626
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13626:     struct {
+[s S645 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S645 . . GO CHS0 CHS1 CHS2 CHS3 CHS4 ]
+"13635
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13635:     struct {
+[s S646 :1 `uc 1 :1 `uc 1 ]
+[n S646 . . DONE ]
+"13639
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13639:     struct {
+[s S647 :1 `uc 1 :1 `uc 1 ]
+[n S647 . . NOT_DONE ]
+"13643
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13643:     struct {
+[s S648 :1 `uc 1 :1 `uc 1 ]
+[n S648 . . nDONE ]
+"13647
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13647:     struct {
+[s S649 :1 `uc 1 :1 `uc 1 ]
+[n S649 . . GO_DONE ]
+"13651
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13651:     struct {
+[s S650 :1 `uc 1 :1 `uc 1 ]
+[n S650 . . GODONE ]
+"13616
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13616: typedef union {
+[u S642 `S643 1 `S644 1 `S645 1 `S646 1 `S647 1 `S648 1 `S649 1 `S650 1 ]
+[n S642 . . . . . . . . . ]
+"13656
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13656: extern volatile ADCON0bits_t ADCON0bits __attribute__((address(0xFC2)));
+[v _ADCON0bits `VS642 ~T0 @X0 0 e@4034 ]
+"1942
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 1942:     struct {
+[s S93 :4 `uc 1 :2 `uc 1 ]
+[n S93 . CCP5M DC5B ]
+"1946
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 1946:     struct {
+[s S94 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S94 . CCP5M0 CCP5M1 CCP5M2 CCP5M3 DC5B0 DC5B1 ]
+"1941
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 1941: typedef union {
+[u S92 `S93 1 `S94 1 ]
+[n S92 . . . ]
+"1955
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 1955: extern volatile CCP5CONbits_t CCP5CONbits __attribute__((address(0xF54)));
+[v _CCP5CONbits `VS92 ~T0 @X0 0 e@3924 ]
+"13549
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13549:     struct {
+[s S639 :2 `uc 1 :2 `uc 1 :3 `uc 1 :1 `uc 1 ]
+[n S639 . NVCFG PVCFG . TRIGSEL ]
+"13555
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13555:     struct {
+[s S640 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S640 . NVCFG0 NVCFG1 PVCFG0 PVCFG1 ]
+"13561
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13561:     struct {
+[s S641 :3 `uc 1 :1 `uc 1 ]
+[n S641 . . CHSN3 ]
+"13548
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13548: typedef union {
+[u S638 `S639 1 `S640 1 `S641 1 ]
+[n S638 . . . . ]
+"13566
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13566: extern volatile ADCON1bits_t ADCON1bits __attribute__((address(0xFC1)));
+[v _ADCON1bits `VS638 ~T0 @X0 0 e@4033 ]
 "9497
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9497:     struct {
-[s S441 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S441 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
+[s S436 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S436 . TMR1IF TMR2IF CCP1IF SSP1IF TX1IF RC1IF ADIF ]
 "9506
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9506:     struct {
-[s S442 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S442 . . SSPIF TXIF RCIF ]
+[s S437 :3 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S437 . . SSPIF TXIF RCIF ]
 "9496
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9496: typedef union {
-[u S440 `S441 1 `S442 1 ]
-[n S440 . . . ]
+[u S435 `S436 1 `S437 1 ]
+[n S435 . . . ]
 "9513
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9513: extern volatile PIR1bits_t PIR1bits __attribute__((address(0xF9E)));
-[v _PIR1bits `VS440 ~T0 @X0 0 e@3998 ]
-"9737
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9737:     struct {
-[s S451 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S451 . CCP2IF TMR3IF HLVDIF BCL1IF EEIF C2IF C1IF OSCFIF ]
-"9747
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9747:     struct {
-[s S452 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S452 . . LVDIF BCLIF ]
-"9752
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9752:     struct {
-[s S453 :6 `uc 1 :1 `uc 1 ]
-[n S453 . . CMIF ]
-"9736
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9736: typedef union {
-[u S450 `S451 1 `S452 1 `S453 1 ]
-[n S450 . . . . ]
-"9757
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9757: extern volatile PIR2bits_t PIR2bits __attribute__((address(0xFA1)));
-[v _PIR2bits `VS450 ~T0 @X0 0 e@4001 ]
-"13783
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13783: extern volatile unsigned char SSP1CON2 __attribute__((address(0xFC5)));
-[v _SSP1CON2 `Vuc ~T0 @X0 0 e@4037 ]
-"13794
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13794:     struct {
-[s S661 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S661 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
-"13804
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13804:     struct {
-[s S662 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S662 . SEN1 ADMSK1 ADMSK2 ADMSK3 ACKEN1 ACKDT1 ACKSTAT1 GCEN1 ]
-"13814
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13814:     struct {
-[s S663 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S663 . . ADMSK11 ADMSK21 ADMSK31 ADMSK4 ADMSK5 ]
-"13822
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13822:     struct {
-[s S664 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S664 . . RSEN1 PEN1 RCEN1 ADMSK41 ADMSK51 ]
-"13793
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13793: typedef union {
-[u S660 `S661 1 `S662 1 `S663 1 `S664 1 ]
-[n S660 . . . . . ]
-"13831
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13831: extern volatile SSP1CON2bits_t SSP1CON2bits __attribute__((address(0xFC5)));
-[v _SSP1CON2bits `VS660 ~T0 @X0 0 e@4037 ]
-"15259
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 15259: extern volatile unsigned char SSP1BUF __attribute__((address(0xFC9)));
-[v _SSP1BUF `Vuc ~T0 @X0 0 e@4041 ]
+[v _PIR1bits `VS435 ~T0 @X0 0 e@3998 ]
+"13472
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13472: extern volatile unsigned char ADCON2 __attribute__((address(0xFC0)));
+[v _ADCON2 `Vuc ~T0 @X0 0 e@4032 ]
+"13543
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13543: extern volatile unsigned char ADCON1 __attribute__((address(0xFC1)));
+[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
+"13611
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 13611: extern volatile unsigned char ADCON0 __attribute__((address(0xFC2)));
+[v _ADCON0 `Vuc ~T0 @X0 0 e@4034 ]
+"58
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 58:     struct {
+[s S2 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S2 . ANSA0 ANSA1 ANSA2 ANSA3 . ANSA5 ]
+"57
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 57: typedef union {
+[u S1 `S2 1 ]
+[n S1 . . ]
+"67
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 67: extern volatile ANSELAbits_t ANSELAbits __attribute__((address(0xF38)));
+[v _ANSELAbits `VS1 ~T0 @X0 0 e@3896 ]
+"198
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 198: extern volatile unsigned char ANSELD __attribute__((address(0xF3B)));
+[v _ANSELD `Vuc ~T0 @X0 0 e@3899 ]
+"147
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 147: extern volatile unsigned char ANSELC __attribute__((address(0xF3A)));
+[v _ANSELC `Vuc ~T0 @X0 0 e@3898 ]
+"260
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 260: extern volatile unsigned char ANSELE __attribute__((address(0xF3C)));
+[v _ANSELE `Vuc ~T0 @X0 0 e@3900 ]
+"16129
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16129: extern volatile unsigned char T0CON __attribute__((address(0xFD5)));
+[v _T0CON `Vuc ~T0 @X0 0 e@4053 ]
+"16926
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16926: extern volatile unsigned char INTCON __attribute__((address(0xFF2)));
+[v _INTCON `Vuc ~T0 @X0 0 e@4082 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -943,284 +983,245 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"18 i2c.c
-[; ;i2c.c: 18: void i2c_init(void) {
-[v _i2c_init `(v ~T0 @X0 1 ef ]
+"5 init_F43K22.c
+[; ;init_F43K22.c: 5: void init_F46K22_CLK(void){
+[v _init_F46K22_CLK `(v ~T0 @X0 1 ef ]
 {
-[e :U _i2c_init ]
+[e :U _init_F46K22_CLK ]
 [f ]
-"23
-[; ;i2c.c: 23:     TRISCbits.TRISC3 = 1;
-[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
-"24
-[; ;i2c.c: 24:     TRISCbits.TRISC4 = 1;
-[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
-"25
-[; ;i2c.c: 25:     ANSELCbits.ANSC3 = 0;
-[e = . . _ANSELCbits 0 2 -> -> 0 `i `uc ]
-"26
-[; ;i2c.c: 26:     ANSELCbits.ANSC4 = 0;
-[e = . . _ANSELCbits 0 3 -> -> 0 `i `uc ]
-"31
-[; ;i2c.c: 31:     SSP1CON1bits.WCOL = 0;
-[e = . . _SSP1CON1bits 0 4 -> -> 0 `i `uc ]
+"7
+[; ;init_F43K22.c: 7:     OSCCONbits.IDLEN = 0;
+[e = . . _OSCCONbits 0 4 -> -> 0 `i `uc ]
+"8
+[; ;init_F43K22.c: 8:     OSCCONbits.IRCF = 0b110;
+[e = . . _OSCCONbits 0 3 -> -> 6 `i `uc ]
+"9
+[; ;init_F43K22.c: 9:     OSCCONbits.OSTS = 1;
+[e = . . _OSCCONbits 0 2 -> -> 1 `i `uc ]
+"10
+[; ;init_F43K22.c: 10:     OSCCONbits.HFIOFS = 1;
+[e = . . _OSCCONbits 0 1 -> -> 1 `i `uc ]
+"11
+[; ;init_F43K22.c: 11:     OSCCONbits.SCS0 = 0;
+[e = . . _OSCCONbits 1 0 -> -> 0 `i `uc ]
+"12
+[; ;init_F43K22.c: 12:     OSCCONbits.SCS1 = 0;
+[e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
+"13
+[; ;init_F43K22.c: 13: }
+[e :UE 849 ]
+}
+"15
+[; ;init_F43K22.c: 15: void init_F23K20_CLK(void){
+[v _init_F23K20_CLK `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F23K20_CLK ]
+[f ]
+"17
+[; ;init_F43K22.c: 17:     OSCCON = 0b01101100;
+[e = _OSCCON -> -> 108 `i `uc ]
+"18
+[; ;init_F43K22.c: 18: }
+[e :UE 850 ]
+}
+"21
+[; ;init_F43K22.c: 21: void init_F46K22_IO(void){
+[v _init_F46K22_IO `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F46K22_IO ]
+[f ]
+"28
+[; ;init_F43K22.c: 28:     TRISAbits.TRISA0 = 1;
+[e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
 "32
-[; ;i2c.c: 32:     SSP1CON1bits.SSPOV1 = 0;
-[e = . . _SSP1CON1bits 2 6 -> -> 0 `i `uc ]
+[; ;init_F43K22.c: 32:     TRISDbits.TRISD0 = 1;
+[e = . . _TRISDbits 0 0 -> -> 1 `i `uc ]
 "33
-[; ;i2c.c: 33:     SSP1CON1bits.SSPEN1 = 1;
-[e = . . _SSP1CON1bits 2 5 -> -> 1 `i `uc ]
+[; ;init_F43K22.c: 33:     TRISDbits.TRISD1 = 1;
+[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
 "34
-[; ;i2c.c: 34:     SSP1CON1bits.CKP = 0;
-[e = . . _SSP1CON1bits 0 1 -> -> 0 `i `uc ]
+[; ;init_F43K22.c: 34:     TRISDbits.TRISD3 = 1;
+[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
 "35
-[; ;i2c.c: 35:     SSP1CON1bits.SSPM = 0b1000;
-[e = . . _SSP1CON1bits 0 0 -> -> 8 `i `uc ]
-"36
-[; ;i2c.c: 36:     __nop();
-[e ( ___nop ..  ]
-"37
-[; ;i2c.c: 37:     __nop();
-[e ( ___nop ..  ]
+[; ;init_F43K22.c: 35:     TRISDbits.TRISD4 = 1;
+[e = . . _TRISDbits 0 4 -> -> 1 `i `uc ]
 "38
-[; ;i2c.c: 38:     __nop();
-[e ( ___nop ..  ]
-"43
-[; ;i2c.c: 43:     SSP1ADD = 19;
-[e = _SSP1ADD -> -> 19 `i `uc ]
-"44
-[; ;i2c.c: 44:     __nop();
-[e ( ___nop ..  ]
+[; ;init_F43K22.c: 38:     TRISCbits.TRISC3 = 1;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+"39
+[; ;init_F43K22.c: 39:     TRISCbits.TRISC4 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+"40
+[; ;init_F43K22.c: 40: }
+[e :UE 851 ]
+}
+"42
+[; ;init_F43K22.c: 42: void init_F23K20_IO(void){
+[v _init_F23K20_IO `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F23K20_IO ]
+[f ]
 "45
-[; ;i2c.c: 45:     __nop();
-[e ( ___nop ..  ]
+[; ;init_F43K22.c: 45:     TRISA = 0b00000111;
+[e = _TRISA -> -> 7 `i `uc ]
 "46
-[; ;i2c.c: 46:     __nop();
-[e ( ___nop ..  ]
+[; ;init_F43K22.c: 46:     TRISB = 0x00;
+[e = _TRISB -> -> 0 `i `uc ]
+"48
+[; ;init_F43K22.c: 48:     TRISC = 0b10011000;
+[e = _TRISC -> -> 152 `i `uc ]
+"49
+[; ;init_F43K22.c: 49: }
+[e :UE 852 ]
+}
+"52
+[; ;init_F43K22.c: 52: void init_F46K22_ADC(void){
+[v _init_F46K22_ADC `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F46K22_ADC ]
+[f ]
+"56
+[; ;init_F43K22.c: 56:     VREFCON0bits.FVREN = 1;
+[e = . . _VREFCON0bits 0 3 -> -> 1 `i `uc ]
 "57
-[; ;i2c.c: 57:     SSP1STATbits.SMP = 1;
-[e = . . _SSP1STATbits 2 7 -> -> 1 `i `uc ]
+[; ;init_F43K22.c: 57:     VREFCON0bits.FVRS = 0b10;
+[e = . . _VREFCON0bits 0 1 -> -> 2 `i `uc ]
 "58
-[; ;i2c.c: 58:     SSP1STATbits.CKE = 0;
-[e = . . _SSP1STATbits 2 6 -> -> 0 `i `uc ]
-"61
-[; ;i2c.c: 61:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"62
-[; ;i2c.c: 62:     PIR2bits.BCL1IF = 0;
-[e = . . _PIR2bits 0 3 -> -> 0 `i `uc ]
-"69
-[; ;i2c.c: 69: }
-[e :UE 854 ]
-}
-"71
-[; ;i2c.c: 71: void i2c_waitForIdle() {
-[v _i2c_waitForIdle `(v ~T0 @X0 1 ef ]
-{
-[e :U _i2c_waitForIdle ]
-[f ]
-"81
-[; ;i2c.c: 81:     while((SSP1CON2 & 0x1F) |SSP1STATbits.RW);
-[e $U 856  ]
-[e :U 857 ]
+[; ;init_F43K22.c: 58:     while(!VREFCON0bits.FVRST);
+[e $U 854  ]
+[e :U 855 ]
+[e :U 854 ]
+[e $ ! != -> . . _VREFCON0bits 0 2 `i -> 0 `i 855  ]
 [e :U 856 ]
-[e $ != | & -> _SSP1CON2 `i -> 31 `i -> . . _SSP1STATbits 12 1 `i -> 0 `i 857  ]
-[e :U 858 ]
-"82
-[; ;i2c.c: 82: }
-[e :UE 855 ]
+"61
+[; ;init_F43K22.c: 61:     ADCON2bits.ADFM = 1;
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+"62
+[; ;init_F43K22.c: 62:     ADCON2bits.ACQT = 0b111;
+[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
+"63
+[; ;init_F43K22.c: 63:     ADCON2bits.ADCS2 = 1;
+[e = . . _ADCON2bits 1 2 -> -> 1 `i `uc ]
+"64
+[; ;init_F43K22.c: 64:     ADCON2bits.ADCS1 = 1;
+[e = . . _ADCON2bits 1 1 -> -> 1 `i `uc ]
+"65
+[; ;init_F43K22.c: 65:     ADCON2bits.ADCS0 = 0;
+[e = . . _ADCON2bits 1 0 -> -> 0 `i `uc ]
+"68
+[; ;init_F43K22.c: 68:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"69
+[; ;init_F43K22.c: 69:     ADCON0bits.CHS = 0b00000;
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+"70
+[; ;init_F43K22.c: 70:     ADCON0bits.GODONE = 0;
+[e = . . _ADCON0bits 7 1 -> -> 0 `i `uc ]
+"75
+[; ;init_F43K22.c: 75:     CCP5CONbits.CCP5M = 0b1011;
+[e = . . _CCP5CONbits 0 0 -> -> 11 `i `uc ]
+"76
+[; ;init_F43K22.c: 76:     ADCON1bits.TRIGSEL = 0;
+[e = . . _ADCON1bits 0 3 -> -> 0 `i `uc ]
+"79
+[; ;init_F43K22.c: 79:     PIR1bits.ADIF = 0;
+[e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
+"81
+[; ;init_F43K22.c: 81: }
+[e :UE 853 ]
 }
-"84
-[; ;i2c.c: 84: void i2c_start(void) {
-[v _i2c_start `(v ~T0 @X0 1 ef ]
+"83
+[; ;init_F43K22.c: 83: void init_F23K20_ADC(void){
+[v _init_F23K20_ADC `(v ~T0 @X0 1 ef ]
 {
-[e :U _i2c_start ]
+[e :U _init_F23K20_ADC ]
 [f ]
+"86
+[; ;init_F43K22.c: 86:     ADCON2 = 0b10111110;
+[e = _ADCON2 -> -> 190 `i `uc ]
+"87
+[; ;init_F43K22.c: 87:     ADCON1 = 0b00000000;
+[e = _ADCON1 -> -> 0 `i `uc ]
+"88
+[; ;init_F43K22.c: 88:     ADCON0 = 0b00000001;
+[e = _ADCON0 -> -> 1 `i `uc ]
+"89
+[; ;init_F43K22.c: 89: }
+[e :UE 857 ]
+}
 "92
-[; ;i2c.c: 92:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"93
-[; ;i2c.c: 93:     SSP1CON2bits.SEN = 1;
-[e = . . _SSP1CON2bits 0 0 -> -> 1 `i `uc ]
+[; ;init_F43K22.c: 92: void init_F46K22_AN(void){
+[v _init_F46K22_AN `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F46K22_AN ]
+[f ]
 "94
-[; ;i2c.c: 94:     while(!PIR1bits.SSP1IF);
-[e $U 860  ]
-[e :U 861 ]
-[e :U 860 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 861  ]
-[e :U 862 ]
+[; ;init_F43K22.c: 94:     ANSELAbits.ANSA0 = 1;
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
 "95
-[; ;i2c.c: 95: }
+[; ;init_F43K22.c: 95:     ANSELAbits.ANSA1 = 0;
+[e = . . _ANSELAbits 0 1 -> -> 0 `i `uc ]
+"96
+[; ;init_F43K22.c: 96:     ANSELAbits.ANSA2 = 0;
+[e = . . _ANSELAbits 0 2 -> -> 0 `i `uc ]
+"97
+[; ;init_F43K22.c: 97:     ANSELAbits.ANSA3 = 0;
+[e = . . _ANSELAbits 0 3 -> -> 0 `i `uc ]
+"98
+[; ;init_F43K22.c: 98:     ANSELAbits.ANSA5 = 0;
+[e = . . _ANSELAbits 0 5 -> -> 0 `i `uc ]
+"101
+[; ;init_F43K22.c: 101:     ANSELD = 0b00000000;
+[e = _ANSELD -> -> 0 `i `uc ]
+"102
+[; ;init_F43K22.c: 102:     ANSELC = 0b00000000;
+[e = _ANSELC -> -> 0 `i `uc ]
+"103
+[; ;init_F43K22.c: 103:     ANSELE = 0b00000000;
+[e = _ANSELE -> -> 0 `i `uc ]
+"104
+[; ;init_F43K22.c: 104: }
+[e :UE 858 ]
+}
+"106
+[; ;init_F43K22.c: 106: void init_F23K20_AN(void){
+[v _init_F23K20_AN `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F23K20_AN ]
+[f ]
+"111
+[; ;init_F43K22.c: 111: }
 [e :UE 859 ]
 }
-"97
-[; ;i2c.c: 97: void i2c_repStart(void) {
-[v _i2c_repStart `(v ~T0 @X0 1 ef ]
+"114
+[; ;init_F43K22.c: 114: void init_F46K22_TMR(void){
+[v _init_F46K22_TMR `(v ~T0 @X0 1 ef ]
 {
-[e :U _i2c_repStart ]
+[e :U _init_F46K22_TMR ]
 [f ]
-"99
-[; ;i2c.c: 99:     i2c_waitForIdle();
-[e ( _i2c_waitForIdle ..  ]
-"106
-[; ;i2c.c: 106:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"107
-[; ;i2c.c: 107:     SSP1CON2bits.RSEN = 1;
-[e = . . _SSP1CON2bits 0 1 -> -> 1 `i `uc ]
-"108
-[; ;i2c.c: 108:     while(!PIR1bits.SSP1IF);
-[e $U 864  ]
-[e :U 865 ]
-[e :U 864 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 865  ]
-[e :U 866 ]
-"109
-[; ;i2c.c: 109: }
-[e :UE 863 ]
-}
-"111
-[; ;i2c.c: 111: void i2c_stop(void) {
-[v _i2c_stop `(v ~T0 @X0 1 ef ]
-{
-[e :U _i2c_stop ]
-[f ]
-"113
-[; ;i2c.c: 113:     i2c_waitForIdle();
-[e ( _i2c_waitForIdle ..  ]
-"120
-[; ;i2c.c: 120:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"121
-[; ;i2c.c: 121:     SSP1CON2bits.PEN = 1;
-[e = . . _SSP1CON2bits 0 2 -> -> 1 `i `uc ]
-"122
-[; ;i2c.c: 122:     while(!PIR1bits.SSP1IF);
-[e $U 868  ]
-[e :U 869 ]
-[e :U 868 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 869  ]
-[e :U 870 ]
+"118
+[; ;init_F43K22.c: 118:     T0CON = 0b10000111;
+[e = _T0CON -> -> 135 `i `uc ]
 "123
-[; ;i2c.c: 123: }
-[e :UE 867 ]
+[; ;init_F43K22.c: 123:     INTCON = 0b00100000;
+[e = _INTCON -> -> 32 `i `uc ]
+"124
+[; ;init_F43K22.c: 124: }
+[e :UE 860 ]
 }
-"125
-[; ;i2c.c: 125: void i2c_ACK(void) {
-[v _i2c_ACK `(v ~T0 @X0 1 ef ]
+"126
+[; ;init_F43K22.c: 126: void init_F23K20_TMR(void){
+[v _init_F23K20_TMR `(v ~T0 @X0 1 ef ]
 {
-[e :U _i2c_ACK ]
+[e :U _init_F23K20_TMR ]
 [f ]
-"134
-[; ;i2c.c: 134:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
+"130
+[; ;init_F43K22.c: 130:     T0CON = 0b10000111;
+[e = _T0CON -> -> 135 `i `uc ]
 "135
-[; ;i2c.c: 135:     SSP1CON2bits.ACKDT = 0;
-[e = . . _SSP1CON2bits 0 5 -> -> 0 `i `uc ]
+[; ;init_F43K22.c: 135:     INTCON = 0b00100000;
+[e = _INTCON -> -> 32 `i `uc ]
 "136
-[; ;i2c.c: 136:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
-"137
-[; ;i2c.c: 137:     while(!PIR1bits.SSP1IF);
-[e $U 872  ]
-[e :U 873 ]
-[e :U 872 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 873  ]
-[e :U 874 ]
-"138
-[; ;i2c.c: 138: }
-[e :UE 871 ]
-}
-"139
-[; ;i2c.c: 139: void i2c_NAK(void) {
-[v _i2c_NAK `(v ~T0 @X0 1 ef ]
-{
-[e :U _i2c_NAK ]
-[f ]
-"149
-[; ;i2c.c: 149:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"150
-[; ;i2c.c: 150:     SSP1CON2bits.ACKDT = 1;
-[e = . . _SSP1CON2bits 0 5 -> -> 1 `i `uc ]
-"151
-[; ;i2c.c: 151:     SSP1CON2bits.ACKEN = 1;
-[e = . . _SSP1CON2bits 0 4 -> -> 1 `i `uc ]
-"152
-[; ;i2c.c: 152:     while(!PIR1bits.SSP1IF);
-[e $U 876  ]
-[e :U 877 ]
-[e :U 876 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 877  ]
-[e :U 878 ]
-"153
-[; ;i2c.c: 153: }
-[e :UE 875 ]
-}
-"155
-[; ;i2c.c: 155: UINT8_T i2c_read(void) {
-[v _i2c_read `(uc ~T0 @X0 1 ef ]
-{
-[e :U _i2c_read ]
-[f ]
-"156
-[; ;i2c.c: 156:     UINT8_T i2cReadData = 0;
-[v _i2cReadData `uc ~T0 @X0 1 a ]
-[e = _i2cReadData -> -> 0 `i `uc ]
-"158
-[; ;i2c.c: 158:     i2c_waitForIdle();
-[e ( _i2c_waitForIdle ..  ]
-"169
-[; ;i2c.c: 169:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"170
-[; ;i2c.c: 170:     SSP1CON2bits.RCEN = 1;
-[e = . . _SSP1CON2bits 0 3 -> -> 1 `i `uc ]
-"171
-[; ;i2c.c: 171:     while(!SSP1STATbits.BF);
-[e $U 880  ]
-[e :U 881 ]
-[e :U 880 ]
-[e $ ! != -> . . _SSP1STATbits 2 0 `i -> 0 `i 881  ]
-[e :U 882 ]
-"172
-[; ;i2c.c: 172:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"173
-[; ;i2c.c: 173:     i2cReadData = SSP1BUF;
-[e = _i2cReadData _SSP1BUF ]
-"174
-[; ;i2c.c: 174:     return i2cReadData;
-[e ) _i2cReadData ]
-[e $UE 879  ]
-"175
-[; ;i2c.c: 175: }
-[e :UE 879 ]
-}
-"177
-[; ;i2c.c: 177: void i2c_write(UINT8_T i2cWriteData) {
-[v _i2c_write `(v ~T0 @X0 1 ef1`uc ]
-{
-[e :U _i2c_write ]
-[v _i2cWriteData `uc ~T0 @X0 1 r1 ]
-[f ]
-"179
-[; ;i2c.c: 179:     i2c_waitForIdle();
-[e ( _i2c_waitForIdle ..  ]
-"186
-[; ;i2c.c: 186:     PIR1bits.SSP1IF = 0;
-[e = . . _PIR1bits 0 3 -> -> 0 `i `uc ]
-"187
-[; ;i2c.c: 187:     SSP1BUF = i2cWriteData;
-[e = _SSP1BUF _i2cWriteData ]
-"188
-[; ;i2c.c: 188:     while(!PIR1bits.SSP1IF);
-[e $U 884  ]
-[e :U 885 ]
-[e :U 884 ]
-[e $ ! != -> . . _PIR1bits 0 3 `i -> 0 `i 885  ]
-[e :U 886 ]
-"189
-[; ;i2c.c: 189: }
-[e :UE 883 ]
+[; ;init_F43K22.c: 136: }
+[e :UE 861 ]
 }

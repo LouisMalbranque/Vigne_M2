@@ -1,4 +1,4 @@
-# 1 "test_i2c.c"
+# 1 "init_F43K22.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,127 +6,9 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "test_i2c.c" 2
-# 18 "test_i2c.c"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
-extern const char __xc8_OPTIM_SPEED;
-
-extern double __fpnormalize(double);
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\xc8debug.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\musl_xc8.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\features.h" 1 3
-# 10 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int wchar_t;
-# 122 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned size_t;
-# 168 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __int24 int24_t;
-# 204 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef __uint24 uint24_t;
-# 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdlib.h" 2 3
-
-
-int atoi (const char *);
-long atol (const char *);
-long long atoll (const char *);
-double atof (const char *);
-
-float strtof (const char *restrict, char **restrict);
-double strtod (const char *restrict, char **restrict);
-long double strtold (const char *restrict, char **restrict);
-
-
-
-long strtol (const char *restrict, char **restrict, int);
-unsigned long strtoul (const char *restrict, char **restrict, int);
-long long strtoll (const char *restrict, char **restrict, int);
-unsigned long long strtoull (const char *restrict, char **restrict, int);
-
-int rand (void);
-void srand (unsigned);
-
-          void abort (void);
-int atexit (void (*) (void));
-          void exit (int);
-          void _Exit (int);
-
-void *bsearch (const void *, const void *, size_t, size_t, int (*)(const void *, const void *));
-
-__attribute__((nonreentrant)) void qsort (void *, size_t, size_t, int (*)(const void *, const void *));
-
-int abs (int);
-long labs (long);
-long long llabs (long long);
-
-typedef struct { int quot, rem; } div_t;
-typedef struct { long quot, rem; } ldiv_t;
-typedef struct { long long quot, rem; } lldiv_t;
-
-div_t div (int, int);
-ldiv_t ldiv (long, long);
-lldiv_t lldiv (long long, long long);
-
-typedef struct { unsigned int quot, rem; } udiv_t;
-typedef struct { unsigned long quot, rem; } uldiv_t;
-udiv_t udiv (unsigned int, unsigned int);
-uldiv_t uldiv (unsigned long, unsigned long);
-
-
-
-
-
-size_t __ctype_get_mb_cur_max(void);
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\xc8debug.h" 2 3
-
-
-
-
-
-
-
-
-#pragma intrinsic(__builtin_software_breakpoint)
-extern void __builtin_software_breakpoint(void);
-# 23 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 1 3
-
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 1 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 1 3
-# 4 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\htc.h" 2 3
-# 5 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 2 3
-
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18_chip_select.h" 1 3
-# 779 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18_chip_select.h" 3
+# 1 "init_F43K22.c" 2
+# 1 "./init_F43K22.h" 1
+# 11 "./init_F43K22.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18f46k22.h" 1 3
 # 44 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18f46k22.h" 3
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\__at.h" 1 3
@@ -9506,463 +9388,13 @@ extern volatile __bit nW2 __attribute__((address(0x7B6A)));
 
 
 extern volatile __bit nWRITE2 __attribute__((address(0x7B6A)));
-# 779 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18_chip_select.h" 2 3
-# 8 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 2 3
-# 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 3
-__attribute__((__unsupported__("The " "flash_write" " routine is no longer supported. Please use the MPLAB X MCC."))) void flash_write(const unsigned char *, unsigned int, __far unsigned char *);
-__attribute__((__unsupported__("The " "EraseFlash" " routine is no longer supported. Please use the MPLAB X MCC."))) void EraseFlash(unsigned long startaddr, unsigned long endaddr);
+# 11 "./init_F43K22.h" 2
 
 
 
 
 
 
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\errata.h" 1 3
-# 26 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 2 3
-# 49 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 3
-#pragma intrinsic(__nop)
-extern void __nop(void);
-# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 3
-__attribute__((__unsupported__("The " "Read_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) unsigned char Read_b_eep(unsigned int badd);
-__attribute__((__unsupported__("The " "Busy_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Busy_eep(void);
-__attribute__((__unsupported__("The " "Write_b_eep" " routine is no longer supported. Please use the MPLAB X MCC."))) void Write_b_eep(unsigned int badd, unsigned char bdat);
-# 178 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\pic18.h" 3
-unsigned char __t1rd16on(void);
-unsigned char __t3rd16on(void);
-
-
-
-
-
-
-#pragma intrinsic(_delay)
-extern __attribute__((nonreentrant)) void _delay(unsigned long);
-#pragma intrinsic(_delaywdt)
-extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
-#pragma intrinsic(_delay3)
-extern __attribute__((nonreentrant)) void _delay3(unsigned char);
-# 32 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\xc.h" 2 3
-# 18 "test_i2c.c" 2
-
-
-
-
-
-
-
-#pragma config FOSC = INTIO7
-#pragma config PLLCFG = OFF
-#pragma config PRICLKEN = ON
-#pragma config FCMEN = OFF
-#pragma config IESO = OFF
-
-
-#pragma config PWRTEN = ON
-#pragma config BOREN = SBORDIS
-#pragma config BORV = 190
-
-
-#pragma config WDTEN = OFF
-#pragma config WDTPS = 32768
-
-
-#pragma config CCP2MX = PORTC1
-#pragma config PBADEN = OFF
-#pragma config CCP3MX = PORTB5
-#pragma config HFOFST = ON
-#pragma config T3CMX = PORTC0
-#pragma config P2BMX = PORTD2
-#pragma config MCLRE = EXTMCLR
-
-
-#pragma config STVREN = ON
-#pragma config LVP = OFF
-#pragma config XINST = OFF
-
-
-#pragma config CP0 = OFF
-#pragma config CP1 = OFF
-
-
-
-
-#pragma config CPB = OFF
-#pragma config CPD = OFF
-
-
-#pragma config WRT0 = OFF
-#pragma config WRT1 = OFF
-
-
-
-
-#pragma config WRTC = OFF
-#pragma config WRTB = OFF
-#pragma config WRTD = OFF
-
-
-#pragma config EBTR0 = OFF
-#pragma config EBTR1 = OFF
-
-
-
-
-#pragma config EBTRB = OFF
-# 98 "test_i2c.c"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 1 3
-# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-
-
-
-
-
-typedef void * va_list[1];
-
-
-
-
-typedef void * __isoc_va_list[1];
-# 137 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long ssize_t;
-# 246 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long off_t;
-# 399 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct _IO_FILE FILE;
-# 24 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 2 3
-# 52 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdio.h" 3
-typedef union _G_fpos64_t {
- char __opaque[16];
- double __align;
-} fpos_t;
-
-extern FILE *const stdin;
-extern FILE *const stdout;
-extern FILE *const stderr;
-
-
-
-
-
-FILE *fopen(const char *restrict, const char *restrict);
-FILE *freopen(const char *restrict, const char *restrict, FILE *restrict);
-int fclose(FILE *);
-
-int remove(const char *);
-int rename(const char *, const char *);
-
-int feof(FILE *);
-int ferror(FILE *);
-int fflush(FILE *);
-void clearerr(FILE *);
-
-int fseek(FILE *, long, int);
-long ftell(FILE *);
-void rewind(FILE *);
-
-int fgetpos(FILE *restrict, fpos_t *restrict);
-int fsetpos(FILE *, const fpos_t *);
-
-size_t fread(void *restrict, size_t, size_t, FILE *restrict);
-size_t fwrite(const void *restrict, size_t, size_t, FILE *restrict);
-
-int fgetc(FILE *);
-int getc(FILE *);
-int getchar(void);
-int ungetc(int, FILE *);
-
-int fputc(int, FILE *);
-int putc(int, FILE *);
-int putchar(int);
-
-char *fgets(char *restrict, int, FILE *restrict);
-
-char *gets(char *);
-
-
-int fputs(const char *restrict, FILE *restrict);
-int puts(const char *);
-
-#pragma printf_check(printf) const
-#pragma printf_check(vprintf) const
-#pragma printf_check(sprintf) const
-#pragma printf_check(snprintf) const
-#pragma printf_check(vsprintf) const
-#pragma printf_check(vsnprintf) const
-
-int printf(const char *restrict, ...);
-int fprintf(FILE *restrict, const char *restrict, ...);
-int sprintf(char *restrict, const char *restrict, ...);
-int snprintf(char *restrict, size_t, const char *restrict, ...);
-
-int vprintf(const char *restrict, __isoc_va_list);
-int vfprintf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsprintf(char *restrict, const char *restrict, __isoc_va_list);
-int vsnprintf(char *restrict, size_t, const char *restrict, __isoc_va_list);
-
-int scanf(const char *restrict, ...);
-int fscanf(FILE *restrict, const char *restrict, ...);
-int sscanf(const char *restrict, const char *restrict, ...);
-int vscanf(const char *restrict, __isoc_va_list);
-int vfscanf(FILE *restrict, const char *restrict, __isoc_va_list);
-int vsscanf(const char *restrict, const char *restrict, __isoc_va_list);
-
-void perror(const char *);
-
-int setvbuf(FILE *restrict, char *restrict, int, size_t);
-void setbuf(FILE *restrict, char *restrict);
-
-char *tmpnam(char *);
-FILE *tmpfile(void);
-
-
-
-
-FILE *fmemopen(void *restrict, size_t, const char *restrict);
-FILE *open_memstream(char **, size_t *);
-FILE *fdopen(int, const char *);
-FILE *popen(const char *, const char *);
-int pclose(FILE *);
-int fileno(FILE *);
-int fseeko(FILE *, off_t, int);
-off_t ftello(FILE *);
-int dprintf(int, const char *restrict, ...);
-int vdprintf(int, const char *restrict, __isoc_va_list);
-void flockfile(FILE *);
-int ftrylockfile(FILE *);
-void funlockfile(FILE *);
-int getc_unlocked(FILE *);
-int getchar_unlocked(void);
-int putc_unlocked(int, FILE *);
-int putchar_unlocked(int);
-ssize_t getdelim(char **restrict, size_t *restrict, int, FILE *restrict);
-ssize_t getline(char **restrict, size_t *restrict, FILE *restrict);
-int renameat(int, const char *, int, const char *);
-char *ctermid(char *);
-
-
-
-
-
-
-
-char *tempnam(const char *, const char *);
-# 98 "test_i2c.c" 2
-
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 1 3
-# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 411 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef struct __locale_struct * locale_t;
-# 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 2 3
-
-
-void *memcpy (void *restrict, const void *restrict, size_t);
-void *memmove (void *, const void *, size_t);
-void *memset (void *, int, size_t);
-int memcmp (const void *, const void *, size_t);
-void *memchr (const void *, int, size_t);
-
-char *strcpy (char *restrict, const char *restrict);
-char *strncpy (char *restrict, const char *restrict, size_t);
-
-char *strcat (char *restrict, const char *restrict);
-char *strncat (char *restrict, const char *restrict, size_t);
-
-int strcmp (const char *, const char *);
-int strncmp (const char *, const char *, size_t);
-
-int strcoll (const char *, const char *);
-size_t strxfrm (char *restrict, const char *restrict, size_t);
-
-char *strchr (const char *, int);
-char *strrchr (const char *, int);
-
-size_t strcspn (const char *, const char *);
-size_t strspn (const char *, const char *);
-char *strpbrk (const char *, const char *);
-char *strstr (const char *, const char *);
-char *strtok (char *restrict, const char *restrict);
-
-size_t strlen (const char *);
-
-char *strerror (int);
-# 65 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\string.h" 3
-char *strtok_r (char *restrict, const char *restrict, char **restrict);
-int strerror_r (int, char *, size_t);
-char *stpcpy(char *restrict, const char *restrict);
-char *stpncpy(char *restrict, const char *restrict, size_t);
-size_t strnlen (const char *, size_t);
-char *strdup (const char *);
-char *strndup (const char *, size_t);
-char *strsignal(int);
-char *strerror_l (int, locale_t);
-int strcoll_l (const char *, const char *, locale_t);
-size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
-
-
-
-
-void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 100 "test_i2c.c" 2
-
-
-# 1 "./general.h" 1
-# 41 "./general.h"
-typedef unsigned char UINT8_T;
-typedef unsigned int UINT16_T;
-typedef unsigned char BOOL;
-typedef char INT8_T;
-typedef int INT16_T;
-# 102 "test_i2c.c" 2
-
-# 1 "./LoRa_com.h" 1
-# 36 "./LoRa_com.h"
-# 1 "./spi.h" 1
-# 14 "./spi.h"
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int32_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint32_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 139 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 2 3
-# 14 "./spi.h" 2
-# 40 "./spi.h"
-void SPIInit(void);
-void SPITransfer (UINT8_T data_out);
-UINT8_T SPIReceive (UINT8_T data_out);
-# 36 "./LoRa_com.h" 2
-
-# 1 "./uart.h" 1
-# 14 "./uart.h"
-void UARTInit(UINT16_T baudRate);
-UINT8_T UARTReadByte(void);
-void UARTWriteByte(UINT8_T data);
-void UARTWriteStr(char *Str);
-void UARTWriteStrLn(char *Str);
-void UARTWriteByteHex(UINT8_T data);
-# 37 "./LoRa_com.h" 2
-
-# 1 "./SX1272.h" 1
-# 248 "./SX1272.h"
-void WriteSXRegister(uint8_t address, uint8_t data);
-uint8_t ReadSXRegister(uint8_t address);
-void GetMode (void);
-void InitModule (void);
-void PrintSXRegContent(uint8_t address);
-void CheckConfiguration (void);
-# 38 "./LoRa_com.h" 2
-
-# 1 "./RF_LoRa_868_SO.h" 1
-# 35 "./RF_LoRa_868_SO.h"
-void InitRFLoRaPins(void);
-void ResetRFModule(void);
-void AntennaTX(void);
-# 39 "./LoRa_com.h" 2
-
-
-void init_LORA_communication(UINT16_T baud_rate);
-void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity,double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame);
-void set_TX_and_transmit(void);
-void has_transmitted(uint8_t reg_val);
-void reset_IRQs(uint8_t reg_val);
-# 103 "test_i2c.c" 2
-
-# 1 "./i2c.h" 1
-# 35 "./i2c.h"
-void i2c_init(void);
-void i2c_waitForIdle(void);
-void i2c_start(void);
-void i2c_repStart(void);
-void i2c_stop(void);
-UINT8_T i2c_read(void);
-void i2c_write(UINT8_T data);
-void i2c_ACK(void);
-void i2c_NAK(void);
-# 104 "test_i2c.c" 2
-
-
-# 1 "./init_F43K22.h" 1
-# 17 "./init_F43K22.h"
     void init_F46K22_CLK(void);
     void init_F23K20_CLK(void);
     void init_F46K22_IO(void);
@@ -9974,275 +9406,140 @@ void i2c_NAK(void);
     void init_F46K22_TMR(void);
     void init_F23K20_TMR(void);
     void __attribute__((picinterrupt(("")))) TMR0Interrupt();
-# 106 "test_i2c.c" 2
+# 1 "init_F43K22.c" 2
 
 
 
-    UINT8_T header1;
-    UINT8_T header0;
 
-    UINT8_T bat_voltage1;
-    UINT8_T bat_voltage0;
+void init_F46K22_CLK(void){
 
-
-
-    UINT8_T bat_voltage_unit;
-    UINT8_T bat_voltage_decim_part;
-    UINT16_T accu_v;
-    UINT16_T accu_v2;
-    UINT8_T reg_val;
-
-    UINT8_T panel_voltage1;
-    UINT8_T panel_voltage0;
-
-
-
-    uint8_t txBuffer[256];
-    uint8_t reg_val;
-
-    uint8_t id_node = 1;
-    uint8_t id_trame = 1;
-    uint8_t id_reseau = 231;
-
-
-    double volts=0.0;
-
-    double humidity = 0.0;
-    double humidity2 = 0.0;
-    double humidity3 = 0.0;
-    UINT16_T volts_cV;
-    UINT16_T ADC_result;
-    UINT16_T temp_AT = 0;
-    uint8_t battery_voltage_int=3;
-    int16_t i;
-    BOOL send_data;
-    UINT16_T timer_tick;
-    UINT8_T humidity_HIH6021_H = 0;
-    UINT8_T humidity_HIH6021_L = 0;
-    UINT8_T temperature_HIH6021_H = 0;
-    UINT8_T temperature_HIH6021_L = 0;
-    UINT16_T temperatureHL=0;
-    UINT16_T humidityHL=0;
-    double temperature = 0.0;
-    double temperature2 = 0.0;
-    double temperature3 = 0.0;
-    double temperature4 = 0.0;
-    double volts_divider = 0.0;
-    uint8_t txMsg[6];
-    uint8_t txPremiereTrame[6];
-    uint8_t idT=0;
-    uint8_t idR=0xFF;
-    uint8_t idN=0xFF;
-    uint8_t var1=0xFF;
-    uint8_t var2=0xFF;
-    double battery_voltage = 3.0;
-    void measure_battery(void);
-    void measure_humidity_temp_HIH6021(void);
-
-
-
-
-int main(int argc, char** argv) {
-
-
-
-
-
-
-    header1 = 0;
-    header0 = 0;
-    bat_voltage1 = 0;
-    bat_voltage0 = 0;
-
-
-   init_F46K22_CLK();
-   init_F46K22_IO();
-   init_F46K22_ADC();
-   init_F46K22_AN();
-   init_F46K22_TMR();
-
-    init_LORA_communication(19200);
-# 215 "test_i2c.c"
-    i2c_init();
-    (INTCONbits.GIE = 1);
-
-    txPremiereTrame[0] = idT;
-    txPremiereTrame[1] = idN;
-    txPremiereTrame[2] = idR;
-    txPremiereTrame[3] = battery_voltage_int;
-    txPremiereTrame[4] = idN;
-    txPremiereTrame[5] = idR;
-    WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-    WriteSXRegister(0x22, 6);
-    for (i = 0; i < 6; i++) {
-        WriteSXRegister(0x00, txPremiereTrame[i]);
-    }
-
-    _delay((unsigned long)((1)*(8000000UL/4000.0)));
-
-
-    WriteSXRegister(0x01, 0x83);
-    _delay((unsigned long)((100)*(8000000UL/4000.0)));
-    GetMode();
-
-
-    reg_val = ReadSXRegister(0x12);
-    while (reg_val & 0x08 == 0x00) {
-        reg_val = ReadSXRegister(0x12);
-    }
-
-    _delay((unsigned long)((200)*(8000000UL/4000.0)));
-
-
-
-    UARTWriteStrLn(" ");
-    UARTWriteStrLn("step 4: clear flags");
-    reg_val = ReadSXRegister(0x12);
-    UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-    UARTWriteByteHex(reg_val);
-
-    WriteSXRegister(0x12, 0xFF);
-
-
-    while(1){
-        measure_humidity_temp_HIH6021();
-
-
-
-
-
-        uint8_t b_temperature = (uint8_t)(((temperature4 + 30) * 255) / 70);
-        uint8_t b_humidity = (uint8_t)((humidity3 * 255) / 100);
-        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
-
-
-        txMsg[0] = 1;
-        txMsg[1] = id_node;
-        txMsg[2] = id_reseau;
-        txMsg[3] = 3;
-        txMsg[4] = b_temperature;
-        txMsg[5] = b_humidity;
-
-
-
-
-
-
-        WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-        WriteSXRegister(0x22, 6);
-# 290 "test_i2c.c"
-        for (i = 0; i < 6; i++) {
-            WriteSXRegister(0x00, txMsg[i]);
-        }
-
-        _delay((unsigned long)((2)*(8000000UL/4000.0)));
-
-
-        WriteSXRegister(0x01, 0x83);
-        _delay((unsigned long)((100)*(8000000UL/4000.0)));
-        GetMode();
-
-
-        reg_val = ReadSXRegister(0x12);
-        while (reg_val & 0x08 == 0x00) {
-            reg_val = ReadSXRegister(0x12);
-        }
-
-        _delay((unsigned long)((200)*(8000000UL/4000.0)));
-
-
-
-        UARTWriteStrLn(" ");
-        UARTWriteStrLn("step 4: clear flags");
-        reg_val = ReadSXRegister(0x12);
-        UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-        UARTWriteByteHex(reg_val);
-
-        WriteSXRegister(0x12, 0xFF);
-# 328 "test_i2c.c"
-        _delay((unsigned long)((10000)*(8000000UL/4000.0)));
-        _delay((unsigned long)((10000)*(8000000UL/4000.0)));
-        _delay((unsigned long)((10000)*(8000000UL/4000.0)));
-        _delay((unsigned long)((10000)*(8000000UL/4000.0)));
-        _delay((unsigned long)((10000)*(8000000UL/4000.0)));
-        _delay((unsigned long)((10000)*(8000000UL/4000.0)));
-
-
-    }
-    return (0);
+    OSCCONbits.IDLEN = 0;
+    OSCCONbits.IRCF = 0b110;
+    OSCCONbits.OSTS = 1;
+    OSCCONbits.HFIOFS = 1;
+    OSCCONbits.SCS0 = 0;
+    OSCCONbits.SCS1 = 0;
 }
 
-void measure_battery(void)
-{
+void init_F23K20_CLK(void){
+
+    OSCCON = 0b01101100;
+}
+
+
+void init_F46K22_IO(void){
 
 
 
 
 
 
-    ADCON0bits.GO = 1;
+    TRISAbits.TRISA0 = 1;
 
-    while (ADCON0bits.GO);
+
+
+    TRISDbits.TRISD0 = 1;
+    TRISDbits.TRISD1 = 1;
+    TRISDbits.TRISD3 = 1;
+    TRISDbits.TRISD4 = 1;
+
+
+    TRISCbits.TRISC3 = 1;
+    TRISCbits.TRISC4 = 1;
+}
+
+void init_F23K20_IO(void){
+
+
+    TRISA = 0b00000111;
+    TRISB = 0x00;
+
+    TRISC = 0b10011000;
+}
+
+
+void init_F46K22_ADC(void){
+
+
+
+    VREFCON0bits.FVREN = 1;
+    VREFCON0bits.FVRS = 0b10;
+    while(!VREFCON0bits.FVRST);
+
+
+    ADCON2bits.ADFM = 1;
+    ADCON2bits.ACQT = 0b111;
+    ADCON2bits.ADCS2 = 1;
+    ADCON2bits.ADCS1 = 1;
+    ADCON2bits.ADCS0 = 0;
+
+
+    ADCON0bits.ADON = 1;
+    ADCON0bits.CHS = 0b00000;
+    ADCON0bits.GODONE = 0;
+
+
+
+
+    CCP5CONbits.CCP5M = 0b1011;
+    ADCON1bits.TRIGSEL = 0;
+
+
     PIR1bits.ADIF = 0;
 
+}
+
+void init_F23K20_ADC(void){
 
 
-
-    ADC_result = (ADRESH << 8 )|ADRESL;
-# 375 "test_i2c.c"
-    volts = (2.048/1023)*ADC_result;
-    battery_voltage = volts *(2.115);
-# 389 "test_i2c.c"
-    accu_v = (UINT16_T)(battery_voltage * 100);
-    accu_v2 = (UINT16_T)(battery_voltage*100);
-    bat_voltage_unit = (accu_v/100);
-
-    bat_voltage_decim_part = ((accu_v2/10)%10 << 4) | (accu_v2 % 10);
-
-
-
-    _delay((unsigned long)((0.03)*(8000000UL/4000.0)));
+    ADCON2 = 0b10111110;
+    ADCON1 = 0b00000000;
+    ADCON0 = 0b00000001;
 }
 
 
+void init_F46K22_AN(void){
+
+    ANSELAbits.ANSA0 = 1;
+    ANSELAbits.ANSA1 = 0;
+    ANSELAbits.ANSA2 = 0;
+    ANSELAbits.ANSA3 = 0;
+    ANSELAbits.ANSA5 = 0;
+
+
+    ANSELD = 0b00000000;
+    ANSELC = 0b00000000;
+    ANSELE = 0b00000000;
+}
+
+void init_F23K20_AN(void){
 
 
 
-void measure_humidity_temp_HIH6021(void){
 
-    i2c_start();
+}
 
-    i2c_write((0x27) << 1 |0 );
-    i2c_stop();
-    _delay((unsigned long)((40)*(8000000UL/4000.0)));
 
-    i2c_start();
-    i2c_write((0x27) << 1 | 1);
-
-    __nop();
-    humidity_HIH6021_H = i2c_read();
-    i2c_ACK();
-    humidity_HIH6021_L = i2c_read();
-    i2c_ACK();
-    temperature_HIH6021_H = i2c_read();
-    i2c_ACK();
-    temperature_HIH6021_L = i2c_read();
-    i2c_NAK();
-    i2c_stop();
+void init_F46K22_TMR(void){
 
 
 
-    humidityHL = ((humidity_HIH6021_H & 0b00111111) << 8) | humidity_HIH6021_L;
-    temperatureHL = (temperature_HIH6021_H << 6 | temperature_HIH6021_L);
-    temperatureHL >> 2;
+    T0CON = 0b10000111;
 
 
-    humidity = (double)humidityHL;
-    humidity2 = humidity/16382;
-    humidity3 = humidity2*100;
 
-    temperature = (double)temperatureHL;
-    temperature2 = temperature /16382;
-    temperature3 =temperature2*165;
-    temperature4=temperature3-40;
+
+    INTCON = 0b00100000;
+}
+
+void init_F23K20_TMR(void){
+
+
+
+    T0CON = 0b10000111;
+
+
+
+
+    INTCON = 0b00100000;
 }
