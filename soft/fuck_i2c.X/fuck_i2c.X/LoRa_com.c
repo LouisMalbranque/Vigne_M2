@@ -35,8 +35,8 @@ void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, u
         WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
 
         txMsg[0] = id_trame;
-        txMsg[1] = id_node;
-        txMsg[2] = id_reseau;
+        txMsg[1] = id_reseau;
+        txMsg[2] = id_node;
         txMsg[3] = b_battery_voltage;
         txMsg[4] = b_temperature;
         txMsg[5] = b_humidity;

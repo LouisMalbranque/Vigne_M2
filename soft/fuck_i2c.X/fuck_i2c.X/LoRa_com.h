@@ -35,7 +35,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "spi.h"
 #include "uart.h"
 #include "SX1272.h"

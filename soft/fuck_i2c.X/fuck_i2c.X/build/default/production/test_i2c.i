@@ -9819,7 +9819,7 @@ typedef int INT16_T;
 # 102 "test_i2c.c" 2
 
 # 1 "./LoRa_com.h" 1
-# 39 "./LoRa_com.h"
+# 38 "./LoRa_com.h"
 # 1 "./spi.h" 1
 # 14 "./spi.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
@@ -9910,7 +9910,7 @@ typedef uint32_t uint_fast32_t;
 void SPIInit(void);
 void SPITransfer (UINT8_T data_out);
 UINT8_T SPIReceive (UINT8_T data_out);
-# 39 "./LoRa_com.h" 2
+# 38 "./LoRa_com.h" 2
 
 # 1 "./uart.h" 1
 # 14 "./uart.h"
@@ -9920,7 +9920,7 @@ void UARTWriteByte(UINT8_T data);
 void UARTWriteStr(char *Str);
 void UARTWriteStrLn(char *Str);
 void UARTWriteByteHex(UINT8_T data);
-# 40 "./LoRa_com.h" 2
+# 39 "./LoRa_com.h" 2
 
 # 1 "./SX1272.h" 1
 # 248 "./SX1272.h"
@@ -9930,14 +9930,14 @@ void GetMode (void);
 void InitModule (void);
 void PrintSXRegContent(uint8_t address);
 void CheckConfiguration (void);
-# 41 "./LoRa_com.h" 2
+# 40 "./LoRa_com.h" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
 # 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);
-# 42 "./LoRa_com.h" 2
+# 41 "./LoRa_com.h" 2
 
 
 void init_LORA_communication();
@@ -9961,6 +9961,12 @@ void i2c_ACK(void);
 void i2c_NAK(void);
 # 104 "test_i2c.c" 2
 
+# 1 "./EEPROM.h" 1
+# 25 "./EEPROM.h"
+    UINT8_T readEEPROM(UINT8_T address);
+    void writeEEPROM(UINT8_T address, UINT8_T data);
+# 105 "test_i2c.c" 2
+
 
 # 1 "./init_F43K22.h" 1
 # 21 "./init_F43K22.h"
@@ -9976,7 +9982,7 @@ void i2c_NAK(void);
     void init_F46K22_TMR(void);
     void init_F23K20_TMR(void);
     void __attribute__((picinterrupt(("")))) TMR0Interrupt();
-# 106 "test_i2c.c" 2
+# 107 "test_i2c.c" 2
 
 
 
@@ -10065,7 +10071,16 @@ int main(int argc, char** argv) {
     measure_battery();
 
 
-    load_FIFO_with_init_values(0, 0xFF, 0xFF, battery_voltage);
+    id_node = readEEPROM(0x00);
+    id_reseau = readEEPROM(0x01);
+
+
+    writeEEPROM(0x00, id_node + 1);
+    writeEEPROM(0x01, id_reseau + 2);
+
+
+
+    load_FIFO_with_init_values(0, id_node, id_reseau, battery_voltage);
 
 
     set_TX_and_transmit();
@@ -10124,10 +10139,10 @@ void measure_battery(void)
 
 
     ADC_result = (ADRESH << 8 )|ADRESL;
-# 271 "test_i2c.c"
+# 281 "test_i2c.c"
     volts = (2.048/1023)*ADC_result;
     battery_voltage = volts *(2.115);
-# 285 "test_i2c.c"
+# 295 "test_i2c.c"
     accu_v = (UINT16_T)(battery_voltage * 100);
     accu_v2 = (UINT16_T)(battery_voltage*100);
     bat_voltage_unit = (accu_v/100);

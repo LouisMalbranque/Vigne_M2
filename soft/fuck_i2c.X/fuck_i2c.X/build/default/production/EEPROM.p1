@@ -1,32 +1,66 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"36 ./RF_LoRa_868_SO.h
-[; ;./RF_LoRa_868_SO.h: 36: void InitRFLoRaPins(void);
-[v _InitRFLoRaPins `(v ~T0 @X0 0 ef ]
-"40 ./spi.h
-[; ;./spi.h: 40: void SPIInit(void);
-[v _SPIInit `(v ~T0 @X0 0 ef ]
-"37 ./RF_LoRa_868_SO.h
-[; ;./RF_LoRa_868_SO.h: 37: void ResetRFModule(void);
-[v _ResetRFModule `(v ~T0 @X0 0 ef ]
-"38
-[; ;./RF_LoRa_868_SO.h: 38: void AntennaTX(void);
-[v _AntennaTX `(v ~T0 @X0 0 ef ]
-"248 ./SX1272.h
-[; ;./SX1272.h: 248: void WriteSXRegister(uint8_t address, uint8_t data);
-[v _WriteSXRegister `(v ~T0 @X0 0 ef2`uc`uc ]
-[v F5961 `(v ~T0 @X0 1 tf1`ul ]
-"187 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18.h
-[v __delay `JF5961 ~T0 @X0 0 e ]
-[p i __delay ]
-"250 ./SX1272.h
-[; ;./SX1272.h: 250: void GetMode (void);
-[v _GetMode `(v ~T0 @X0 0 ef ]
-"251
-[; ;./SX1272.h: 251: void InitModule (void);
-[v _InitModule `(v ~T0 @X0 0 ef ]
-"249
-[; ;./SX1272.h: 249: uint8_t ReadSXRegister(uint8_t address);
-[v _ReadSXRegister `(uc ~T0 @X0 0 ef1`uc ]
+"10275 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10275: extern volatile unsigned char EEADR __attribute__((address(0xFA9)));
+[v _EEADR `Vuc ~T0 @X0 0 e@4009 ]
+"10345
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10345: extern volatile unsigned char EEADRH __attribute__((address(0xFAA)));
+[v _EEADRH `Vuc ~T0 @X0 0 e@4010 ]
+"10255
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10255: extern volatile unsigned char EEDATA __attribute__((address(0xFA8)));
+[v _EEDATA `Vuc ~T0 @X0 0 e@4008 ]
+"10175
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10175:     struct {
+[s S469 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S469 . RD WR WREN WRERR FREE . CFGS EEPGD ]
+"10185
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10185:     struct {
+[s S470 :6 `uc 1 :1 `uc 1 ]
+[n S470 . . EEFS ]
+"10174
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10174: typedef union {
+[u S468 `S469 1 `S470 1 ]
+[n S468 . . . ]
+"10190
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 10190: extern volatile EECON1bits_t EECON1bits __attribute__((address(0xFA6)));
+[v _EECON1bits `VS468 ~T0 @X0 0 e@4006 ]
+"16932
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16932:     struct {
+[s S826 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S826 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
+"16942
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16942:     struct {
+[s S827 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S827 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
+"16952
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16952:     struct {
+[s S828 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S828 . . GIEL GIEH ]
+"16931
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16931: typedef union {
+[u S825 `S826 1 `S827 1 `S828 1 ]
+[n S825 . . . . ]
+"16958
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16958: extern volatile INTCONbits_t INTCONbits __attribute__((address(0xFF2)));
+[v _INTCONbits `VS825 ~T0 @X0 0 e@4082 ]
+"9737
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9737:     struct {
+[s S451 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S451 . CCP2IF TMR3IF HLVDIF BCL1IF EEIF C2IF C1IF OSCFIF ]
+"9747
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9747:     struct {
+[s S452 :2 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S452 . . LVDIF BCLIF ]
+"9752
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9752:     struct {
+[s S453 :6 `uc 1 :1 `uc 1 ]
+[n S453 . . CMIF ]
+"9736
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9736: typedef union {
+[u S450 `S451 1 `S452 1 `S453 1 ]
+[n S450 . . . . ]
+"9757
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 9757: extern volatile PIR2bits_t PIR2bits __attribute__((address(0xFA1)));
+[v _PIR2bits `VS450 ~T0 @X0 0 e@4001 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 54: __asm("ANSELA equ 0F38h");
 [; <" ANSELA equ 0F38h ;# ">
@@ -786,234 +820,99 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"7 LoRa_com.c
-[; ;LoRa_com.c: 7: void init_LORA_communication(){
-[v _init_LORA_communication `(v ~T0 @X0 1 ef ]
+"4 EEPROM.c
+[; ;EEPROM.c: 4: void writeEEPROM(UINT8_T address, UINT8_T data){
+[v _writeEEPROM `(v ~T0 @X0 1 ef2`uc`uc ]
 {
-[e :U _init_LORA_communication ]
+[e :U _writeEEPROM ]
+[v _address `uc ~T0 @X0 1 r1 ]
+[v _data `uc ~T0 @X0 1 r2 ]
 [f ]
+"6
+[; ;EEPROM.c: 6:     EEADR = address;
+[e = _EEADR _address ]
+"7
+[; ;EEPROM.c: 7:     EEADRH = 0x00;
+[e = _EEADRH -> -> 0 `i `uc ]
+"8
+[; ;EEPROM.c: 8:     EEDATA = data;
+[e = _EEDATA _data ]
+"9
+[; ;EEPROM.c: 9:     EECON1bits.EEPGD = 0;
+[e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
 "10
-[; ;LoRa_com.c: 10:     InitRFLoRaPins();
-[e ( _InitRFLoRaPins ..  ]
+[; ;EEPROM.c: 10:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
 "11
-[; ;LoRa_com.c: 11:     SPIInit();
-[e ( _SPIInit ..  ]
+[; ;EEPROM.c: 11:     EECON1bits.WREN = 1;
+[e = . . _EECON1bits 0 2 -> -> 1 `i `uc ]
 "12
-[; ;LoRa_com.c: 12:     ResetRFModule();
-[e ( _ResetRFModule ..  ]
-"14
-[; ;LoRa_com.c: 14:     AntennaTX();
-[e ( _AntennaTX ..  ]
+[; ;EEPROM.c: 12:     INTCONbits.GIE = 0;
+[e = . . _INTCONbits 1 7 -> -> 0 `i `uc ]
 "17
-[; ;LoRa_com.c: 17:     WriteSXRegister(0x01, 0x00);
-[e ( _WriteSXRegister (2 , -> -> 1 `i `uc -> -> 0 `i `uc ]
+[; ;EEPROM.c: 17:     __asm("MOVLW 0x55");
+[; <" MOVLW 0x55 ;# ">
 "18
-[; ;LoRa_com.c: 18:     WriteSXRegister(0x01, 0x80);
-[e ( _WriteSXRegister (2 , -> -> 1 `i `uc -> -> 128 `i `uc ]
+[; ;EEPROM.c: 18:     __asm("MOVWF EECON2");
+[; <" MOVWF EECON2 ;# ">
 "19
-[; ;LoRa_com.c: 19:     WriteSXRegister(0x01, 0x81);
-[e ( _WriteSXRegister (2 , -> -> 1 `i `uc -> -> 129 `i `uc ]
+[; ;EEPROM.c: 19:     __asm("MOVLW 0xAA");
+[; <" MOVLW 0xAA ;# ">
 "20
-[; ;LoRa_com.c: 20:     _delay((unsigned long)((100)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
+[; ;EEPROM.c: 20:     __asm("MOVWF EECON2");
+[; <" MOVWF EECON2 ;# ">
 "21
-[; ;LoRa_com.c: 21:     GetMode();
-[e ( _GetMode ..  ]
-"24
-[; ;LoRa_com.c: 24:     InitModule();
-[e ( _InitModule ..  ]
-"25
-[; ;LoRa_com.c: 25: }
-[e :UE 857 ]
-}
-"27
-[; ;LoRa_com.c: 27: void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity){
-[v _load_FIFO_with_temp_humidity_voltage `(v ~T0 @X0 1 ef6`uc`uc`uc`d`d`d ]
-{
-[e :U _load_FIFO_with_temp_humidity_voltage ]
-[v _id_trame `uc ~T0 @X0 1 r1 ]
-[v _id_reseau `uc ~T0 @X0 1 r2 ]
-[v _id_node `uc ~T0 @X0 1 r3 ]
-[v _battery_voltage `d ~T0 @X0 1 r4 ]
-[v _temperature `d ~T0 @X0 1 r5 ]
-[v _humidity `d ~T0 @X0 1 r6 ]
-[f ]
-"29
-[; ;LoRa_com.c: 29:         uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
-[v _b_temperature `uc ~T0 @X0 1 a ]
-[e = _b_temperature -> / * + _temperature -> -> 30 `i `d -> -> 255 `i `d -> -> 70 `i `d `uc ]
-"30
-[; ;LoRa_com.c: 30:         uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-[v _b_humidity `uc ~T0 @X0 1 a ]
-[e = _b_humidity -> / * _humidity -> -> 255 `i `d -> -> 100 `i `d `uc ]
-"31
-[; ;LoRa_com.c: 31:         uint8_t b_battery_voltage = (uint8_t)((battery_voltage - 2.75) * 1000);
-[v _b_battery_voltage `uc ~T0 @X0 1 a ]
-[e = _b_battery_voltage -> * - _battery_voltage .2.75 -> -> 1000 `i `d `uc ]
-"32
-[; ;LoRa_com.c: 32:         uint8_t txMsg[6];
-[v _txMsg `uc ~T0 @X0 -> 6 `i a ]
-"34
-[; ;LoRa_com.c: 34:         WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-[e ( _WriteSXRegister (2 , -> -> 13 `i `uc ( _ReadSXRegister (1 -> -> 14 `i `uc ]
-"35
-[; ;LoRa_com.c: 35:         WriteSXRegister(0x22, 6);
-[e ( _WriteSXRegister (2 , -> -> 34 `i `uc -> -> 6 `i `uc ]
-"37
-[; ;LoRa_com.c: 37:         txMsg[0] = id_trame;
-[e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_trame ]
-"38
-[; ;LoRa_com.c: 38:         txMsg[1] = id_reseau;
-[e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_reseau ]
-"39
-[; ;LoRa_com.c: 39:         txMsg[2] = id_node;
-[e = *U + &U _txMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
-"40
-[; ;LoRa_com.c: 40:         txMsg[3] = b_battery_voltage;
-[e = *U + &U _txMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_battery_voltage ]
-"41
-[; ;LoRa_com.c: 41:         txMsg[4] = b_temperature;
-[e = *U + &U _txMsg * -> -> -> 4 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_temperature ]
-"42
-[; ;LoRa_com.c: 42:         txMsg[5] = b_humidity;
-[e = *U + &U _txMsg * -> -> -> 5 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_humidity ]
-"44
-[; ;LoRa_com.c: 44:         for (int i = 0; i < 6; i++) {
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 6 `i 859  ]
-[e $U 860  ]
+[; ;EEPROM.c: 21:     __asm("BSF EECON1, 1, 0");
+[; <" BSF EECON1, 1, 0 ;# ">
+"23
+[; ;EEPROM.c: 23:     while(EECON1bits.WR){};
+[e $U 858  ]
 [e :U 859 ]
 {
-"45
-[; ;LoRa_com.c: 45:             WriteSXRegister(0x00, txMsg[i]);
-[e ( _WriteSXRegister (2 , -> -> 0 `i `uc *U + &U _txMsg * -> -> _i `ui `ux -> -> # *U &U _txMsg `ui `ux ]
-"46
-[; ;LoRa_com.c: 46:         }
 }
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 6 `i 859  ]
+[e :U 858 ]
+[e $ != -> . . _EECON1bits 0 1 `i -> 0 `i 859  ]
 [e :U 860 ]
+"25
+[; ;EEPROM.c: 25:     PIR2bits.EEIF = 0;
+[e = . . _PIR2bits 0 4 -> -> 0 `i `uc ]
+"26
+[; ;EEPROM.c: 26:     __asm("NOP");
+[; <" NOP ;# ">
+"27
+[; ;EEPROM.c: 27:     INTCONbits.GIE = 1;
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+"28
+[; ;EEPROM.c: 28: }
+[e :UE 857 ]
 }
-"47
-[; ;LoRa_com.c: 47: }
-[e :UE 858 ]
-}
-"49
-[; ;LoRa_com.c: 49: void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage){
-[v _load_FIFO_with_init_values `(v ~T0 @X0 1 ef4`uc`uc`uc`d ]
+"31
+[; ;EEPROM.c: 31: UINT8_T readEEPROM(UINT8_T address){
+[v _readEEPROM `(uc ~T0 @X0 1 ef1`uc ]
 {
-[e :U _load_FIFO_with_init_values ]
-[v _id_trame `uc ~T0 @X0 1 r1 ]
-[v _id_reseau `uc ~T0 @X0 1 r2 ]
-[v _id_node `uc ~T0 @X0 1 r3 ]
-[v _battery_voltage `d ~T0 @X0 1 r4 ]
+[e :U _readEEPROM ]
+[v _address `uc ~T0 @X0 1 r1 ]
 [f ]
-"52
-[; ;LoRa_com.c: 52:         uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 10));
-[v _b_battery_voltage `uc ~T0 @X0 1 a ]
-[e = _b_battery_voltage -> * _battery_voltage -> -> 10 `i `d `uc ]
-"53
-[; ;LoRa_com.c: 53:         uint8_t txMsg[4];
-[v _txMsg `uc ~T0 @X0 -> 4 `i a ]
-"55
-[; ;LoRa_com.c: 55:         WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-[e ( _WriteSXRegister (2 , -> -> 13 `i `uc ( _ReadSXRegister (1 -> -> 14 `i `uc ]
-"56
-[; ;LoRa_com.c: 56:         WriteSXRegister(0x22, 4);
-[e ( _WriteSXRegister (2 , -> -> 34 `i `uc -> -> 4 `i `uc ]
-"58
-[; ;LoRa_com.c: 58:         txMsg[0] = id_trame;
-[e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_trame ]
-"59
-[; ;LoRa_com.c: 59:         txMsg[1] = id_node;
-[e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
-"60
-[; ;LoRa_com.c: 60:         txMsg[2] = id_reseau;
-[e = *U + &U _txMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_reseau ]
-"61
-[; ;LoRa_com.c: 61:         txMsg[3] = b_battery_voltage;
-[e = *U + &U _txMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_battery_voltage ]
-"63
-[; ;LoRa_com.c: 63:         for (int i = 0; i < 6; i++) {
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 6 `i 863  ]
-[e $U 864  ]
-[e :U 863 ]
-{
-"64
-[; ;LoRa_com.c: 64:             WriteSXRegister(0x00, txMsg[i]);
-[e ( _WriteSXRegister (2 , -> -> 0 `i `uc *U + &U _txMsg * -> -> _i `ui `ux -> -> # *U &U _txMsg `ui `ux ]
-"65
-[; ;LoRa_com.c: 65:         }
-}
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 6 `i 863  ]
-[e :U 864 ]
-}
-"66
-[; ;LoRa_com.c: 66: }
-[e :UE 862 ]
-}
-"68
-[; ;LoRa_com.c: 68: void set_TX_and_transmit(void){
-[v _set_TX_and_transmit `(v ~T0 @X0 1 ef ]
-{
-[e :U _set_TX_and_transmit ]
-[f ]
-"70
-[; ;LoRa_com.c: 70:         WriteSXRegister(0x01, 0x83);
-[e ( _WriteSXRegister (2 , -> -> 1 `i `uc -> -> 131 `i `uc ]
-"71
-[; ;LoRa_com.c: 71:         _delay((unsigned long)((100)*(8000000UL/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"73
-[; ;LoRa_com.c: 73: }
-[e :UE 866 ]
-}
-"75
-[; ;LoRa_com.c: 75: void wait_for_transmission(){
-[v _wait_for_transmission `(v ~T0 @X0 1 ef ]
-{
-[e :U _wait_for_transmission ]
-[f ]
-"77
-[; ;LoRa_com.c: 77:     uint8_t reg_val = ReadSXRegister(0x12);
-[v _reg_val `uc ~T0 @X0 1 a ]
-[e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"78
-[; ;LoRa_com.c: 78:     while (reg_val & 0x08 == 0x00) {
-[e $U 868  ]
-[e :U 869 ]
-{
-"79
-[; ;LoRa_com.c: 79:         reg_val = ReadSXRegister(0x12);
-[e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"80
-[; ;LoRa_com.c: 80:     }
-}
-[e :U 868 ]
-"78
-[; ;LoRa_com.c: 78:     while (reg_val & 0x08 == 0x00) {
-[e $ != & -> _reg_val `i -> == -> 8 `i -> 0 `i `i -> 0 `i 869  ]
-[e :U 870 ]
-"81
-[; ;LoRa_com.c: 81: }
-[e :UE 867 ]
-}
-"83
-[; ;LoRa_com.c: 83: void reset_IRQs(){
-[v _reset_IRQs `(v ~T0 @X0 1 ef ]
-{
-[e :U _reset_IRQs ]
-[f ]
-"85
-[; ;LoRa_com.c: 85:     WriteSXRegister(0x12, 0xFF);
-[e ( _WriteSXRegister (2 , -> -> 18 `i `uc -> -> 255 `i `uc ]
-"86
-[; ;LoRa_com.c: 86: }
-[e :UE 871 ]
+"32
+[; ;EEPROM.c: 32:     EEADR = address;
+[e = _EEADR _address ]
+"33
+[; ;EEPROM.c: 33:     EEADRH = 0x00;
+[e = _EEADRH -> -> 0 `i `uc ]
+"34
+[; ;EEPROM.c: 34:     EECON1bits.EEPGD = 0;
+[e = . . _EECON1bits 0 7 -> -> 0 `i `uc ]
+"35
+[; ;EEPROM.c: 35:     EECON1bits.CFGS = 0;
+[e = . . _EECON1bits 0 6 -> -> 0 `i `uc ]
+"36
+[; ;EEPROM.c: 36:     EECON1bits.RD = 1;
+[e = . . _EECON1bits 0 0 -> -> 1 `i `uc ]
+"37
+[; ;EEPROM.c: 37:     return EEDATA;
+[e ) _EEDATA ]
+[e $UE 861  ]
+"38
+[; ;EEPROM.c: 38: }
+[e :UE 861 ]
 }

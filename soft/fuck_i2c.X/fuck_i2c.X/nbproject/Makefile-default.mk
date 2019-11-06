@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=i2c.c test_i2c.c SX1272.c uart.c spi.c RF_LoRa_868_SO.c LoRa_com.c init_F43K22.c
+SOURCEFILES_QUOTED_IF_SPACED=i2c.c test_i2c.c SX1272.c uart.c spi.c RF_LoRa_868_SO.c LoRa_com.c init_F43K22.c EEPROM.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/test_i2c.p1 ${OBJECTDIR}/SX1272.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/RF_LoRa_868_SO.p1 ${OBJECTDIR}/LoRa_com.p1 ${OBJECTDIR}/init_F43K22.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/i2c.p1.d ${OBJECTDIR}/test_i2c.p1.d ${OBJECTDIR}/SX1272.p1.d ${OBJECTDIR}/uart.p1.d ${OBJECTDIR}/spi.p1.d ${OBJECTDIR}/RF_LoRa_868_SO.p1.d ${OBJECTDIR}/LoRa_com.p1.d ${OBJECTDIR}/init_F43K22.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/test_i2c.p1 ${OBJECTDIR}/SX1272.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/RF_LoRa_868_SO.p1 ${OBJECTDIR}/LoRa_com.p1 ${OBJECTDIR}/init_F43K22.p1 ${OBJECTDIR}/EEPROM.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/i2c.p1.d ${OBJECTDIR}/test_i2c.p1.d ${OBJECTDIR}/SX1272.p1.d ${OBJECTDIR}/uart.p1.d ${OBJECTDIR}/spi.p1.d ${OBJECTDIR}/RF_LoRa_868_SO.p1.d ${OBJECTDIR}/LoRa_com.p1.d ${OBJECTDIR}/init_F43K22.p1.d ${OBJECTDIR}/EEPROM.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/test_i2c.p1 ${OBJECTDIR}/SX1272.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/RF_LoRa_868_SO.p1 ${OBJECTDIR}/LoRa_com.p1 ${OBJECTDIR}/init_F43K22.p1
+OBJECTFILES=${OBJECTDIR}/i2c.p1 ${OBJECTDIR}/test_i2c.p1 ${OBJECTDIR}/SX1272.p1 ${OBJECTDIR}/uart.p1 ${OBJECTDIR}/spi.p1 ${OBJECTDIR}/RF_LoRa_868_SO.p1 ${OBJECTDIR}/LoRa_com.p1 ${OBJECTDIR}/init_F43K22.p1 ${OBJECTDIR}/EEPROM.p1
 
 # Source Files
-SOURCEFILES=i2c.c test_i2c.c SX1272.c uart.c spi.c RF_LoRa_868_SO.c LoRa_com.c init_F43K22.c
+SOURCEFILES=i2c.c test_i2c.c SX1272.c uart.c spi.c RF_LoRa_868_SO.c LoRa_com.c init_F43K22.c EEPROM.c
 
 
 
@@ -158,6 +158,14 @@ ${OBJECTDIR}/init_F43K22.p1: init_F43K22.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/init_F43K22.d ${OBJECTDIR}/init_F43K22.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/init_F43K22.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/EEPROM.p1: EEPROM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/EEPROM.p1.d 
+	@${RM} ${OBJECTDIR}/EEPROM.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/EEPROM.p1 EEPROM.c 
+	@-${MV} ${OBJECTDIR}/EEPROM.d ${OBJECTDIR}/EEPROM.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/EEPROM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/i2c.p1: i2c.c  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
@@ -222,6 +230,14 @@ ${OBJECTDIR}/init_F43K22.p1: init_F43K22.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/init_F43K22.p1 init_F43K22.c 
 	@-${MV} ${OBJECTDIR}/init_F43K22.d ${OBJECTDIR}/init_F43K22.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/init_F43K22.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/EEPROM.p1: EEPROM.c  nbproject/Makefile-${CND_CONF}.mk
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/EEPROM.p1.d 
+	@${RM} ${OBJECTDIR}/EEPROM.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/EEPROM.p1 EEPROM.c 
+	@-${MV} ${OBJECTDIR}/EEPROM.d ${OBJECTDIR}/EEPROM.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/EEPROM.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 

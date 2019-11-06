@@ -102,6 +102,7 @@
 #include "general.h"
 #include "LoRa_com.h"
 #include "i2c.h"
+#include "EEPROM.h"
 
 #include "init_F43K22.h"
 
@@ -190,8 +191,17 @@ int main(int argc, char** argv) {
     
     measure_battery();
     
+    // get data from eeprom
+    id_node = readEEPROM(0x00);
+    id_reseau = readEEPROM(0x01);
+    
+    // for fun, to test EEPROM
+    writeEEPROM(0x00, id_node + 1);
+    writeEEPROM(0x01, id_reseau + 2);
+    
+    
     // load fifo
-    load_FIFO_with_init_values(0, 0xFF, 0xFF, battery_voltage);
+    load_FIFO_with_init_values(0, id_node, id_reseau, battery_voltage);
     
     // set Lora mode in TX mode to send data
     set_TX_and_transmit();

@@ -7,4 +7,5 @@ uart.h  \
 SX1272.h  \
 RF_LoRa_868_SO.h  \
 i2c.h  \
+EEPROM.h  \
 init_F43K22.h 

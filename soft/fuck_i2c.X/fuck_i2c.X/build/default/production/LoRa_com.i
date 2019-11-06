@@ -9753,7 +9753,6 @@ char *tempnam(const char *, const char *);
 # 36 "./LoRa_com.h" 2
 
 
-
 # 1 "./spi.h" 1
 # 14 "./spi.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.10\\pic\\include\\c99\\stdint.h" 1 3
@@ -9844,7 +9843,7 @@ typedef uint32_t uint_fast32_t;
 void SPIInit(void);
 void SPITransfer (UINT8_T data_out);
 UINT8_T SPIReceive (UINT8_T data_out);
-# 39 "./LoRa_com.h" 2
+# 38 "./LoRa_com.h" 2
 
 # 1 "./uart.h" 1
 # 14 "./uart.h"
@@ -9854,7 +9853,7 @@ void UARTWriteByte(UINT8_T data);
 void UARTWriteStr(char *Str);
 void UARTWriteStrLn(char *Str);
 void UARTWriteByteHex(UINT8_T data);
-# 40 "./LoRa_com.h" 2
+# 39 "./LoRa_com.h" 2
 
 # 1 "./SX1272.h" 1
 # 248 "./SX1272.h"
@@ -9864,14 +9863,14 @@ void GetMode (void);
 void InitModule (void);
 void PrintSXRegContent(uint8_t address);
 void CheckConfiguration (void);
-# 41 "./LoRa_com.h" 2
+# 40 "./LoRa_com.h" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
 # 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);
-# 42 "./LoRa_com.h" 2
+# 41 "./LoRa_com.h" 2
 
 
 void init_LORA_communication();
@@ -9917,8 +9916,8 @@ void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, u
         WriteSXRegister(0x22, 6);
 
         txMsg[0] = id_trame;
-        txMsg[1] = id_node;
-        txMsg[2] = id_reseau;
+        txMsg[1] = id_reseau;
+        txMsg[2] = id_node;
         txMsg[3] = b_battery_voltage;
         txMsg[4] = b_temperature;
         txMsg[5] = b_humidity;
