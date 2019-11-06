@@ -10009,8 +10009,7 @@ void i2c_NAK(void);
     double volts=0.0;
 
     double humidity = 0.0;
-    double humidity2 = 0.0;
-    double humidity3 = 0.0;
+
     UINT16_T volts_cV;
     UINT16_T ADC_result;
     UINT16_T temp_AT = 0;
@@ -10018,25 +10017,22 @@ void i2c_NAK(void);
     int16_t i;
     BOOL send_data;
     UINT16_T timer_tick;
-    UINT8_T humidity_HIH6021_H = 0;
-    UINT8_T humidity_HIH6021_L = 0;
-    UINT8_T temperature_HIH6021_H = 0;
-    UINT8_T temperature_HIH6021_L = 0;
+
+
+
     UINT16_T temperatureHL=0;
     UINT16_T humidityHL=0;
     double temperature = 0.0;
-    double temperature2 = 0.0;
-    double temperature3 = 0.0;
-    double temperature4 = 0.0;
     double volts_divider = 0.0;
+
     uint8_t txMsg[6];
-    uint8_t txPremiereTrame[6];
     uint8_t idT=0;
     uint8_t idR=0xFF;
     uint8_t idN=0xFF;
     uint8_t var1=0xFF;
     uint8_t var2=0xFF;
     double battery_voltage = 3.0;
+
     void measure_battery(void);
     void measure_humidity_temp_HIH6021(void);
 
@@ -10064,33 +10060,33 @@ int main(int argc, char** argv) {
     i2c_init();
     (INTCONbits.GIE = 1);
 
-    txPremiereTrame[0] = idT;
-    txPremiereTrame[1] = idN;
-    txPremiereTrame[2] = idR;
-    txPremiereTrame[3] = battery_voltage_int;
-    txPremiereTrame[4] = idN;
-    txPremiereTrame[5] = idR;
+
+
+
+
+    txMsg[0] = idT;
+    txMsg[1] = idN;
+    txMsg[2] = idR;
+    txMsg[3] = battery_voltage_int;
+
     WriteSXRegister(0x0D, ReadSXRegister(0x0E));
     WriteSXRegister(0x22, 4);
-    for (i = 0; i < 4; i++) {
-        WriteSXRegister(0x00, txPremiereTrame[i]);
-    }
 
+    for (i = 0; i < 4; i++) {
+        WriteSXRegister(0x00, txMsg[i]);
+    }
     _delay((unsigned long)((1)*(8000000UL/4000.0)));
 
 
     WriteSXRegister(0x01, 0x83);
     _delay((unsigned long)((100)*(8000000UL/4000.0)));
-    GetMode();
 
 
     reg_val = ReadSXRegister(0x12);
     while (reg_val & 0x08 == 0x00) {
         reg_val = ReadSXRegister(0x12);
     }
-
     _delay((unsigned long)((200)*(8000000UL/4000.0)));
-
 
 
     UARTWriteStrLn(" ");
@@ -10102,17 +10098,17 @@ int main(int argc, char** argv) {
     WriteSXRegister(0x12, 0xFF);
 
 
+
+
     while(1){
         measure_humidity_temp_HIH6021();
 
-
-
-
-
-        uint8_t b_temperature = (uint8_t)(((temperature4 + 30) * 255) / 70);
-        uint8_t b_humidity = (uint8_t)((humidity3 * 255) / 100);
+        uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
+        uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
         uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
-
+# 246 "test_i2c.c"
+        WriteSXRegister(0x0D, ReadSXRegister(0x0E));
+        WriteSXRegister(0x22, 6);
 
         txMsg[0] = 1;
         txMsg[1] = id_node;
@@ -10120,15 +10116,6 @@ int main(int argc, char** argv) {
         txMsg[3] = 3;
         txMsg[4] = b_temperature;
         txMsg[5] = b_humidity;
-
-
-
-
-
-
-        WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-        WriteSXRegister(0x22, 6);
-# 266 "test_i2c.c"
         for (i = 0; i < 6; i++) {
             WriteSXRegister(0x00, txMsg[i]);
         }
@@ -10157,7 +10144,9 @@ int main(int argc, char** argv) {
         UARTWriteByteHex(reg_val);
 
         WriteSXRegister(0x12, 0xFF);
-# 304 "test_i2c.c"
+
+
+
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
@@ -10187,10 +10176,10 @@ void measure_battery(void)
 
 
     ADC_result = (ADRESH << 8 )|ADRESL;
-# 351 "test_i2c.c"
+# 333 "test_i2c.c"
     volts = (2.048/1023)*ADC_result;
     battery_voltage = volts *(2.115);
-# 365 "test_i2c.c"
+# 347 "test_i2c.c"
     accu_v = (UINT16_T)(battery_voltage * 100);
     accu_v2 = (UINT16_T)(battery_voltage*100);
     bat_voltage_unit = (accu_v/100);
@@ -10207,12 +10196,19 @@ void measure_battery(void)
 
 
 void measure_humidity_temp_HIH6021(void){
+    UINT8_T humidity_HIH6021_H = 0;
+    UINT8_T humidity_HIH6021_L = 0;
+    UINT8_T temperature_HIH6021_H = 0;
+    UINT8_T temperature_HIH6021_L = 0;
+
 
     i2c_start();
 
-    i2c_write((0x27) << 1 |0 );
+    i2c_write((0x27) << 1 | 0 );
     i2c_stop();
+
     _delay((unsigned long)((40)*(8000000UL/4000.0)));
+
 
     i2c_start();
     i2c_write((0x27) << 1 | 1);
@@ -10235,12 +10231,9 @@ void measure_humidity_temp_HIH6021(void){
     temperatureHL >> 2;
 
 
-    humidity = (double)humidityHL;
-    humidity2 = humidity/16382;
-    humidity3 = humidity2*100;
 
-    temperature = (double)temperatureHL;
-    temperature2 = temperature /16382;
-    temperature3 =temperature2*165;
-    temperature4=temperature3-40;
+
+    humidity = ( ( (double)humidityHL ) / 16382 )*100;
+    temperature = ( ( ( (double)temperatureHL ) /16382 )*165 ) - 40;
+
 }

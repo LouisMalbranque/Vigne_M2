@@ -136,8 +136,7 @@
     double volts=0.0;                     // voltage in Volts
     //double battery_voltage=0.0;             //Taking into account the resistive divider
     double humidity = 0.0;
-    double humidity2 = 0.0;
-    double humidity3 = 0.0;
+
     UINT16_T volts_cV;               // voltage in centiVolts
     UINT16_T ADC_result; 
     UINT16_T temp_AT = 0;
@@ -145,25 +144,22 @@
     int16_t i;
     BOOL send_data;
     UINT16_T timer_tick;
-    UINT8_T humidity_HIH6021_H = 0;
-    UINT8_T humidity_HIH6021_L = 0;
-    UINT8_T temperature_HIH6021_H = 0;
-    UINT8_T temperature_HIH6021_L = 0;
+    
+
+    
     UINT16_T temperatureHL=0;
     UINT16_T humidityHL=0;
     double temperature = 0.0;
-    double temperature2 = 0.0;
-    double temperature3 = 0.0;
-    double temperature4 = 0.0;
     double volts_divider = 0.0;
+    
     uint8_t txMsg[6];
-    uint8_t txPremiereTrame[6];
     uint8_t idT=0;
     uint8_t idR=0xFF;
     uint8_t idN=0xFF;
     uint8_t var1=0xFF;
     uint8_t var2=0xFF;
     double battery_voltage = 3.0;
+    
     void measure_battery(void);
     void measure_humidity_temp_HIH6021(void);
 
@@ -190,34 +186,34 @@ int main(int argc, char** argv) {
 
     i2c_init();
     ei();                         // enable interrupt
+    
+    
+    
+    
     /*Sending the 1st frame after switching on*/
-    txPremiereTrame[0] = idT;
-    txPremiereTrame[1] = idN;
-    txPremiereTrame[2] = idR;
-    txPremiereTrame[3] = battery_voltage_int;
-    txPremiereTrame[4] = idN;
-    txPremiereTrame[5] = idR;
+    txMsg[0] = idT;
+    txMsg[1] = idN;
+    txMsg[2] = idR;
+    txMsg[3] = battery_voltage_int;
+    
     WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
     WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_0);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
+    
     for (i = 0; i < PAYLOAD_LENGTH_0; i++) {
-        WriteSXRegister(REG_FIFO, txPremiereTrame[i]);         // load FIFO with data to transmit  
+        WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
     }
-        
     __delay_ms(1);
         
     // set mode to LoRa TX
     WriteSXRegister(REG_OP_MODE, LORA_TX_MODE);
     __delay_ms(100);                                    // delay required to start oscillator and PLL
-    GetMode();
         
     // wait end of transmission
     reg_val = ReadSXRegister(REG_IRQ_FLAGS);
     while (reg_val & 0x08 == 0x00) {                    // wait for end of transmission (wait until TxDone is set)
         reg_val = ReadSXRegister(REG_IRQ_FLAGS);
     }
-        
     __delay_ms(200);        // delay is required before checking mode: it takes some time to go from TX mode to STDBY mode
-    //GetMode();              // check that mode is back to STDBY
         
     // reset all IRQs
     UARTWriteStrLn(" ");
@@ -227,42 +223,35 @@ int main(int argc, char** argv) {
     UARTWriteByteHex(reg_val);
         
     WriteSXRegister(REG_IRQ_FLAGS, 0xFF);           // clear flags: writing 1 clears flag
+    
     /*Here, we have to check if the sensor is already known by the central station. */
     /*1st, we have to check if the sensor's id is already stored in the*/
+    
     while(1){
         measure_humidity_temp_HIH6021();
+        
+        uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
+        uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
+        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
+        
         //measure_battery();
         //load_FIFO_with_temp_humidity_voltage(temperature,humidity,battery_voltage,txBuffer,id_node,id_reseau,1);
         //set_TX_and_transmit();
         //has_transmitted(reg_val);
         //reset_IRQs(reg_val);
-        uint8_t b_temperature = (uint8_t)(((temperature4 + 30) * 255) / 70);
-        uint8_t b_humidity = (uint8_t)((humidity3 * 255) / 100);
-        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
         
         
+        
+        
+        WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
+        WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
+
         txMsg[0] = 1;
         txMsg[1] = id_node;
         txMsg[2] = id_reseau;
         txMsg[3] = 3;//b_battery_voltage;
         txMsg[4] = b_temperature;
         txMsg[5] = b_humidity;
-        
-         // load FIFO with data to transmit
-        //strcpy(( char* )txBuffer, ( char* )txMsg);          // load txBuffer with content of txMsg
-                                                        // txMsg is a table of constant values, so it is stored in Flash Memory
-                                                        // txBuffer is a table of variables, so it is stored in RAM
-        
-        WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
-        WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
-
-        /*WriteSXRegister(REG_FIFO,1);
-        WriteSXRegister(REG_FIFO,id_node);
-        WriteSXRegister(REG_FIFO,id_reseau);
-        WriteSXRegister(REG_FIFO,battery_voltage_int);
-        WriteSXRegister(REG_FIFO,b_temperature);
-        WriteSXRegister(REG_FIFO,b_humidity);*/
-        
         for (i = 0; i < PAYLOAD_LENGTH_1; i++) {
             WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
         }
@@ -292,15 +281,8 @@ int main(int argc, char** argv) {
         
         WriteSXRegister(REG_IRQ_FLAGS, 0xFF);           // clear flags: writing 1 clears flag
 
-        // check that flags are actually cleared (useless if not debugging)
-        /*reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-        UARTWriteStr("after clear: REG_IRQ_FLAGS = 0x");
-        UARTWriteByteHex(reg_val);*/
-        
         // wait before next transmission
-        /*for (i = 0; i < 4; i++) {
-           __delay_ms(500);  
-        }*/
+
         __delay_ms(10000);
         __delay_ms(10000);
         __delay_ms(10000);
@@ -378,12 +360,19 @@ void measure_battery(void)
  * A computing is then used on these 4 bytes in order to have the matching temp and humidity
  */
 void measure_humidity_temp_HIH6021(void){
+    UINT8_T humidity_HIH6021_H = 0;
+    UINT8_T humidity_HIH6021_L = 0;
+    UINT8_T temperature_HIH6021_H = 0;
+    UINT8_T temperature_HIH6021_L = 0;
+    
     
     i2c_start();//I2C bus initialization
     /*Wake up the sensor*/
-    i2c_write((0x27) << 1 |WRITE );//Reaching the slave's address, and put a WRITE
+    i2c_write((0x27) << 1 | WRITE );//Reaching the slave's address, and put a WRITE
     i2c_stop();
-    __delay_ms(40);
+    
+    __delay_ms(40); // mandatory delay to let the sensor mesure (36.65 ms according to datasheet)
+    
     /*Once started, we retrieve the datas measured*/
     i2c_start();
     i2c_write((0x27) << 1 | READ);//First byte to send, which is the I2C address and a "1" bit at last (which match a READ state)
@@ -405,13 +394,10 @@ void measure_humidity_temp_HIH6021(void){
     temperatureHL = (temperature_HIH6021_H << 6 | temperature_HIH6021_L);//1st byte shifted by 8 bits on the left, and datasheet says do "not care" about the last 2 bytes.
     temperatureHL >> 2;
                                                                          //so we do not care
-    //humidity = (((double)humidityHL)/(((2^14)-2)))*100;//Use the humidity conversion formula provided by the datasheet
-    humidity = (double)humidityHL;
-    humidity2 = humidity/16382;
-    humidity3 = humidity2*100;
-    //temperature = ((((double)temperatureHL) / (((2^14)-2)))*165)-40;//Same as above, but with the temperature conversion formula
-    temperature = (double)temperatureHL;
-    temperature2 = temperature /16382;
-    temperature3 =temperature2*165;
-    temperature4=temperature3-40;
+    
+    
+    // convert 14bit value into double value 
+    humidity = ( ( (double)humidityHL ) / 16382 )*100; //Use the humidity conversion formula provided by the datasheet
+    temperature = ( ( ( (double)temperatureHL ) /16382 )*165 ) - 40;
+
 }
