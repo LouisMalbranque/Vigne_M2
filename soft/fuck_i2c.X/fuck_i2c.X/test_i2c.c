@@ -201,7 +201,7 @@ int main(int argc, char** argv) {
     
     
     // load fifo
-    load_FIFO_with_init_values(0, id_node, id_reseau, battery_voltage);
+    load_FIFO_with_init_values(0, id_reseau, id_node, battery_voltage);
     
     // set Lora mode in TX mode to send data
     set_TX_and_transmit();
@@ -217,7 +217,7 @@ int main(int argc, char** argv) {
         measure_battery();
         
         // load fifo with data
-        load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);
+        load_FIFO_with_temp_humidity_voltage(1, id_reseau, id_node, battery_voltage, temperature, humidity);
         
         // set Lora mode in TX mode to send data
         set_TX_and_transmit();
