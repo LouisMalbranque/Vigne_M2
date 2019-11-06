@@ -183,35 +183,11 @@ int main(int argc, char** argv) {
     bat_voltage0 = 0;
     //uint8_t txMsg[6];
     
-   init_F46K22_CLK();
-   init_F46K22_IO();
-   init_F46K22_ADC();
-   init_F46K22_AN();
-   init_F46K22_TMR();
+    UARTInit(19200);            // init UART @ 19200 bps
+    
     // ***** I2C configuration *****
-    init_LORA_communication(19200);
-    /*UARTInit(19200);            // init UART @ 19200 bps
-    InitRFLoRaPins();           // configure pins for RF Solutions LoRa module   
-    SPIInit();                  // init SPI   
-    ResetRFModule();            // reset the RF Solutions LoRa module (should be optional since Power On Reset is implemented)
-    
-    AntennaTX();                // connect antenna to module output
-    
-    // put module in LoRa mode (see SX1272 datasheet page 107)
-    UARTWriteStrLn("set mode to LoRa standby");
+    init_LORA_communication();
 
-    WriteSXRegister(REG_OP_MODE, FSK_SLEEP_MODE);       // SLEEP mode required first to change bit n°7
-    WriteSXRegister(REG_OP_MODE, LORA_SLEEP_MODE);      // switch from FSK mode to LoRa mode
-    WriteSXRegister(REG_OP_MODE, LORA_STANDBY_MODE);    // STANDBY mode required fot FIFO loading
-    __delay_ms(100);
-    GetMode();
-    
-    // initialize the module
-    UARTWriteStrLn("initialize module ");
-    InitModule();
-    
-    // for debugging purpose only: check configuration registers content
-    CheckConfiguration();*/
     i2c_init();
     ei();                         // enable interrupt
     /*Sending the 1st frame after switching on*/
@@ -222,8 +198,8 @@ int main(int argc, char** argv) {
     txPremiereTrame[4] = idN;
     txPremiereTrame[5] = idR;
     WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
-    WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
-    for (i = 0; i < PAYLOAD_LENGTH; i++) {
+    WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_0);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
+    for (i = 0; i < PAYLOAD_LENGTH_0; i++) {
         WriteSXRegister(REG_FIFO, txPremiereTrame[i]);         // load FIFO with data to transmit  
     }
         
@@ -278,7 +254,7 @@ int main(int argc, char** argv) {
                                                         // txBuffer is a table of variables, so it is stored in RAM
         
         WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
-        WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
+        WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
 
         /*WriteSXRegister(REG_FIFO,1);
         WriteSXRegister(REG_FIFO,id_node);
@@ -287,7 +263,7 @@ int main(int argc, char** argv) {
         WriteSXRegister(REG_FIFO,b_temperature);
         WriteSXRegister(REG_FIFO,b_humidity);*/
         
-        for (i = 0; i < PAYLOAD_LENGTH; i++) {
+        for (i = 0; i < PAYLOAD_LENGTH_1; i++) {
             WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
         }
         

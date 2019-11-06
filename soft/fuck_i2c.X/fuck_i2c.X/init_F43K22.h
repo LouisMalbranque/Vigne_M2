@@ -17,7 +17,8 @@
 #ifdef	__cplusplus
 extern "C" {
 #endif
-
+    
+    void init_F46K22(void);
     void init_F46K22_CLK(void);
     void init_F23K20_CLK(void);
     void init_F46K22_IO(void);

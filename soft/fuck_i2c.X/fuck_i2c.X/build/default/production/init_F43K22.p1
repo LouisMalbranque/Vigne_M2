@@ -1,4 +1,19 @@
 Version 4.0 HI-TECH Software Intermediate Code
+"22 ./init_F43K22.h
+[; ;./init_F43K22.h: 22:     void init_F46K22_CLK(void);
+[v _init_F46K22_CLK `(v ~T0 @X0 0 ef ]
+"24
+[; ;./init_F43K22.h: 24:     void init_F46K22_IO(void);
+[v _init_F46K22_IO `(v ~T0 @X0 0 ef ]
+"26
+[; ;./init_F43K22.h: 26:     void init_F46K22_ADC(void);
+[v _init_F46K22_ADC `(v ~T0 @X0 0 ef ]
+"28
+[; ;./init_F43K22.h: 28:     void init_F46K22_AN(void);
+[v _init_F46K22_AN `(v ~T0 @X0 0 ef ]
+"30
+[; ;./init_F43K22.h: 30:     void init_F46K22_TMR(void);
+[v _init_F46K22_TMR `(v ~T0 @X0 0 ef ]
 "16052 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 16052:     struct {
 [s S761 :2 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 ]
@@ -983,245 +998,270 @@ Version 4.0 HI-TECH Software Intermediate Code
 "17406
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.10\pic\include\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
-"5 init_F43K22.c
-[; ;init_F43K22.c: 5: void init_F46K22_CLK(void){
+"4 init_F43K22.c
+[; ;init_F43K22.c: 4: void init_F46K22(void){
+[v _init_F46K22 `(v ~T0 @X0 1 ef ]
+{
+[e :U _init_F46K22 ]
+[f ]
+"5
+[; ;init_F43K22.c: 5:    init_F46K22_CLK();
+[e ( _init_F46K22_CLK ..  ]
+"6
+[; ;init_F43K22.c: 6:    init_F46K22_IO();
+[e ( _init_F46K22_IO ..  ]
+"7
+[; ;init_F43K22.c: 7:    init_F46K22_ADC();
+[e ( _init_F46K22_ADC ..  ]
+"8
+[; ;init_F43K22.c: 8:    init_F46K22_AN();
+[e ( _init_F46K22_AN ..  ]
+"9
+[; ;init_F43K22.c: 9:    init_F46K22_TMR();
+[e ( _init_F46K22_TMR ..  ]
+"10
+[; ;init_F43K22.c: 10: }
+[e :UE 857 ]
+}
+"14
+[; ;init_F43K22.c: 14: void init_F46K22_CLK(void){
 [v _init_F46K22_CLK `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F46K22_CLK ]
 [f ]
-"7
-[; ;init_F43K22.c: 7:     OSCCONbits.IDLEN = 0;
+"16
+[; ;init_F43K22.c: 16:     OSCCONbits.IDLEN = 0;
 [e = . . _OSCCONbits 0 4 -> -> 0 `i `uc ]
-"8
-[; ;init_F43K22.c: 8:     OSCCONbits.IRCF = 0b110;
+"17
+[; ;init_F43K22.c: 17:     OSCCONbits.IRCF = 0b110;
 [e = . . _OSCCONbits 0 3 -> -> 6 `i `uc ]
-"9
-[; ;init_F43K22.c: 9:     OSCCONbits.OSTS = 1;
+"18
+[; ;init_F43K22.c: 18:     OSCCONbits.OSTS = 1;
 [e = . . _OSCCONbits 0 2 -> -> 1 `i `uc ]
-"10
-[; ;init_F43K22.c: 10:     OSCCONbits.HFIOFS = 1;
+"19
+[; ;init_F43K22.c: 19:     OSCCONbits.HFIOFS = 1;
 [e = . . _OSCCONbits 0 1 -> -> 1 `i `uc ]
-"11
-[; ;init_F43K22.c: 11:     OSCCONbits.SCS0 = 0;
+"20
+[; ;init_F43K22.c: 20:     OSCCONbits.SCS0 = 0;
 [e = . . _OSCCONbits 1 0 -> -> 0 `i `uc ]
-"12
-[; ;init_F43K22.c: 12:     OSCCONbits.SCS1 = 0;
+"21
+[; ;init_F43K22.c: 21:     OSCCONbits.SCS1 = 0;
 [e = . . _OSCCONbits 1 1 -> -> 0 `i `uc ]
-"13
-[; ;init_F43K22.c: 13: }
-[e :UE 849 ]
+"22
+[; ;init_F43K22.c: 22: }
+[e :UE 858 ]
 }
-"15
-[; ;init_F43K22.c: 15: void init_F23K20_CLK(void){
+"24
+[; ;init_F43K22.c: 24: void init_F23K20_CLK(void){
 [v _init_F23K20_CLK `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F23K20_CLK ]
 [f ]
-"17
-[; ;init_F43K22.c: 17:     OSCCON = 0b01101100;
+"26
+[; ;init_F43K22.c: 26:     OSCCON = 0b01101100;
 [e = _OSCCON -> -> 108 `i `uc ]
-"18
-[; ;init_F43K22.c: 18: }
-[e :UE 850 ]
+"27
+[; ;init_F43K22.c: 27: }
+[e :UE 859 ]
 }
-"21
-[; ;init_F43K22.c: 21: void init_F46K22_IO(void){
+"30
+[; ;init_F43K22.c: 30: void init_F46K22_IO(void){
 [v _init_F46K22_IO `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F46K22_IO ]
 [f ]
-"28
-[; ;init_F43K22.c: 28:     TRISAbits.TRISA0 = 1;
+"37
+[; ;init_F43K22.c: 37:     TRISAbits.TRISA0 = 1;
 [e = . . _TRISAbits 0 0 -> -> 1 `i `uc ]
-"32
-[; ;init_F43K22.c: 32:     TRISDbits.TRISD0 = 1;
+"41
+[; ;init_F43K22.c: 41:     TRISDbits.TRISD0 = 1;
 [e = . . _TRISDbits 0 0 -> -> 1 `i `uc ]
-"33
-[; ;init_F43K22.c: 33:     TRISDbits.TRISD1 = 1;
-[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
-"34
-[; ;init_F43K22.c: 34:     TRISDbits.TRISD3 = 1;
-[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
-"35
-[; ;init_F43K22.c: 35:     TRISDbits.TRISD4 = 1;
-[e = . . _TRISDbits 0 4 -> -> 1 `i `uc ]
-"38
-[; ;init_F43K22.c: 38:     TRISCbits.TRISC3 = 1;
-[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
-"39
-[; ;init_F43K22.c: 39:     TRISCbits.TRISC4 = 1;
-[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
-"40
-[; ;init_F43K22.c: 40: }
-[e :UE 851 ]
-}
 "42
-[; ;init_F43K22.c: 42: void init_F23K20_IO(void){
+[; ;init_F43K22.c: 42:     TRISDbits.TRISD1 = 1;
+[e = . . _TRISDbits 0 1 -> -> 1 `i `uc ]
+"43
+[; ;init_F43K22.c: 43:     TRISDbits.TRISD3 = 1;
+[e = . . _TRISDbits 0 3 -> -> 1 `i `uc ]
+"44
+[; ;init_F43K22.c: 44:     TRISDbits.TRISD4 = 1;
+[e = . . _TRISDbits 0 4 -> -> 1 `i `uc ]
+"47
+[; ;init_F43K22.c: 47:     TRISCbits.TRISC3 = 1;
+[e = . . _TRISCbits 0 3 -> -> 1 `i `uc ]
+"48
+[; ;init_F43K22.c: 48:     TRISCbits.TRISC4 = 1;
+[e = . . _TRISCbits 0 4 -> -> 1 `i `uc ]
+"49
+[; ;init_F43K22.c: 49: }
+[e :UE 860 ]
+}
+"51
+[; ;init_F43K22.c: 51: void init_F23K20_IO(void){
 [v _init_F23K20_IO `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F23K20_IO ]
 [f ]
-"45
-[; ;init_F43K22.c: 45:     TRISA = 0b00000111;
+"54
+[; ;init_F43K22.c: 54:     TRISA = 0b00000111;
 [e = _TRISA -> -> 7 `i `uc ]
-"46
-[; ;init_F43K22.c: 46:     TRISB = 0x00;
+"55
+[; ;init_F43K22.c: 55:     TRISB = 0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"48
-[; ;init_F43K22.c: 48:     TRISC = 0b10011000;
+"57
+[; ;init_F43K22.c: 57:     TRISC = 0b10011000;
 [e = _TRISC -> -> 152 `i `uc ]
-"49
-[; ;init_F43K22.c: 49: }
-[e :UE 852 ]
+"58
+[; ;init_F43K22.c: 58: }
+[e :UE 861 ]
 }
-"52
-[; ;init_F43K22.c: 52: void init_F46K22_ADC(void){
+"61
+[; ;init_F43K22.c: 61: void init_F46K22_ADC(void){
 [v _init_F46K22_ADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F46K22_ADC ]
 [f ]
-"56
-[; ;init_F43K22.c: 56:     VREFCON0bits.FVREN = 1;
-[e = . . _VREFCON0bits 0 3 -> -> 1 `i `uc ]
-"57
-[; ;init_F43K22.c: 57:     VREFCON0bits.FVRS = 0b10;
-[e = . . _VREFCON0bits 0 1 -> -> 2 `i `uc ]
-"58
-[; ;init_F43K22.c: 58:     while(!VREFCON0bits.FVRST);
-[e $U 854  ]
-[e :U 855 ]
-[e :U 854 ]
-[e $ ! != -> . . _VREFCON0bits 0 2 `i -> 0 `i 855  ]
-[e :U 856 ]
-"61
-[; ;init_F43K22.c: 61:     ADCON2bits.ADFM = 1;
-[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
-"62
-[; ;init_F43K22.c: 62:     ADCON2bits.ACQT = 0b111;
-[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
-"63
-[; ;init_F43K22.c: 63:     ADCON2bits.ADCS2 = 1;
-[e = . . _ADCON2bits 1 2 -> -> 1 `i `uc ]
-"64
-[; ;init_F43K22.c: 64:     ADCON2bits.ADCS1 = 1;
-[e = . . _ADCON2bits 1 1 -> -> 1 `i `uc ]
 "65
-[; ;init_F43K22.c: 65:     ADCON2bits.ADCS0 = 0;
-[e = . . _ADCON2bits 1 0 -> -> 0 `i `uc ]
-"68
-[; ;init_F43K22.c: 68:     ADCON0bits.ADON = 1;
-[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
-"69
-[; ;init_F43K22.c: 69:     ADCON0bits.CHS = 0b00000;
-[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
+[; ;init_F43K22.c: 65:     VREFCON0bits.FVREN = 1;
+[e = . . _VREFCON0bits 0 3 -> -> 1 `i `uc ]
+"66
+[; ;init_F43K22.c: 66:     VREFCON0bits.FVRS = 0b10;
+[e = . . _VREFCON0bits 0 1 -> -> 2 `i `uc ]
+"67
+[; ;init_F43K22.c: 67:     while(!VREFCON0bits.FVRST);
+[e $U 863  ]
+[e :U 864 ]
+[e :U 863 ]
+[e $ ! != -> . . _VREFCON0bits 0 2 `i -> 0 `i 864  ]
+[e :U 865 ]
 "70
-[; ;init_F43K22.c: 70:     ADCON0bits.GODONE = 0;
-[e = . . _ADCON0bits 7 1 -> -> 0 `i `uc ]
-"75
-[; ;init_F43K22.c: 75:     CCP5CONbits.CCP5M = 0b1011;
-[e = . . _CCP5CONbits 0 0 -> -> 11 `i `uc ]
-"76
-[; ;init_F43K22.c: 76:     ADCON1bits.TRIGSEL = 0;
-[e = . . _ADCON1bits 0 3 -> -> 0 `i `uc ]
+[; ;init_F43K22.c: 70:     ADCON2bits.ADFM = 1;
+[e = . . _ADCON2bits 0 3 -> -> 1 `i `uc ]
+"71
+[; ;init_F43K22.c: 71:     ADCON2bits.ACQT = 0b111;
+[e = . . _ADCON2bits 0 1 -> -> 7 `i `uc ]
+"72
+[; ;init_F43K22.c: 72:     ADCON2bits.ADCS2 = 1;
+[e = . . _ADCON2bits 1 2 -> -> 1 `i `uc ]
+"73
+[; ;init_F43K22.c: 73:     ADCON2bits.ADCS1 = 1;
+[e = . . _ADCON2bits 1 1 -> -> 1 `i `uc ]
+"74
+[; ;init_F43K22.c: 74:     ADCON2bits.ADCS0 = 0;
+[e = . . _ADCON2bits 1 0 -> -> 0 `i `uc ]
+"77
+[; ;init_F43K22.c: 77:     ADCON0bits.ADON = 1;
+[e = . . _ADCON0bits 1 0 -> -> 1 `i `uc ]
+"78
+[; ;init_F43K22.c: 78:     ADCON0bits.CHS = 0b00000;
+[e = . . _ADCON0bits 1 2 -> -> 0 `i `uc ]
 "79
-[; ;init_F43K22.c: 79:     PIR1bits.ADIF = 0;
+[; ;init_F43K22.c: 79:     ADCON0bits.GODONE = 0;
+[e = . . _ADCON0bits 7 1 -> -> 0 `i `uc ]
+"84
+[; ;init_F43K22.c: 84:     CCP5CONbits.CCP5M = 0b1011;
+[e = . . _CCP5CONbits 0 0 -> -> 11 `i `uc ]
+"85
+[; ;init_F43K22.c: 85:     ADCON1bits.TRIGSEL = 0;
+[e = . . _ADCON1bits 0 3 -> -> 0 `i `uc ]
+"88
+[; ;init_F43K22.c: 88:     PIR1bits.ADIF = 0;
 [e = . . _PIR1bits 0 6 -> -> 0 `i `uc ]
-"81
-[; ;init_F43K22.c: 81: }
-[e :UE 853 ]
+"90
+[; ;init_F43K22.c: 90: }
+[e :UE 862 ]
 }
-"83
-[; ;init_F43K22.c: 83: void init_F23K20_ADC(void){
+"92
+[; ;init_F43K22.c: 92: void init_F23K20_ADC(void){
 [v _init_F23K20_ADC `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F23K20_ADC ]
 [f ]
-"86
-[; ;init_F43K22.c: 86:     ADCON2 = 0b10111110;
+"95
+[; ;init_F43K22.c: 95:     ADCON2 = 0b10111110;
 [e = _ADCON2 -> -> 190 `i `uc ]
-"87
-[; ;init_F43K22.c: 87:     ADCON1 = 0b00000000;
+"96
+[; ;init_F43K22.c: 96:     ADCON1 = 0b00000000;
 [e = _ADCON1 -> -> 0 `i `uc ]
-"88
-[; ;init_F43K22.c: 88:     ADCON0 = 0b00000001;
+"97
+[; ;init_F43K22.c: 97:     ADCON0 = 0b00000001;
 [e = _ADCON0 -> -> 1 `i `uc ]
-"89
-[; ;init_F43K22.c: 89: }
-[e :UE 857 ]
+"98
+[; ;init_F43K22.c: 98: }
+[e :UE 866 ]
 }
-"92
-[; ;init_F43K22.c: 92: void init_F46K22_AN(void){
+"101
+[; ;init_F43K22.c: 101: void init_F46K22_AN(void){
 [v _init_F46K22_AN `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F46K22_AN ]
 [f ]
-"94
-[; ;init_F43K22.c: 94:     ANSELAbits.ANSA0 = 1;
-[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
-"95
-[; ;init_F43K22.c: 95:     ANSELAbits.ANSA1 = 0;
-[e = . . _ANSELAbits 0 1 -> -> 0 `i `uc ]
-"96
-[; ;init_F43K22.c: 96:     ANSELAbits.ANSA2 = 0;
-[e = . . _ANSELAbits 0 2 -> -> 0 `i `uc ]
-"97
-[; ;init_F43K22.c: 97:     ANSELAbits.ANSA3 = 0;
-[e = . . _ANSELAbits 0 3 -> -> 0 `i `uc ]
-"98
-[; ;init_F43K22.c: 98:     ANSELAbits.ANSA5 = 0;
-[e = . . _ANSELAbits 0 5 -> -> 0 `i `uc ]
-"101
-[; ;init_F43K22.c: 101:     ANSELD = 0b00000000;
-[e = _ANSELD -> -> 0 `i `uc ]
-"102
-[; ;init_F43K22.c: 102:     ANSELC = 0b00000000;
-[e = _ANSELC -> -> 0 `i `uc ]
 "103
-[; ;init_F43K22.c: 103:     ANSELE = 0b00000000;
-[e = _ANSELE -> -> 0 `i `uc ]
+[; ;init_F43K22.c: 103:     ANSELAbits.ANSA0 = 1;
+[e = . . _ANSELAbits 0 0 -> -> 1 `i `uc ]
 "104
-[; ;init_F43K22.c: 104: }
-[e :UE 858 ]
-}
+[; ;init_F43K22.c: 104:     ANSELAbits.ANSA1 = 0;
+[e = . . _ANSELAbits 0 1 -> -> 0 `i `uc ]
+"105
+[; ;init_F43K22.c: 105:     ANSELAbits.ANSA2 = 0;
+[e = . . _ANSELAbits 0 2 -> -> 0 `i `uc ]
 "106
-[; ;init_F43K22.c: 106: void init_F23K20_AN(void){
+[; ;init_F43K22.c: 106:     ANSELAbits.ANSA3 = 0;
+[e = . . _ANSELAbits 0 3 -> -> 0 `i `uc ]
+"107
+[; ;init_F43K22.c: 107:     ANSELAbits.ANSA5 = 0;
+[e = . . _ANSELAbits 0 5 -> -> 0 `i `uc ]
+"110
+[; ;init_F43K22.c: 110:     ANSELD = 0b00000000;
+[e = _ANSELD -> -> 0 `i `uc ]
+"111
+[; ;init_F43K22.c: 111:     ANSELC = 0b00000000;
+[e = _ANSELC -> -> 0 `i `uc ]
+"112
+[; ;init_F43K22.c: 112:     ANSELE = 0b00000000;
+[e = _ANSELE -> -> 0 `i `uc ]
+"113
+[; ;init_F43K22.c: 113: }
+[e :UE 867 ]
+}
+"115
+[; ;init_F43K22.c: 115: void init_F23K20_AN(void){
 [v _init_F23K20_AN `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F23K20_AN ]
 [f ]
-"111
-[; ;init_F43K22.c: 111: }
-[e :UE 859 ]
+"120
+[; ;init_F43K22.c: 120: }
+[e :UE 868 ]
 }
-"114
-[; ;init_F43K22.c: 114: void init_F46K22_TMR(void){
+"123
+[; ;init_F43K22.c: 123: void init_F46K22_TMR(void){
 [v _init_F46K22_TMR `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F46K22_TMR ]
 [f ]
-"118
-[; ;init_F43K22.c: 118:     T0CON = 0b10000111;
+"127
+[; ;init_F43K22.c: 127:     T0CON = 0b10000111;
 [e = _T0CON -> -> 135 `i `uc ]
-"123
-[; ;init_F43K22.c: 123:     INTCON = 0b00100000;
+"132
+[; ;init_F43K22.c: 132:     INTCON = 0b00100000;
 [e = _INTCON -> -> 32 `i `uc ]
-"124
-[; ;init_F43K22.c: 124: }
-[e :UE 860 ]
+"133
+[; ;init_F43K22.c: 133: }
+[e :UE 869 ]
 }
-"126
-[; ;init_F43K22.c: 126: void init_F23K20_TMR(void){
+"135
+[; ;init_F43K22.c: 135: void init_F23K20_TMR(void){
 [v _init_F23K20_TMR `(v ~T0 @X0 1 ef ]
 {
 [e :U _init_F23K20_TMR ]
 [f ]
-"130
-[; ;init_F43K22.c: 130:     T0CON = 0b10000111;
+"139
+[; ;init_F43K22.c: 139:     T0CON = 0b10000111;
 [e = _T0CON -> -> 135 `i `uc ]
-"135
-[; ;init_F43K22.c: 135:     INTCON = 0b00100000;
+"144
+[; ;init_F43K22.c: 144:     INTCON = 0b00100000;
 [e = _INTCON -> -> 32 `i `uc ]
-"136
-[; ;init_F43K22.c: 136: }
-[e :UE 861 ]
+"145
+[; ;init_F43K22.c: 145: }
+[e :UE 870 ]
 }

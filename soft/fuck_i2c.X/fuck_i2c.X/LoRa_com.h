@@ -38,7 +38,7 @@
 #include "SX1272.h"
 #include "RF_LoRa_868_SO.h"
 
-void init_LORA_communication(UINT16_T baud_rate);
+void init_LORA_communication();
 void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity,double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame);
 void set_TX_and_transmit(void);
 void has_transmitted(uint8_t reg_val);

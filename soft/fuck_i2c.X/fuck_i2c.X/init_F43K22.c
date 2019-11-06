@@ -1,5 +1,14 @@
 #include "init_F43K22.h"
 
+/* full config of the F46K22*/
+void init_F46K22(void){
+   init_F46K22_CLK();
+   init_F46K22_IO();
+   init_F46K22_ADC();
+   init_F46K22_AN();
+   init_F46K22_TMR();
+}
+
 
 /*Set the clock used for the uC (either internal or exterior, and which frequency is used) */
 void init_F46K22_CLK(void){

@@ -9725,14 +9725,14 @@ void CheckConfiguration (void);
 # 38 "./LoRa_com.h" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
-# 35 "./RF_LoRa_868_SO.h"
+# 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);
 # 39 "./LoRa_com.h" 2
 
 
-void init_LORA_communication(UINT16_T baud_rate);
+void init_LORA_communication();
 void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity,double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame);
 void set_TX_and_transmit(void);
 void has_transmitted(uint8_t reg_val);
@@ -9743,17 +9743,15 @@ void reset_IRQs(uint8_t reg_val);
 
 
 
-void init_LORA_communication(UINT16_T baud_rate){
+void init_LORA_communication(){
 
-    UARTInit(baud_rate);
+
     InitRFLoRaPins();
     SPIInit();
     ResetRFModule();
 
     AntennaTX();
 
-
-    UARTWriteStrLn("set mode to LoRa standby");
 
     WriteSXRegister(0x01, 0x00);
     WriteSXRegister(0x01, 0x80);
@@ -9762,11 +9760,7 @@ void init_LORA_communication(UINT16_T baud_rate){
     GetMode();
 
 
-    UARTWriteStrLn("initialize module ");
     InitModule();
-
-
-    CheckConfiguration();
 }
 
 void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity, double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame){

@@ -27,7 +27,8 @@
 #define RF_TXpin_DIR       TRISBbits.TRISB3          // direction bit for TX control line
 #define RF_RESETpin_DIR    TRISBbits.TRISB2          // direction bit for Reset
 
-#define PAYLOAD_LENGTH 6                             // for transmission: number of bytes to transmit
+#define PAYLOAD_LENGTH_0 4                           // for transmission: number of bytes to transmit trame 0
+#define PAYLOAD_LENGTH_1 6                          // for trame 0
                                                      // (this value will be stored before transmission in REG_PAYLOAD_LENGTH_LORA register of SX1272 chip)
 #define POUT 14                                      // output power (in dBm)
                                                      // (used to compute the data to store in REG_PA_CONFIG register during configuration of SX1272 chip)

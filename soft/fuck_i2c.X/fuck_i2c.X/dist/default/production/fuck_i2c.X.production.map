@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files (x86)\Microchip\xc8\v2.10\pic\dat\en_msgs.txt \
   -cs -h+dist/default/production\fuck_i2c.X.production.sym \
   --cmf=dist/default/production\fuck_i2c.X.production.cmf -z -Q18F46K22 \
-  -oC:\Users\louis\AppData\Local\Temp\s4b8.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\louis\AppData\Local\Temp\scqg.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/fuck_i2c.X.production.map -E1 -ver=XC8 \
   --acfsm=1493 -ASTACK=0200h-0F37h -pstack=STACK -ACODE=00h-0FFFFh \
   -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
@@ -26,7 +26,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\louis\AppData\Local\Temp\s4b8.o \
+  C:\Users\louis\AppData\Local\Temp\scqg.o \
   dist/default/production\fuck_i2c.X.production.o 
 
 Object code version is 3.11
@@ -39,112 +39,98 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\louis\AppData\Local\Temp\s4b8.o
+C:\Users\louis\AppData\Local\Temp\scqg.o
                 init                                  0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production\fuck_i2c.X.production.o
-                mediumconst                        FC42     FC42      3BE     7E21       0
-                text38                             E40E     E40E      106     7207       0
-                text37                             DF88     DF88       34     6FC4       0
-                text36                             DFF2     DFF2       3C     6FF9       0
-                text35                             DE4E     DE4E       1A     6F27       0
-                text34                             DDB4     DDB4       14     6EDA       0
-                text33                             DDA4     DDA4       10     6ED2       0
-                text32                             DD84     DD84        A     6EC2       0
-                text31                             DE1E     DE1E       18     6F0F       0
-                text30                             DED6     DED6       20     6F6B       0
-                text29                             DE68     DE68       1A     6F34       0
-                text28                             DDDC     DDDC       16     6EEE       0
-                text27                             E258     E258       C4     712C       0
-                text26                             E172     E172       6E     70B9       0
-                text25                             DF16     DF16       22     6F8B       0
-                text24                             E070     E070       50     7038       0
-                text23                             E116     E116       5C     708B       0
-                text22                             E820     E820      1B8     7410       0
-                text21                             DEB8     DEB8       1E     6F5C       0
-                text20                             E514     E514      158     728A       0
-                text19                             DE82     DE82       1A     6F41       0
-                text18                             E31C     E31C       F2     718E       0
-                text17                             DD8E     DD8E        A     6EC7       0
-                text16                             DF38     DF38       24     6F9C       0
-                text15                             E02E     E02E       42     7017       0
-                text14                             DFBC     DFBC       36     6FDE       0
-                text13                             E1E0     E1E0       78     70F0       0
-                text12                             F782     F782      4C0     7BC1       0
-                text11                             EBB0     EBB0      39A     75D8       0
-                text10                             F358     F358      42A     79AC       0
-                text9                              E66C     E66C      1B4     7336       0
-                text8                              DDF2     DDF2       16     6EF9       0
-                text7                              DE08     DE08       16     6F04       0
-                text6                              DF5C     DF5C       2C     6FAE       0
-                text5                              DEF6     DEF6       20     6F7B       0
-                text4                              DDC8     DDC8       14     6EE4       0
-                text3                              DE36     DE36       18     6F1B       0
-                text2                              DE9C     DE9C       1C     6F4E       0
-                text1                              E9D8     E9D8      1D8     74EC       0
-                text0                              EF4A     EF4A      40E     77A5       0
+                mediumconst                        FC6C     FC6C      394     7E36       0
+                text31                             E212     E212       36     7109       0
+                text30                             E600     E600      106     7300       0
+                text29                             E1DE     E1DE       34     70EF       0
+                text28                             E0B0     E0B0       18     7058       0
+                text27                             E14E     E14E       20     70A7       0
+                text26                             E0E0     E0E0       1A     7070       0
+                text25                             E130     E130       1E     7098       0
+                text24                             E06E     E06E       16     7037       0
+                text23                             E44A     E44A       C4     7225       0
+                text22                             E3DC     E3DC       6E     71EE       0
+                text21                             E28A     E28A       50     7145       0
+                text20                             E380     E380       5C     71C0       0
+                text19                             E706     E706      158     7383       0
+                text18                             E0FA     E0FA       1A     707D       0
+                text17                             E50E     E50E       F2     7287       0
+                text16                             E044     E044        A     7022       0
+                text15                             E18E     E18E       24     70C7       0
+                text14                             E248     E248       42     7124       0
+                text13                             E2DA     E2DA       50     716D       0
+                text12                             F7AC     F7AC      4C0     7BD6       0
+                text11                             EBEA     EBEA      39A     75F5       0
+                text10                             F382     F382      42A     79C1       0
+                text9                              E85E     E85E      1B4     742F       0
+                text8                              E084     E084       16     7042       0
+                text7                              E09A     E09A       16     704D       0
+                text6                              E1B2     E1B2       2C     70D9       0
+                text5                              E16E     E16E       20     70B7       0
+                text4                              E05A     E05A       14     702D       0
+                text3                              E0C8     E0C8       18     7064       0
+                text2                              E114     E114       1C     708A       0
+                text1                              EA12     EA12      1D8     7509       0
+                text0                              EF84     EF84      3FE     77C2       0
                 cstackCOMRAM                          1        1       56        1       1
                 bssBANK1                            100      100      100      100       1
                 dataBANK0                            A8       A8        C       60       1
                 bssBANK0                             60       60       48       60       1
                 bssCOMRAM                            57       57        9        1       1
-                cinit                              E0C0     E0C0       56     7060       0
-                idataBANK0                         DD98     DD98        C     DD98       0
+                cinit                              E32A     E32A       56     7195       0
+                idataBANK0                         E04E     E04E        C     E04E       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
 
         CLASS   CODE           
                 init                                  0        0        4         0
-                text38                             E40E     E40E      106         0
-                text37                             DF88     DF88       34         0
-                text36                             DFF2     DFF2       3C         0
-                text35                             DE4E     DE4E       1A         0
-                text34                             DDB4     DDB4       14         0
-                text33                             DDA4     DDA4       10         0
-                text32                             DD84     DD84        A         0
-                text31                             DE1E     DE1E       18         0
-                text30                             DED6     DED6       20         0
-                text29                             DE68     DE68       1A         0
-                text28                             DDDC     DDDC       16         0
-                text27                             E258     E258       C4         0
-                text26                             E172     E172       6E         0
-                text25                             DF16     DF16       22         0
-                text24                             E070     E070       50         0
-                text23                             E116     E116       5C         0
-                text22                             E820     E820      1B8         0
-                text21                             DEB8     DEB8       1E         0
-                text20                             E514     E514      158         0
-                text19                             DE82     DE82       1A         0
-                text18                             E31C     E31C       F2         0
-                text17                             DD8E     DD8E        A         0
-                text16                             DF38     DF38       24         0
-                text15                             E02E     E02E       42         0
-                text14                             DFBC     DFBC       36         0
-                text13                             E1E0     E1E0       78         0
-                text12                             F782     F782      4C0         0
-                text11                             EBB0     EBB0      39A         0
-                text10                             F358     F358      42A         0
-                text9                              E66C     E66C      1B4         0
-                text8                              DDF2     DDF2       16         0
-                text7                              DE08     DE08       16         0
-                text6                              DF5C     DF5C       2C         0
-                text5                              DEF6     DEF6       20         0
-                text4                              DDC8     DDC8       14         0
-                text3                              DE36     DE36       18         0
-                text2                              DE9C     DE9C       1C         0
-                text1                              E9D8     E9D8      1D8         0
-                text0                              EF4A     EF4A      40E         0
-                cinit                              E0C0     E0C0       56         0
-                idataBANK0                         DD98     DD98        C         0
+                text31                             E212     E212       36         0
+                text30                             E600     E600      106         0
+                text29                             E1DE     E1DE       34         0
+                text28                             E0B0     E0B0       18         0
+                text27                             E14E     E14E       20         0
+                text26                             E0E0     E0E0       1A         0
+                text25                             E130     E130       1E         0
+                text24                             E06E     E06E       16         0
+                text23                             E44A     E44A       C4         0
+                text22                             E3DC     E3DC       6E         0
+                text21                             E28A     E28A       50         0
+                text20                             E380     E380       5C         0
+                text19                             E706     E706      158         0
+                text18                             E0FA     E0FA       1A         0
+                text17                             E50E     E50E       F2         0
+                text16                             E044     E044        A         0
+                text15                             E18E     E18E       24         0
+                text14                             E248     E248       42         0
+                text13                             E2DA     E2DA       50         0
+                text12                             F7AC     F7AC      4C0         0
+                text11                             EBEA     EBEA      39A         0
+                text10                             F382     F382      42A         0
+                text9                              E85E     E85E      1B4         0
+                text8                              E084     E084       16         0
+                text7                              E09A     E09A       16         0
+                text6                              E1B2     E1B2       2C         0
+                text5                              E16E     E16E       20         0
+                text4                              E05A     E05A       14         0
+                text3                              E0C8     E0C8       18         0
+                text2                              E114     E114       1C         0
+                text1                              EA12     EA12      1D8         0
+                text0                              EF84     EF84      3FE         0
+                cinit                              E32A     E32A       56         0
+                idataBANK0                         E04E     E04E        C         0
 
         CLASS   CONST          
 
         CLASS   SMALLCONST     
 
         CLASS   MEDIUMCONST    
-                mediumconst                        FC42     FC42      3BE         0
+                mediumconst                        FC6C     FC6C      394         0
 
         CLASS   COMRAM         
                 cstackCOMRAM                          1        1       56         1
@@ -211,48 +197,41 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 cstackCOMRAM                   000001  00005F  000060         1       1  COMRAM  
                 bssBANK0                       000060  000054  0000B4        60       1  BANK0   
                 bssBANK1                       000100  000100  000200       100       1  BANK1   
-                text32                         00DD84  00000A  00DD8E      6EC2       0  CODE    
-                text17                         00DD8E  00000A  00DD98      6EC7       0  CODE    
-                idataBANK0                     00DD98  00000C  00DDA4      DD98       0  CODE    
-                text33                         00DDA4  000010  00DDB4      6ED2       0  CODE    
-                text34                         00DDB4  000014  00DDC8      6EDA       0  CODE    
-                text4                          00DDC8  000014  00DDDC      6EE4       0  CODE    
-                text28                         00DDDC  000016  00DDF2      6EEE       0  CODE    
-                text8                          00DDF2  000016  00DE08      6EF9       0  CODE    
-                text7                          00DE08  000016  00DE1E      6F04       0  CODE    
-                text31                         00DE1E  000018  00DE36      6F0F       0  CODE    
-                text3                          00DE36  000018  00DE4E      6F1B       0  CODE    
-                text35                         00DE4E  00001A  00DE68      6F27       0  CODE    
-                text29                         00DE68  00001A  00DE82      6F34       0  CODE    
-                text19                         00DE82  00001A  00DE9C      6F41       0  CODE    
-                text2                          00DE9C  00001C  00DEB8      6F4E       0  CODE    
-                text21                         00DEB8  00001E  00DED6      6F5C       0  CODE    
-                text30                         00DED6  000020  00DEF6      6F6B       0  CODE    
-                text5                          00DEF6  000020  00DF16      6F7B       0  CODE    
-                text25                         00DF16  000022  00DF38      6F8B       0  CODE    
-                text16                         00DF38  000024  00DF5C      6F9C       0  CODE    
-                text6                          00DF5C  00002C  00DF88      6FAE       0  CODE    
-                text37                         00DF88  000034  00DFBC      6FC4       0  CODE    
-                text14                         00DFBC  000036  00DFF2      6FDE       0  CODE    
-                text36                         00DFF2  00003C  00E02E      6FF9       0  CODE    
-                text15                         00E02E  000042  00E070      7017       0  CODE    
-                text24                         00E070  000050  00E0C0      7038       0  CODE    
-                cinit                          00E0C0  000056  00E116      7060       0  CODE    
-                text23                         00E116  00005C  00E172      708B       0  CODE    
-                text26                         00E172  00006E  00E1E0      70B9       0  CODE    
-                text13                         00E1E0  000078  00E258      70F0       0  CODE    
-                text27                         00E258  0000C4  00E31C      712C       0  CODE    
-                text18                         00E31C  0000F2  00E40E      718E       0  CODE    
-                text38                         00E40E  000106  00E514      7207       0  CODE    
-                text20                         00E514  000158  00E66C      728A       0  CODE    
-                text9                          00E66C  0001B4  00E820      7336       0  CODE    
-                text22                         00E820  0001B8  00E9D8      7410       0  CODE    
-                text1                          00E9D8  0001D8  00EBB0      74EC       0  CODE    
-                text11                         00EBB0  00039A  00EF4A      75D8       0  CODE    
-                text0                          00EF4A  00040E  00F358      77A5       0  CODE    
-                text10                         00F358  00042A  00F782      79AC       0  CODE    
-                text12                         00F782  0004C0  00FC42      7BC1       0  CODE    
-                mediumconst                    00FC42  0003BE  010000      7E21       0  MEDIUMCO
+                text16                         00E044  00000A  00E04E      7022       0  CODE    
+                idataBANK0                     00E04E  00000C  00E05A      E04E       0  CODE    
+                text4                          00E05A  000014  00E06E      702D       0  CODE    
+                text24                         00E06E  000016  00E084      7037       0  CODE    
+                text8                          00E084  000016  00E09A      7042       0  CODE    
+                text7                          00E09A  000016  00E0B0      704D       0  CODE    
+                text28                         00E0B0  000018  00E0C8      7058       0  CODE    
+                text3                          00E0C8  000018  00E0E0      7064       0  CODE    
+                text26                         00E0E0  00001A  00E0FA      7070       0  CODE    
+                text18                         00E0FA  00001A  00E114      707D       0  CODE    
+                text2                          00E114  00001C  00E130      708A       0  CODE    
+                text25                         00E130  00001E  00E14E      7098       0  CODE    
+                text27                         00E14E  000020  00E16E      70A7       0  CODE    
+                text5                          00E16E  000020  00E18E      70B7       0  CODE    
+                text15                         00E18E  000024  00E1B2      70C7       0  CODE    
+                text6                          00E1B2  00002C  00E1DE      70D9       0  CODE    
+                text29                         00E1DE  000034  00E212      70EF       0  CODE    
+                text31                         00E212  000036  00E248      7109       0  CODE    
+                text14                         00E248  000042  00E28A      7124       0  CODE    
+                text21                         00E28A  000050  00E2DA      7145       0  CODE    
+                text13                         00E2DA  000050  00E32A      716D       0  CODE    
+                cinit                          00E32A  000056  00E380      7195       0  CODE    
+                text20                         00E380  00005C  00E3DC      71C0       0  CODE    
+                text22                         00E3DC  00006E  00E44A      71EE       0  CODE    
+                text23                         00E44A  0000C4  00E50E      7225       0  CODE    
+                text17                         00E50E  0000F2  00E600      7287       0  CODE    
+                text30                         00E600  000106  00E706      7300       0  CODE    
+                text19                         00E706  000158  00E85E      7383       0  CODE    
+                text9                          00E85E  0001B4  00EA12      742F       0  CODE    
+                text1                          00EA12  0001D8  00EBEA      7509       0  CODE    
+                text11                         00EBEA  00039A  00EF84      75F5       0  CODE    
+                text0                          00EF84  0003FE  00F382      77C2       0  CODE    
+                text10                         00F382  00042A  00F7AC      79C1       0  CODE    
+                text12                         00F7AC  0004C0  00FC6C      7BD6       0  CODE    
+                mediumconst                    00FC6C  000394  010000      7E36       0  MEDIUMCO
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -277,14 +256,14 @@ UNUSED ADDRESS RANGES
         BANK9            000900-0009FF              100
         BIGRAM           0000B4-0000FF               4C
                          000200-000F37              D38
-        CODE             000004-00DD83             DD80
-        CONST            000004-00DD83             DD80
+        CODE             000004-00E043             E040
+        CONST            000004-00E043             E040
         EEDATA           F00000-F003FF              400
-        MEDIUMCONST      001000-00DD83             CD84
+        MEDIUMCONST      001000-00E043             D044
         RAM              0000B4-0000FF               4C
                          000200-000F37              100
         SFR              000F38-000FFF               28
-        SMALLCONST       001000-00DD83              100
+        SMALLCONST       001000-00E043              100
         STACK            000200-000F37              D38
 
                                   Symbol Table
@@ -297,8 +276,6 @@ UNUSED ADDRESS RANGES
 ?___xxtofl                              cstackCOMRAM 000001
 GetMode@masked_reg                      cstackCOMRAM 000011
 GetMode@reg                             cstackCOMRAM 000012
-PrintSXRegContent@RegValue              cstackCOMRAM 00000F
-PrintSXRegContent@address               cstackCOMRAM 000010
 ReadSXRegister@RegValue                 cstackCOMRAM 000004
 ReadSXRegister@address                  cstackCOMRAM 000005
 SPIReceive@data_in                      cstackCOMRAM 000003
@@ -329,15 +306,14 @@ _ANSELCbits                             (abs)        000F3A
 _ANSELD                                 (abs)        000F3B
 _ANSELDbits                             (abs)        000F3B
 _ANSELE                                 (abs)        000F3C
-_AntennaTX                              text31       00DE1E
+_AntennaTX                              text28       00E0B0
 _BAUDCON1bits                           (abs)        000FB8
 _CCP5CONbits                            (abs)        000F54
-_CheckConfiguration                     text22       00E820
-_GetMode                                text20       00E514
+_GetMode                                text19       00E706
 _INTCON                                 (abs)        000FF2
 _INTCONbits                             (abs)        000FF2
-_InitModule                             text18       00E31C
-_InitRFLoRaPins                         text17       00DD8E
+_InitModule                             text17       00E50E
+_InitRFLoRaPins                         text16       00E044
 _LATBbits                               (abs)        000F8A
 _LATEbits                               (abs)        000F8D
 _OSCCON                                 (abs)        000FD3
@@ -347,19 +323,18 @@ _PIE1bits                               (abs)        000F9D
 _PIR1bits                               (abs)        000F9E
 _PIR2bits                               (abs)        000FA1
 _PIR3bits                               (abs)        000FA4
-_PrintSXRegContent                      text25       00DF16
 _RCIE                                   (abs)        007CED
 _RCIF                                   (abs)        007CF5
 _RCREG1                                 (abs)        000FAE
 _RCSTA1                                 (abs)        000FAB
 _RCSTA1bits                             (abs)        000FAB
-_ReadSXRegister                         text21       00DEB8
-_ResetRFModule                          text16       00DF38
+_ReadSXRegister                         text25       00E130
+_ResetRFModule                          text15       00E18E
 _SPBRG1                                 (abs)        000FAF
 _SPBRGH1                                (abs)        000FB0
-_SPIInit                                text15       00E02E
-_SPIReceive                             text30       00DED6
-_SPITransfer                            text29       00DE68
+_SPIInit                                text14       00E248
+_SPIReceive                             text27       00E14E
+_SPITransfer                            text26       00E0E0
 _SSP1ADD                                (abs)        000FC8
 _SSP1BUF                                (abs)        000FC9
 _SSP1CON1bits                           (abs)        000FC6
@@ -381,13 +356,13 @@ _TRISEbits                              (abs)        000F96
 _TXREG1                                 (abs)        000FAD
 _TXSTA1                                 (abs)        000FAC
 _TXSTA1bits                             (abs)        000FAC
-_UARTInit                               text14       00DFBC
-_UARTWriteByte                          text28       00DDDC
-_UARTWriteByteHex                       text26       00E172
-_UARTWriteStr                           text24       00E070
-_UARTWriteStrLn                         text23       00E116
+_UARTInit                               text31       00E212
+_UARTWriteByte                          text24       00E06E
+_UARTWriteByteHex                       text22       00E3DC
+_UARTWriteStr                           text21       00E28A
+_UARTWriteStrLn                         text20       00E380
 _VREFCON0bits                           (abs)        000F42
-_WriteSXRegister                        text19       00DE82
+_WriteSXRegister                        text18       00E0FA
 __CFG_BOREN$SBORDIS                     (abs)        000000
 __CFG_BORV$190                          (abs)        000000
 __CFG_CCP2MX$PORTC1                     (abs)        000000
@@ -517,13 +492,6 @@ __Htext29                               text29       000000
 __Htext3                                text3        000000
 __Htext30                               text30       000000
 __Htext31                               text31       000000
-__Htext32                               text32       000000
-__Htext33                               text33       000000
-__Htext34                               text34       000000
-__Htext35                               text35       000000
-__Htext36                               text36       000000
-__Htext37                               text37       000000
-__Htext38                               text38       000000
 __Htext4                                text4        000000
 __Htext5                                text5        000000
 __Htext6                                text6        000000
@@ -579,7 +547,7 @@ __Lintentry                             intentry     000000
 __Lintret                               intret       000000
 __Lintsave_regs                         intsave_regs 000000
 __Lirdata                               irdata       000000
-__Lmediumconst                          mediumconst  00FC42
+__Lmediumconst                          mediumconst  00FC6C
 __LnvFARRAM                             nvFARRAM     000000
 __Lnvbit                                nvbit        000000
 __Lnvrram                               nvrram       000000
@@ -627,13 +595,6 @@ __Ltext29                               text29       000000
 __Ltext3                                text3        000000
 __Ltext30                               text30       000000
 __Ltext31                               text31       000000
-__Ltext32                               text32       000000
-__Ltext33                               text33       000000
-__Ltext34                               text34       000000
-__Ltext35                               text35       000000
-__Ltext36                               text36       000000
-__Ltext37                               text37       000000
-__Ltext38                               text38       000000
 __Ltext4                                text4        000000
 __Ltext5                                text5        000000
 __Ltext6                                text6        000000
@@ -643,20 +604,20 @@ __Ltext9                                text9        000000
 __S0                                    (abs)        30000E
 __S1                                    (abs)        000200
 __S2                                    (abs)        000000
-___awdiv                                text27       00E258
+___awdiv                                text23       00E44A
 ___awdiv@counter                        cstackCOMRAM 000005
 ___awdiv@dividend                       cstackCOMRAM 000001
 ___awdiv@divisor                        cstackCOMRAM 000003
 ___awdiv@quotient                       cstackCOMRAM 000007
 ___awdiv@sign                           cstackCOMRAM 000006
-___fladd                                text12       00F782
+___fladd                                text12       00F7AC
 ___fladd@a                              cstackCOMRAM 000005
 ___fladd@aexp                           cstackCOMRAM 00000E
 ___fladd@b                              cstackCOMRAM 000001
 ___fladd@bexp                           cstackCOMRAM 00000F
 ___fladd@grs                            cstackCOMRAM 000010
 ___fladd@signs                          cstackCOMRAM 00000D
-___fldiv                                text11       00EBB0
+___fldiv                                text11       00EBEA
 ___fldiv@a                              cstackCOMRAM 00002E
 ___fldiv@aexp                           cstackCOMRAM 000042
 ___fldiv@b                              cstackCOMRAM 00002A
@@ -665,7 +626,7 @@ ___fldiv@grs                            cstackCOMRAM 00003D
 ___fldiv@new_exp                        cstackCOMRAM 00003B
 ___fldiv@rem                            cstackCOMRAM 000036
 ___fldiv@sign                           cstackCOMRAM 00003A
-___flmul                                text10       00F358
+___flmul                                text10       00F382
 ___flmul@a                              cstackCOMRAM 000015
 ___flmul@aexp                           cstackCOMRAM 000022
 ___flmul@b                              cstackCOMRAM 000011
@@ -674,7 +635,7 @@ ___flmul@grs                            cstackCOMRAM 00001E
 ___flmul@prod                           cstackCOMRAM 000024
 ___flmul@sign                           cstackCOMRAM 00001D
 ___flmul@temp                           cstackCOMRAM 000028
-___fltol                                text38       00E40E
+___fltol                                text30       00E600
 ___fltol@exp1                           cstackCOMRAM 00004C
 ___fltol@f1                             cstackCOMRAM 000043
 ___fltol@sign1                          cstackCOMRAM 00004B
@@ -683,109 +644,93 @@ ___intlo_sp                             stack        000000
 ___param_bank                           (abs)        000000
 ___rparam_used                          (abs)        000001
 ___sp                                   stack        000000
-___xxtofl                               text9        00E66C
+___xxtofl                               text9        00E85E
 ___xxtofl@arg                           cstackCOMRAM 00000B
 ___xxtofl@exp                           cstackCOMRAM 00000A
 ___xxtofl@sign                          cstackCOMRAM 000009
 ___xxtofl@val                           cstackCOMRAM 000001
 __accesstop                             (abs)        000060
 __activetblptr                          (abs)        000002
-__end_of_AntennaTX                      text31       00DE36
-__end_of_CheckConfiguration             text22       00E9D8
-__end_of_GetMode                        text20       00E66C
-__end_of_InitModule                     text18       00E40E
-__end_of_InitRFLoRaPins                 text17       00DD98
-__end_of_PrintSXRegContent              text25       00DF38
-__end_of_ReadSXRegister                 text21       00DED6
-__end_of_ResetRFModule                  text16       00DF5C
-__end_of_SPIInit                        text15       00E070
-__end_of_SPIReceive                     text30       00DEF6
-__end_of_SPITransfer                    text29       00DE82
-__end_of_UARTInit                       text14       00DFF2
-__end_of_UARTWriteByte                  text28       00DDF2
-__end_of_UARTWriteByteHex               text26       00E1E0
-__end_of_UARTWriteStr                   text24       00E0C0
-__end_of_UARTWriteStrLn                 text23       00E172
-__end_of_WriteSXRegister                text19       00DE9C
-__end_of___awdiv                        text27       00E31C
-__end_of___fladd                        text12       00FC42
-__end_of___fldiv                        text11       00EF4A
-__end_of___flmul                        text10       00F782
-__end_of___fltol                        text38       00E514
-__end_of___xxtofl                       text9        00E820
-__end_of__initialization                cinit        00E10C
-__end_of_i2c_ACK                        text8        00DE08
-__end_of_i2c_NAK                        text7        00DE1E
-__end_of_i2c_init                       text37       00DFBC
-__end_of_i2c_read                       text5        00DF16
-__end_of_i2c_start                      text4        00DDDC
-__end_of_i2c_stop                       text3        00DE4E
-__end_of_i2c_waitForIdle                text6        00DF88
-__end_of_i2c_write                      text2        00DEB8
-__end_of_init_F46K22_ADC                text36       00E02E
-__end_of_init_F46K22_AN                 text35       00DE68
-__end_of_init_F46K22_CLK                text34       00DDC8
-__end_of_init_F46K22_IO                 text33       00DDB4
-__end_of_init_F46K22_TMR                text32       00DD8E
-__end_of_init_LORA_communication        text13       00E258
-__end_of_main                           text0        00F358
-__end_of_measure_humidity_temp_HIH6021  text1        00EBB0
-__initialization                        cinit        00E0C0
-__mediumconst                           mediumconst  00FC42
+__end_of_AntennaTX                      text28       00E0C8
+__end_of_GetMode                        text19       00E85E
+__end_of_InitModule                     text17       00E600
+__end_of_InitRFLoRaPins                 text16       00E04E
+__end_of_ReadSXRegister                 text25       00E14E
+__end_of_ResetRFModule                  text15       00E1B2
+__end_of_SPIInit                        text14       00E28A
+__end_of_SPIReceive                     text27       00E16E
+__end_of_SPITransfer                    text26       00E0FA
+__end_of_UARTInit                       text31       00E248
+__end_of_UARTWriteByte                  text24       00E084
+__end_of_UARTWriteByteHex               text22       00E44A
+__end_of_UARTWriteStr                   text21       00E2DA
+__end_of_UARTWriteStrLn                 text20       00E3DC
+__end_of_WriteSXRegister                text18       00E114
+__end_of___awdiv                        text23       00E50E
+__end_of___fladd                        text12       00FC6C
+__end_of___fldiv                        text11       00EF84
+__end_of___flmul                        text10       00F7AC
+__end_of___fltol                        text30       00E706
+__end_of___xxtofl                       text9        00EA12
+__end_of__initialization                cinit        00E376
+__end_of_i2c_ACK                        text8        00E09A
+__end_of_i2c_NAK                        text7        00E0B0
+__end_of_i2c_init                       text29       00E212
+__end_of_i2c_read                       text5        00E18E
+__end_of_i2c_start                      text4        00E06E
+__end_of_i2c_stop                       text3        00E0E0
+__end_of_i2c_waitForIdle                text6        00E1DE
+__end_of_i2c_write                      text2        00E130
+__end_of_init_LORA_communication        text13       00E32A
+__end_of_main                           text0        00F382
+__end_of_measure_humidity_temp_HIH6021  text1        00EBEA
+__initialization                        cinit        00E32A
+__mediumconst                           mediumconst  00FC6C
 __pbssBANK0                             bssBANK0     000060
 __pbssBANK1                             bssBANK1     000100
 __pbssCOMRAM                            bssCOMRAM    000057
-__pcinit                                cinit        00E0C0
+__pcinit                                cinit        00E32A
 __pcstackCOMRAM                         cstackCOMRAM 000001
 __pdataBANK0                            dataBANK0    0000A8
-__pidataBANK0                           idataBANK0   00DD98
-__pmediumconst                          mediumconst  00FC42
-__ptext0                                text0        00EF4A
-__ptext1                                text1        00E9D8
-__ptext10                               text10       00F358
-__ptext11                               text11       00EBB0
-__ptext12                               text12       00F782
-__ptext13                               text13       00E1E0
-__ptext14                               text14       00DFBC
-__ptext15                               text15       00E02E
-__ptext16                               text16       00DF38
-__ptext17                               text17       00DD8E
-__ptext18                               text18       00E31C
-__ptext19                               text19       00DE82
-__ptext2                                text2        00DE9C
-__ptext20                               text20       00E514
-__ptext21                               text21       00DEB8
-__ptext22                               text22       00E820
-__ptext23                               text23       00E116
-__ptext24                               text24       00E070
-__ptext25                               text25       00DF16
-__ptext26                               text26       00E172
-__ptext27                               text27       00E258
-__ptext28                               text28       00DDDC
-__ptext29                               text29       00DE68
-__ptext3                                text3        00DE36
-__ptext30                               text30       00DED6
-__ptext31                               text31       00DE1E
-__ptext32                               text32       00DD84
-__ptext33                               text33       00DDA4
-__ptext34                               text34       00DDB4
-__ptext35                               text35       00DE4E
-__ptext36                               text36       00DFF2
-__ptext37                               text37       00DF88
-__ptext38                               text38       00E40E
-__ptext4                                text4        00DDC8
-__ptext5                                text5        00DEF6
-__ptext6                                text6        00DF5C
-__ptext7                                text7        00DE08
-__ptext8                                text8        00DDF2
-__ptext9                                text9        00E66C
+__pidataBANK0                           idataBANK0   00E04E
+__pmediumconst                          mediumconst  00FC6C
+__ptext0                                text0        00EF84
+__ptext1                                text1        00EA12
+__ptext10                               text10       00F382
+__ptext11                               text11       00EBEA
+__ptext12                               text12       00F7AC
+__ptext13                               text13       00E2DA
+__ptext14                               text14       00E248
+__ptext15                               text15       00E18E
+__ptext16                               text16       00E044
+__ptext17                               text17       00E50E
+__ptext18                               text18       00E0FA
+__ptext19                               text19       00E706
+__ptext2                                text2        00E114
+__ptext20                               text20       00E380
+__ptext21                               text21       00E28A
+__ptext22                               text22       00E3DC
+__ptext23                               text23       00E44A
+__ptext24                               text24       00E06E
+__ptext25                               text25       00E130
+__ptext26                               text26       00E0E0
+__ptext27                               text27       00E14E
+__ptext28                               text28       00E0B0
+__ptext29                               text29       00E1DE
+__ptext3                                text3        00E0C8
+__ptext30                               text30       00E600
+__ptext31                               text31       00E212
+__ptext4                                text4        00E05A
+__ptext5                                text5        00E16E
+__ptext6                                text6        00E1B2
+__ptext7                                text7        00E09A
+__ptext8                                text8        00E084
+__ptext9                                text9        00E85E
 __ramtop                                ramtop       001000
 __size_of_AntennaTX                     (abs)        000000
-__size_of_CheckConfiguration            (abs)        000000
 __size_of_GetMode                       (abs)        000000
 __size_of_InitModule                    (abs)        000000
 __size_of_InitRFLoRaPins                (abs)        000000
-__size_of_PrintSXRegContent             (abs)        000000
 __size_of_ReadSXRegister                (abs)        000000
 __size_of_ResetRFModule                 (abs)        000000
 __size_of_SPIInit                       (abs)        000000
@@ -811,11 +756,6 @@ __size_of_i2c_start                     (abs)        000000
 __size_of_i2c_stop                      (abs)        000000
 __size_of_i2c_waitForIdle               (abs)        000000
 __size_of_i2c_write                     (abs)        000000
-__size_of_init_F46K22_ADC               (abs)        000000
-__size_of_init_F46K22_AN                (abs)        000000
-__size_of_init_F46K22_CLK               (abs)        000000
-__size_of_init_F46K22_IO                (abs)        000000
-__size_of_init_F46K22_TMR               (abs)        000000
 __size_of_init_LORA_communication       (abs)        000000
 __size_of_main                          (abs)        000000
 __size_of_measure_humidity_temp_HIH6021 (abs)        000000
@@ -837,28 +777,23 @@ _humidityHL                             bssBANK0     000090
 _humidity_HIH6021_H                     bssCOMRAM    00005C
 _humidity_HIH6021_L                     bssCOMRAM    00005B
 _i                                      bssCOMRAM    000057
-_i2c_ACK                                text8        00DDF2
-_i2c_NAK                                text7        00DE08
-_i2c_init                               text37       00DF88
-_i2c_read                               text5        00DEF6
-_i2c_start                              text4        00DDC8
-_i2c_stop                               text3        00DE36
-_i2c_waitForIdle                        text6        00DF5C
-_i2c_write                              text2        00DE9C
+_i2c_ACK                                text8        00E084
+_i2c_NAK                                text7        00E09A
+_i2c_init                               text29       00E1DE
+_i2c_read                               text5        00E16E
+_i2c_start                              text4        00E05A
+_i2c_stop                               text3        00E0C8
+_i2c_waitForIdle                        text6        00E1B2
+_i2c_write                              text2        00E114
 _idN                                    dataBANK0    0000AE
 _idR                                    dataBANK0    0000AF
 _idT                                    bssBANK0     00009E
 _id_node                                dataBANK0    0000B3
 _id_reseau                              dataBANK0    0000B1
 _id_trame                               dataBANK0    0000B2
-_init_F46K22_ADC                        text36       00DFF2
-_init_F46K22_AN                         text35       00DE4E
-_init_F46K22_CLK                        text34       00DDB4
-_init_F46K22_IO                         text33       00DDA4
-_init_F46K22_TMR                        text32       00DD84
-_init_LORA_communication                text13       00E1E0
-_main                                   text0        00EF4A
-_measure_humidity_temp_HIH6021          text1        00E9D8
+_init_LORA_communication                text13       00E2DA
+_main                                   text0        00EF84
+_measure_humidity_temp_HIH6021          text1        00EA12
 _panel_voltage0                         bssBANK0     0000A0
 _panel_voltage1                         bssBANK0     0000A1
 _reg_val                                bssCOMRAM    00005D
@@ -880,10 +815,9 @@ _var2                                   dataBANK0    0000AC
 _volts                                  bssBANK0     00008C
 _volts_cV                               bssBANK0     000098
 _volts_divider                          bssBANK0     00006C
-end_of_initialization                   cinit        00E10C
+end_of_initialization                   cinit        00E376
 i2c_read@i2cReadData                    cstackCOMRAM 000002
 i2c_write@i2cWriteData                  cstackCOMRAM 000002
-init_LORA_communication@baud_rate       cstackCOMRAM 000013
 intlevel0                               text         000000
 intlevel1                               text         000000
 intlevel2                               text         000000
@@ -893,7 +827,7 @@ main@b_temperature                      cstackCOMRAM 000055
 stackhi                                 (abs)        000F37
 stacklo                                 (abs)        000200
 start                                   init         000000
-start_initialization                    cinit        00E0C0
+start_initialization                    cinit        00E32A
 
 
 FUNCTION INFORMATION:
@@ -922,10 +856,11 @@ FUNCTION INFORMATION:
       Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Totals:        10       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
 Total ram usage:       10 bytes
- Hardware stack levels required when called:    5
+ Hardware stack levels required when called:    4
  This function calls:
 		_GetMode
 		_ReadSXRegister
+		_UARTInit
 		_UARTWriteByteHex
 		_UARTWriteStr
 		_UARTWriteStrLn
@@ -935,11 +870,6 @@ Total ram usage:       10 bytes
 		___flmul
 		___fltol
 		_i2c_init
-		_init_F46K22_ADC
-		_init_F46K22_AN
-		_init_F46K22_CLK
-		_init_F46K22_IO
-		_init_F46K22_TMR
 		_init_LORA_communication
 		_measure_humidity_temp_HIH6021
  This function is called by:
@@ -949,7 +879,7 @@ Total ram usage:       10 bytes
 
  *************** function _measure_humidity_temp_HIH6021 *****************
  Defined at:
-		line 404 in file "test_i2c.c"
+		line 380 in file "test_i2c.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -1342,7 +1272,7 @@ Total ram usage:       16 bytes
  Defined at:
 		line 7 in file "LoRa_com.c"
  Parameters:    Size  Location     Type
-  baud_rate       2   18[COMRAM] unsigned int 
+		None
  Auto vars:     Size  Location     Type
 		None
  Return value:  Size  Location     Type
@@ -1354,55 +1284,23 @@ Total ram usage:       16 bytes
 		On exit  : 
 		Unchanged: 
  Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
       Temps:          2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         4       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        4 bytes
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
  Hardware stack levels used:    1
- Hardware stack levels required when called:    4
+ Hardware stack levels required when called:    3
  This function calls:
 		_AntennaTX
-		_CheckConfiguration
 		_GetMode
 		_InitModule
 		_InitRFLoRaPins
 		_ResetRFModule
 		_SPIInit
-		_UARTInit
-		_UARTWriteStrLn
 		_WriteSXRegister
  This function is called by:
 		_main
- This function uses a non-reentrant model
-
-
- *************** function _UARTInit *****************
- Defined at:
-		line 16 in file "uart.c"
- Parameters:    Size  Location     Type
-  baudRate        2    0[COMRAM] unsigned int 
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_init_LORA_communication
  This function uses a non-reentrant model
 
 
@@ -1596,86 +1494,18 @@ Total ram usage:        4 bytes
  This function uses a non-reentrant model
 
 
- *************** function _ReadSXRegister *****************
- Defined at:
-		line 29 in file "SX1272.c"
- Parameters:    Size  Location     Type
-  address         1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  address         1    4[COMRAM] unsigned char 
-  RegValue        1    3[COMRAM] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      unsigned char 
- Registers used:
-		wreg, status,2, status,0, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    1
- This function calls:
-		_SPIReceive
-		_SPITransfer
- This function is called by:
-		_main
-		_GetMode
-		_load_FIFO_with_temp_humidity_voltage
-		_has_transmitted
-		_reset_IRQs
- This function uses a non-reentrant model
-
-
- *************** function _CheckConfiguration *****************
- Defined at:
-		line 163 in file "SX1272.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    3
- This function calls:
-		_PrintSXRegContent
-		_UARTWriteStr
-		_UARTWriteStrLn
- This function is called by:
-		_init_LORA_communication
- This function uses a non-reentrant model
-
-
  *************** function _UARTWriteStrLn *****************
  Defined at:
 		line 72 in file "uart.c"
  Parameters:    Size  Location     Type
   string          2    1[COMRAM] PTR unsigned char 
-		 -> STR_54(20), STR_53(2), STR_52(24), STR_51(2), 
-		 -> STR_50(28), STR_49(2), STR_48(18), STR_47(2), 
-		 -> STR_46(19), STR_45(25), STR_20(33), STR_19(2), 
-		 -> STR_18(27), STR_17(20), STR_16(24), STR_15(23), 
-		 -> STR_14(8), STR_13(23), STR_12(13), STR_11(11), 
-		 -> STR_10(11), STR_9(38), STR_8(12), STR_5(20), 
-		 -> STR_4(2), STR_2(20), STR_1(2), 
+		 -> STR_52(20), STR_51(2), STR_50(24), STR_49(2), 
+		 -> STR_48(28), STR_47(2), STR_46(18), STR_45(2), 
+		 -> STR_20(33), STR_19(2), STR_18(27), STR_17(20), 
+		 -> STR_16(24), STR_15(23), STR_14(8), STR_13(23), 
+		 -> STR_12(13), STR_11(11), STR_10(11), STR_9(38), 
+		 -> STR_8(12), STR_5(20), STR_4(2), STR_2(20), 
+		 -> STR_1(2), 
  Auto vars:     Size  Location     Type
   i               1    5[COMRAM] unsigned char 
  Return value:  Size  Location     Type
@@ -1700,7 +1530,6 @@ Total ram usage:        5 bytes
 		_main
 		_GetMode
 		_CheckConfiguration
-		_init_LORA_communication
 		_load_FIFO_with_temp_humidity_voltage
 		_set_TX_and_transmit
 		_has_transmitted
@@ -1713,7 +1542,7 @@ Total ram usage:        5 bytes
 		line 64 in file "uart.c"
  Parameters:    Size  Location     Type
   string          2    1[COMRAM] PTR unsigned char 
-		 -> STR_56(32), STR_55(33), STR_43(19), STR_42(29), 
+		 -> STR_54(32), STR_53(33), STR_43(19), STR_42(29), 
 		 -> STR_41(19), STR_40(25), STR_39(20), STR_38(28), 
 		 -> STR_37(27), STR_36(27), STR_35(26), STR_34(23), 
 		 -> STR_33(23), STR_32(19), STR_31(24), STR_30(27), 
@@ -1745,39 +1574,6 @@ Total ram usage:        5 bytes
 		_GetMode
 		_CheckConfiguration
 		_reset_IRQs
- This function uses a non-reentrant model
-
-
- *************** function _PrintSXRegContent *****************
- Defined at:
-		line 151 in file "SX1272.c"
- Parameters:    Size  Location     Type
-  address         1    wreg     unsigned char 
- Auto vars:     Size  Location     Type
-  address         1   15[COMRAM] unsigned char 
-  RegValue        1   14[COMRAM] unsigned char 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2, status,0, tblptrl, tblptrh, tblptru, cstack
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        2 bytes
- Hardware stack levels used:    1
- Hardware stack levels required when called:    2
- This function calls:
-		_SPIReceive
-		_SPITransfer
-		_UARTWriteByteHex
- This function is called by:
-		_CheckConfiguration
  This function uses a non-reentrant model
 
 
@@ -1880,6 +1676,42 @@ Total ram usage:        1 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _ReadSXRegister *****************
+ Defined at:
+		line 29 in file "SX1272.c"
+ Parameters:    Size  Location     Type
+  address         1    wreg     unsigned char 
+ Auto vars:     Size  Location     Type
+  address         1    4[COMRAM] unsigned char 
+  RegValue        1    3[COMRAM] unsigned char 
+ Return value:  Size  Location     Type
+                  1    wreg      unsigned char 
+ Registers used:
+		wreg, status,2, status,0, cstack
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
+      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ Hardware stack levels required when called:    1
+ This function calls:
+		_SPIReceive
+		_SPITransfer
+ This function is called by:
+		_main
+		_GetMode
+		_load_FIFO_with_temp_humidity_voltage
+		_has_transmitted
+		_reset_IRQs
+ This function uses a non-reentrant model
+
+
  *************** function _SPITransfer *****************
  Defined at:
 		line 41 in file "spi.c"
@@ -1973,151 +1805,6 @@ Total ram usage:        1 bytes
  This function uses a non-reentrant model
 
 
- *************** function _init_F46K22_TMR *****************
- Defined at:
-		line 114 in file "init_F43K22.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _init_F46K22_IO *****************
- Defined at:
-		line 21 in file "init_F43K22.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		None
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _init_F46K22_CLK *****************
- Defined at:
-		line 5 in file "init_F43K22.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _init_F46K22_AN *****************
- Defined at:
-		line 92 in file "init_F43K22.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
- *************** function _init_F46K22_ADC *****************
- Defined at:
-		line 52 in file "init_F43K22.c"
- Parameters:    Size  Location     Type
-		None
- Auto vars:     Size  Location     Type
-		None
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, status,2
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
-      Params:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-      Totals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
-Total ram usage:        0 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_main
- This function uses a non-reentrant model
-
-
  *************** function _i2c_init *****************
  Defined at:
 		line 18 in file "i2c.c"
@@ -2179,107 +1866,125 @@ Total ram usage:       10 bytes
  This function uses a non-reentrant model
 
 
+ *************** function _UARTInit *****************
+ Defined at:
+		line 16 in file "uart.c"
+ Parameters:    Size  Location     Type
+  baudRate        2    0[COMRAM] unsigned int 
+ Auto vars:     Size  Location     Type
+		None
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, status,2
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7   BANK8   BANK9  BANK10  BANK11  BANK12  BANK13  BANK14  BANK15
+      Params:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Locals:         0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Temps:          0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+      Totals:         2       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0       0
+Total ram usage:        2 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_main
+ This function uses a non-reentrant model
+
+
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
-init_F43K22.c
-		_init_F46K22_AN		CODE           	DE4E	0000	27
-		_init_F46K22_IO		CODE           	DDA4	0000	17
-		_init_F46K22_ADC		CODE           	DFF2	0000	61
-		_init_F46K22_CLK		CODE           	DDB4	0000	21
-		_init_F46K22_TMR		CODE           	DD84	0000	11
-
-init_F43K22.c estimated size: 137
-
 uart.c
-		_UARTWriteStr  		CODE           	E070	0000	81
-		_UARTWriteByte 		CODE           	DDDC	0000	23
-		_UARTWriteByteHex		CODE           	E172	0000	111
-		_UARTInit      		CODE           	DFBC	0000	55
-		_UARTWriteStrLn		CODE           	E116	0000	93
+		_UARTWriteStr  		CODE           	E28A	0000	81
+		_UARTWriteByte 		CODE           	E06E	0000	23
+		_UARTWriteByteHex		CODE           	E3DC	0000	111
+		_UARTInit      		CODE           	E212	0000	55
+		_UARTWriteStrLn		CODE           	E380	0000	93
 
 uart.c estimated size: 363
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-		___xxtofl      		CODE           	E66C	0000	437
+		___xxtofl      		CODE           	E85E	0000	437
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c estimated size: 437
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c
-		___awdiv       		CODE           	E258	0000	197
+		___awdiv       		CODE           	E44A	0000	197
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\awdiv.c estimated size: 197
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c
-		___fltol       		CODE           	E40E	0000	263
+		___fltol       		CODE           	E600	0000	263
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\fltol.c estimated size: 263
 
 i2c.c
-		_i2c_NAK       		CODE           	DE08	0000	23
-		_i2c_start     		CODE           	DDC8	0000	21
-		_i2c_waitForIdle		CODE           	DF5C	0000	45
-		_i2c_ACK       		CODE           	DDF2	0000	23
-		_i2c_write     		CODE           	DE9C	0000	29
-		_i2c_stop      		CODE           	DE36	0000	25
-		_i2c_read      		CODE           	DEF6	0000	33
-		_i2c_init      		CODE           	DF88	0000	53
+		_i2c_NAK       		CODE           	E09A	0000	23
+		_i2c_start     		CODE           	E05A	0000	21
+		_i2c_waitForIdle		CODE           	E1B2	0000	45
+		_i2c_ACK       		CODE           	E084	0000	23
+		_i2c_write     		CODE           	E114	0000	29
+		_i2c_stop      		CODE           	E0C8	0000	25
+		_i2c_read      		CODE           	E16E	0000	33
+		_i2c_init      		CODE           	E1DE	0000	53
 
 i2c.c estimated size: 252
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c
-		___flmul       		CODE           	F358	0000	1067
+		___flmul       		CODE           	F382	0000	1067
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcmul.c estimated size: 1067
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c
-		___fldiv       		CODE           	EBB0	0000	923
+		___fldiv       		CODE           	EBEA	0000	923
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcdiv.c estimated size: 923
 
 test_i2c.c
-		_main          		CODE           	EF4A	0000	1039
-		_measure_humidity_temp_HIH6021		CODE           	E9D8	0000	473
+		_main          		CODE           	EF84	0000	1023
+		_measure_humidity_temp_HIH6021		CODE           	EA12	0000	473
 
-test_i2c.c estimated size: 1512
+test_i2c.c estimated size: 1496
 
 SX1272.c
-		_ReadSXRegister		CODE           	DEB8	0000	31
-		_CheckConfiguration		CODE           	E820	0000	441
-		_GetMode       		CODE           	E514	0000	345
-		_PrintSXRegContent		CODE           	DF16	0000	35
-		_InitModule    		CODE           	E31C	0000	243
-		_WriteSXRegister		CODE           	DE82	0000	27
+		_ReadSXRegister		CODE           	E130	0000	31
+		_GetMode       		CODE           	E706	0000	345
+		_InitModule    		CODE           	E50E	0000	243
+		_WriteSXRegister		CODE           	E0FA	0000	27
 
-SX1272.c estimated size: 1122
+SX1272.c estimated size: 646
 
 spi.c
-		_SPITransfer   		CODE           	DE68	0000	27
-		_SPIReceive    		CODE           	DED6	0000	33
-		_SPIInit       		CODE           	E02E	0000	67
+		_SPITransfer   		CODE           	E0E0	0000	27
+		_SPIReceive    		CODE           	E14E	0000	33
+		_SPIInit       		CODE           	E248	0000	67
 
 spi.c estimated size: 127
 
 shared
-		__initialization		CODE           	E0C0	0000	77
+		__initialization		CODE           	E32A	0000	77
 
 shared estimated size: 77
 
 RF_LoRa_868_SO.c
-		_ResetRFModule 		CODE           	DF38	0000	37
-		_AntennaTX     		CODE           	DE1E	0000	25
-		_InitRFLoRaPins		CODE           	DD8E	0000	11
+		_ResetRFModule 		CODE           	E18E	0000	37
+		_AntennaTX     		CODE           	E0B0	0000	25
+		_InitRFLoRaPins		CODE           	E044	0000	11
 
 RF_LoRa_868_SO.c estimated size: 73
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c
-		___fladd       		CODE           	F782	0000	1217
+		___fladd       		CODE           	F7AC	0000	1217
 
 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\sprcadd.c estimated size: 1217
 
 LoRa_com.c
-		_init_LORA_communication		CODE           	E1E0	0000	121
+		_init_LORA_communication		CODE           	E2DA	0000	81
 
-LoRa_com.c estimated size: 121
+LoRa_com.c estimated size: 81
 

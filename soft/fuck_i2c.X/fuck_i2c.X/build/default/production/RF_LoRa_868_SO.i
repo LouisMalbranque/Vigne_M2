@@ -9794,7 +9794,7 @@ void CheckConfiguration (void);
 # 14 "RF_LoRa_868_SO.c" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
-# 35 "./RF_LoRa_868_SO.h"
+# 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);

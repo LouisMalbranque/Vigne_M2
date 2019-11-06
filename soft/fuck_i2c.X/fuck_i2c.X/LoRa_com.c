@@ -4,9 +4,9 @@
 
 //uint8_t txBuffer[256];
 
-void init_LORA_communication(UINT16_T baud_rate){
+void init_LORA_communication(){
     
-    UARTInit(baud_rate);            // init UART @ 19200 bps
+    
     InitRFLoRaPins();           // configure pins for RF Solutions LoRa module   
     SPIInit();                  // init SPI   
     ResetRFModule();            // reset the RF Solutions LoRa module (should be optional since Power On Reset is implemented)
@@ -14,8 +14,6 @@ void init_LORA_communication(UINT16_T baud_rate){
     AntennaTX();                // connect antenna to module output
     
     // put module in LoRa mode (see SX1272 datasheet page 107)
-    UARTWriteStrLn("set mode to LoRa standby");
-
     WriteSXRegister(REG_OP_MODE, FSK_SLEEP_MODE);       // SLEEP mode required first to change bit n°7
     WriteSXRegister(REG_OP_MODE, LORA_SLEEP_MODE);      // switch from FSK mode to LoRa mode
     WriteSXRegister(REG_OP_MODE, LORA_STANDBY_MODE);    // STANDBY mode required fot FIFO loading
@@ -23,11 +21,7 @@ void init_LORA_communication(UINT16_T baud_rate){
     GetMode();
     
     // initialize the module
-    UARTWriteStrLn("initialize module ");
     InitModule();
-    
-    // for debugging purpose only: check configuration registers content
-    CheckConfiguration();
 }
 
 void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity, double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame){
@@ -52,9 +46,9 @@ void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity, do
     UARTWriteStrLn(" ");
     UARTWriteStrLn("step 1: load FIFO");
     WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
-    WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
+    WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
 
-    for (i = 0; i < PAYLOAD_LENGTH; i++) {
+    for (i = 0; i < PAYLOAD_LENGTH_1; i++) {
         WriteSXRegister(REG_FIFO, txBuffer[i]);         // load FIFO with data to transmit  
     }
 }

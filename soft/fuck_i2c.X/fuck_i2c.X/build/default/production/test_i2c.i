@@ -9933,14 +9933,14 @@ void CheckConfiguration (void);
 # 38 "./LoRa_com.h" 2
 
 # 1 "./RF_LoRa_868_SO.h" 1
-# 35 "./RF_LoRa_868_SO.h"
+# 36 "./RF_LoRa_868_SO.h"
 void InitRFLoRaPins(void);
 void ResetRFModule(void);
 void AntennaTX(void);
 # 39 "./LoRa_com.h" 2
 
 
-void init_LORA_communication(UINT16_T baud_rate);
+void init_LORA_communication();
 void load_FIFO_with_temp_humidity_voltage(double temperature,double humidity,double battery_voltage,uint8_t *txBuffer,uint8_t id_node, uint8_t id_reseau,uint8_t id_trame);
 void set_TX_and_transmit(void);
 void has_transmitted(uint8_t reg_val);
@@ -9962,7 +9962,8 @@ void i2c_NAK(void);
 
 
 # 1 "./init_F43K22.h" 1
-# 17 "./init_F43K22.h"
+# 21 "./init_F43K22.h"
+    void init_F46K22(void);
     void init_F46K22_CLK(void);
     void init_F23K20_CLK(void);
     void init_F46K22_IO(void);
@@ -10055,14 +10056,11 @@ int main(int argc, char** argv) {
     bat_voltage0 = 0;
 
 
-   init_F46K22_CLK();
-   init_F46K22_IO();
-   init_F46K22_ADC();
-   init_F46K22_AN();
-   init_F46K22_TMR();
+    UARTInit(19200);
 
-    init_LORA_communication(19200);
-# 215 "test_i2c.c"
+
+    init_LORA_communication();
+
     i2c_init();
     (INTCONbits.GIE = 1);
 
@@ -10073,8 +10071,8 @@ int main(int argc, char** argv) {
     txPremiereTrame[4] = idN;
     txPremiereTrame[5] = idR;
     WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-    WriteSXRegister(0x22, 6);
-    for (i = 0; i < 6; i++) {
+    WriteSXRegister(0x22, 4);
+    for (i = 0; i < 4; i++) {
         WriteSXRegister(0x00, txPremiereTrame[i]);
     }
 
@@ -10130,7 +10128,7 @@ int main(int argc, char** argv) {
 
         WriteSXRegister(0x0D, ReadSXRegister(0x0E));
         WriteSXRegister(0x22, 6);
-# 290 "test_i2c.c"
+# 266 "test_i2c.c"
         for (i = 0; i < 6; i++) {
             WriteSXRegister(0x00, txMsg[i]);
         }
@@ -10159,7 +10157,7 @@ int main(int argc, char** argv) {
         UARTWriteByteHex(reg_val);
 
         WriteSXRegister(0x12, 0xFF);
-# 328 "test_i2c.c"
+# 304 "test_i2c.c"
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
@@ -10189,10 +10187,10 @@ void measure_battery(void)
 
 
     ADC_result = (ADRESH << 8 )|ADRESL;
-# 375 "test_i2c.c"
+# 351 "test_i2c.c"
     volts = (2.048/1023)*ADC_result;
     battery_voltage = volts *(2.115);
-# 389 "test_i2c.c"
+# 365 "test_i2c.c"
     accu_v = (UINT16_T)(battery_voltage * 100);
     accu_v2 = (UINT16_T)(battery_voltage*100);
     bat_voltage_unit = (accu_v/100);
