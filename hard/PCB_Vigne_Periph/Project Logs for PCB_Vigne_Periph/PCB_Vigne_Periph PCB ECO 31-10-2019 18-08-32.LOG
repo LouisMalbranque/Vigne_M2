@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=MCLR Pin=J1-1
+Change Net Name : Old Net Name=MCLR New Net Name=VDD
+Added Pin To Net: NetName=MCLR Pin=J1-1
+Added Pin To Net: NetName=MCLR Pin=RMCLR-1
+Added Pin To Net: NetName=MCLR Pin=U0-1
+Added Net: Name=MCLR
+Added Pin To Net: NetName=RESET_LORA_RB2 Pin=U0-35
+Added Pin To Net: NetName=RESET_LORA_RB2 Pin=U1-12
+Added Net: Name=RESET_LORA_RB2
+Added Room: Name=PCB_Vigne_Periph

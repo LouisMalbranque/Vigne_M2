@@ -1,0 +1,3 @@
+Change Component Footprint: Designator=TP1_GND Old Footprint=mini_testpoint New Footprint=testpoint3
+Change Component Footprint: Designator=TP2_GND Old Footprint=mini_testpoint New Footprint=testpoint3
+Added Room: Name=PCB_Vigne_Periph

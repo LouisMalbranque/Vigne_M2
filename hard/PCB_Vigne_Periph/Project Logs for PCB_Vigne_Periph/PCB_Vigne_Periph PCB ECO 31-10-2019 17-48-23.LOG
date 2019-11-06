@@ -1,0 +1,10 @@
+Change Component Footprint: Designator=SW1 Old Footprint=1ZB New Footprint=KSA
+Change Component Footprint: Designator=R1_Div Old Footprint=0201 New Footprint=AXIAL0.4
+Change Component Footprint: Designator=R2_Div Old Footprint=0201 New Footprint=AXIAL0.4
+Change Component Footprint: Designator=R_CLK Old Footprint=0201 New Footprint=AXIAL0.4
+Change Component Footprint: Designator=R_PB Old Footprint=0201 New Footprint=AXIAL0.4
+Change Component Footprint: Designator=R_SDA Old Footprint=0201 New Footprint=AXIAL0.4
+Change Component Footprint: Designator=C_dec_capteur Old Footprint=0402 New Footprint=RAD0.2
+Change Component Footprint: Designator=C_VCore Old Footprint=0402 New Footprint=RAD0.2
+Change Component Footprint: Designator=Cdec Old Footprint=0402 New Footprint=RAD0.2
+Change Component Footprint: Designator=RMCLR Old Footprint=0805 New Footprint=AXIAL0.4

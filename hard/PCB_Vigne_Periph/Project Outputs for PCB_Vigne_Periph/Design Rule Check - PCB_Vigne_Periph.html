@@ -1,0 +1,392 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD15\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">04/11/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">17:12:25</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC" class="file"><acronym title="C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC">C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">16</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDDLYLPHRJWNH4BHWA15EY10IP4J2ROYHUGJHIU2IHOXJPG5A3M5PJ"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDC1REWDHAQADTDIFI112P53TEDJRXC5P0OCKDUMFUYFMZCTQHMH3C">Clearance Constraint (Gap=0.508mm) (OnLayer('Top Layer')  Or OnLayer('Multi-Layer')),(OnLayer('Top Layer') And InPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPK4WNGW4HTA4BY01LAOBSENGDF34O5JZEF2H4VKLSRQVQAYOFTK">Clearance Constraint (Gap=0.508mm) (OnLayer('Bottom Layer') Or OnLayer('Multi-Layer')),(OnLayer('Bottom Layer')  And  InPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUI1ACIVD4SB1K0IZMV3QKP2ONHHTODGJCJ3IANCGM5ZCEY3Y1OQN">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3KO4XIR5AYDEGRU4HDZNQQEEJNZAQQP3SQCWX1C52PX1ZMFOVDHB">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">16</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRZ45BAAAJQHKO3KHPQL4TXIY5DEBDHIO3S014BIEGU4CAMNVZUXI">Hole Size Constraint (Min=0.406mm) (Max=25.4mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFYPDXJE3DM2WKGXYEPVIBDBSHN0L1KODFDW1GRJ0312NBTGO3CXP">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDETQQOC2SYWG1CK3IRJTHAVTJZLOTKPGJAFNMHKB4VHLX0HTDXZJE">SMD To Plane Constraint (Distance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBLAEBWURQFGYK4OXBGLMWMELAJWZLN01ACABDNDXIA2SMSRWPKAM">Minimum Annular Ring (Minimum=0.254mm) (PadXSize_AllLayers = PadYSize_AllLayers)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYEMDHJIPIXGFLX5CSBYLG5V15JBYLBLXX5EZ22FDNISOZAFD214L">Clearance Constraint (Gap=0.203mm) (OnLayer('Top Layer')  Or OnLayer('Multi-Layer')),(OnLayer('Top Layer') And Not InPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDVV3LVD4C2JUTIFBILLX05X21SCYTSPQTCQSCIGGCVUHMOOGULLIM">Clearance Constraint (Gap=0.203mm) (OnLayer('Bottom Layer') Or OnLayer('Multi-Layer')),(OnLayer('Bottom Layer')  And Not InPoly)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDI34GQCOONR3GGHKMMLCAAFBWAE0VXTIT5CDITBICOT3Q3NRWMKSM">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPMUDPFRRJ32YHKX4WROWDUMA1OYAZZJY52CUA2KDHHJP0NGN4KTC">Width Constraint (Min=0.254mm) (Max=254mm) (Preferred=0.813mm) (OnLayer('Bottom Layer') or OnLayer('Top Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGOD2JNE0JKJOGAUMNGP2XP31LFNS5NXJVZU1OBZQVAKKCKQO22O">Clearance Constraint (Gap=0.254mm) (OnLayer('Multi-Layer')),(OnLayer('Multi-Layer'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDK3LGYEKCIVMCMNBE1DV1XCGAZMFXT5H05YL21HFMWWMWOO5H2UVI">Clearance Constraint (Gap=0mm) (OnLayer('Bottom Layer') Or OnLayer('Multi-Layer') Or InPoly),(OnLayer('Keepout'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">16</td>
+</tr>
+</table><br><hr><a name="ID3KO4XIR5AYDEGRU4HDZNQQEEJNZAQQP3SQCWX1C52PX1ZMFOVDHB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7037.968mil|Location2.X=7230.968mil|Location1.Y=7972.378mil|Location2.Y=8165.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7037.968mil|Location2.X=7230.968mil|Location1.Y=7972.378mil|Location2.Y=8165.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad TP2_GND-1 (-20.32,33.02mm) And Pad R2_Div-1 (-17.78,30.48mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8972.969mil|Location2.X=9280.969mil|Location1.Y=7672.378mil|Location2.Y=7780.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8972.969mil|Location2.X=9280.969mil|Location1.Y=7672.378mil|Location2.Y=7780.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-1 (29.21,22.86mm) And Pad SW1-4 (34.29,22.86mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7291.968mil|Location2.X=7610.496mil|Location1.Y=6541.378mil|Location2.Y=6659.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7291.968mil|Location2.X=7610.496mil|Location1.Y=6541.378mil|Location2.Y=6659.905mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad Cdec-2 (-13.97,-6.35mm) And Pad U0-12 (-7.62,-5.08mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9172.969mil|Location2.X=9280.969mil|Location1.Y=7372.378mil|Location2.Y=7780.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9172.969mil|Location2.X=9280.969mil|Location1.Y=7372.378mil|Location2.Y=7780.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-3 (34.29,15.24mm) And Pad SW1-4 (34.29,22.86mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8143.441mil|Location2.X=8410.496mil|Location1.Y=6592.85mil|Location2.Y=6859.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8143.441mil|Location2.X=8410.496mil|Location1.Y=6592.85mil|Location2.Y=6859.905mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U0-31 (7.62,0mm) And Pad P_Uart-1 (12.7,-5.08mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6487.968mil|Location2.X=7115.968mil|Location1.Y=8087.378mil|Location2.Y=8165.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6487.968mil|Location2.X=7115.968mil|Location1.Y=8087.378mil|Location2.Y=8165.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad TP1_GND-1 (-34.29,33.02mm) And Pad TP2_GND-1 (-20.32,33.02mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6041.968mil|Location2.X=6411.968mil|Location1.Y=6041.378mil|Location2.Y=6411.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6041.968mil|Location2.X=6411.968mil|Location1.Y=6041.378mil|Location2.Y=6411.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C_VCore-1 (-45.72,-19.05mm) And Pad C_dec_capteur-2 (-38.1,-11.43mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6041.968mil|Location2.X=6462.465mil|Location1.Y=5790.882mil|Location2.Y=6111.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6041.968mil|Location2.X=6462.465mil|Location1.Y=5790.882mil|Location2.Y=6111.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C_VCore-1 (-45.72,-19.05mm) And Pad HIH6031-2 (-36.83,-25.4mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6312.968mil|Location2.X=6565.968mil|Location1.Y=7562.378mil|Location2.Y=8165.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6312.968mil|Location2.X=6565.968mil|Location1.Y=7562.378mil|Location2.Y=8165.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad J_POWER-1 (-38.1,20.32mm) And Pad TP1_GND-1 (-34.29,33.02mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9172.969mil|Location2.X=9410.969mil|Location1.Y=6792.378mil|Location2.Y=7480.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9172.969mil|Location2.X=9410.969mil|Location1.Y=6792.378mil|Location2.Y=7480.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad SW1-3 (34.29,15.24mm) And Pad U1-2 (38.1,1.27mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7122.968mil|Location2.X=8010.968mil|Location1.Y=7972.378mil|Location2.Y=8170.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7122.968mil|Location2.X=8010.968mil|Location1.Y=7972.378mil|Location2.Y=8170.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R2_Div-1 (-17.78,30.48mm) And Pad J1-3 (2.54,33.02mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7543.441mil|Location2.X=8210.496mil|Location1.Y=6592.85mil|Location2.Y=6859.905mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7543.441mil|Location2.X=8210.496mil|Location1.Y=6592.85mil|Location2.Y=6859.905mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U0-12 (-7.62,-5.08mm) And Pad U0-31 (7.62,0mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6341.968mil|Location2.X=7361.968mil|Location1.Y=6341.378mil|Location2.Y=6611.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6341.968mil|Location2.X=7361.968mil|Location1.Y=6341.378mil|Location2.Y=6611.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C_dec_capteur-2 (-38.1,-11.43mm) And Pad Cdec-2 (-13.97,-6.35mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6312.968mil|Location2.X=6440.968mil|Location1.Y=6341.378mil|Location2.Y=7690.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6312.968mil|Location2.X=6440.968mil|Location1.Y=6341.378mil|Location2.Y=7690.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C_dec_capteur-2 (-38.1,-11.43mm) And Pad J_POWER-1 (-38.1,20.32mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8143.441mil|Location2.X=9410.969mil|Location1.Y=6792.378mil|Location2.Y=6960.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8143.441mil|Location2.X=9410.969mil|Location1.Y=6792.378mil|Location2.Y=6960.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U0-31 (7.62,0mm) And Pad U1-2 (38.1,1.27mm)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7476.968mil|Location2.X=8276.969mil|Location1.Y=6626.378mil|Location2.Y=7026.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7476.968mil|Location2.X=8276.969mil|Location1.Y=6626.378mil|Location2.Y=7026.378mil|Absolute=True">Un-Routed Net Constraint: Net VDD Between Track on layer Bottom Layer (-7.62,-2.54mm) And Track on layer Bottom Layer (7.62,2.54mm)</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

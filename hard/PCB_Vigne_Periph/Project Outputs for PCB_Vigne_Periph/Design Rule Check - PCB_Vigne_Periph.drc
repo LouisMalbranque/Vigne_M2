@@ -1,0 +1,66 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\louis\Desktop\Projets\Vigne\Altium Lib\PCB_Vigne_Periph\PCB_Vigne_Periph\PCB_Vigne_Periph.PCBDOC
+Date     : 04/11/2019
+Time     : 17:12:25
+
+Processing Rule : Clearance Constraint (Gap=0.508mm) (OnLayer('Top Layer')  Or OnLayer('Multi-Layer')),(OnLayer('Top Layer') And InPoly)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.508mm) (OnLayer('Bottom Layer') Or OnLayer('Multi-Layer')),(OnLayer('Bottom Layer')  And  InPoly)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net GND Between Pad TP2_GND-1 (-20.32,33.02mm) And Pad R2_Div-1 (-17.78,30.48mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad SW1-1 (29.21,22.86mm) And Pad SW1-4 (34.29,22.86mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad Cdec-2 (-13.97,-6.35mm) And Pad U0-12 (-7.62,-5.08mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad SW1-3 (34.29,15.24mm) And Pad SW1-4 (34.29,22.86mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U0-31 (7.62,0mm) And Pad P_Uart-1 (12.7,-5.08mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad TP1_GND-1 (-34.29,33.02mm) And Pad TP2_GND-1 (-20.32,33.02mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C_VCore-1 (-45.72,-19.05mm) And Pad C_dec_capteur-2 (-38.1,-11.43mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C_VCore-1 (-45.72,-19.05mm) And Pad HIH6031-2 (-36.83,-25.4mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad J_POWER-1 (-38.1,20.32mm) And Pad TP1_GND-1 (-34.29,33.02mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad SW1-3 (34.29,15.24mm) And Pad U1-2 (38.1,1.27mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad R2_Div-1 (-17.78,30.48mm) And Pad J1-3 (2.54,33.02mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U0-12 (-7.62,-5.08mm) And Pad U0-31 (7.62,0mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C_dec_capteur-2 (-38.1,-11.43mm) And Pad Cdec-2 (-13.97,-6.35mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad C_dec_capteur-2 (-38.1,-11.43mm) And Pad J_POWER-1 (-38.1,20.32mm)
+   Violation between Un-Routed Net Constraint: Net GND Between Pad U0-31 (7.62,0mm) And Pad U1-2 (38.1,1.27mm)
+   Violation between Un-Routed Net Constraint: Net VDD Between Track on layer Bottom Layer (-7.62,-2.54mm) And Track on layer Bottom Layer (7.62,2.54mm)
+Rule Violations :16
+
+Processing Rule : Hole Size Constraint (Min=0.406mm) (Max=25.4mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : SMD To Plane Constraint (Distance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.254mm) (PadXSize_AllLayers = PadYSize_AllLayers)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.203mm) (OnLayer('Top Layer')  Or OnLayer('Multi-Layer')),(OnLayer('Top Layer') And Not InPoly)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.203mm) (OnLayer('Bottom Layer') Or OnLayer('Multi-Layer')),(OnLayer('Bottom Layer')  And Not InPoly)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.254mm) (Max=254mm) (Preferred=0.813mm) (OnLayer('Bottom Layer') or OnLayer('Top Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.254mm) (OnLayer('Multi-Layer')),(OnLayer('Multi-Layer'))
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0mm) (OnLayer('Bottom Layer') Or OnLayer('Multi-Layer') Or InPoly),(OnLayer('Keepout'))
+Rule Violations :0
+
+
+Violations Detected : 16
+Time Elapsed        : 00:00:01

@@ -1,0 +1,109 @@
+Added Component: Designator=C_dec_capteur(0402)
+Added Component: Designator=C_VCore(0402)
+Added Component: Designator=Cdec(0402)
+Added Component: Designator=J1(PIC-ICSP)
+Added Component: Designator=J_POWER(AMP_2)
+Added Component: Designator=P_i2c(HDR1X2)
+Added Component: Designator=P_SPI(HDR1X4)
+Added Component: Designator=P_Uart(HDR1X6)
+Added Component: Designator=R1_Div(0201)
+Added Component: Designator=R2_Div(0201)
+Added Component: Designator=R_CLK(0201)
+Added Component: Designator=R_PB(0201)
+Added Component: Designator=R_SDA(0201)
+Added Component: Designator=RMCLR(0805)
+Added Component: Designator=SW1(1ZB)
+Added Component: Designator=TP1_GND(mini_testpoint)
+Added Component: Designator=TP2_GND(mini_testpoint)
+Added Component: Designator=U0(MCHP-PDIP-P40)
+Added Component: Designator=U1(RF-LORA-868-DIP)
+Added Pin To Net: NetName=CLK_RC3 Pin=P_i2c-1
+Added Pin To Net: NetName=CLK_RC3 Pin=R_CLK-1
+Added Pin To Net: NetName=CLK_RC3 Pin=U0-18
+Added Net: Name=CLK_RC3
+Added Pin To Net: NetName=CS_LORA_RE0 Pin=P_SPI-4
+Added Pin To Net: NetName=CS_LORA_RE0 Pin=U0-8
+Added Pin To Net: NetName=CS_LORA_RE0 Pin=U1-16
+Added Net: Name=CS_LORA_RE0
+Added Pin To Net: NetName=DIO0_LORA_RB0 Pin=U0-33
+Added Pin To Net: NetName=DIO0_LORA_RB0 Pin=U1-6
+Added Net: Name=DIO0_LORA_RB0
+Added Pin To Net: NetName=DIV_RA0 Pin=R1_Div-1
+Added Pin To Net: NetName=DIV_RA0 Pin=R2_Div-2
+Added Pin To Net: NetName=DIV_RA0 Pin=U0-2
+Added Net: Name=DIV_RA0
+Added Pin To Net: NetName=GND Pin=C_dec_capteur-2
+Added Pin To Net: NetName=GND Pin=C_VCore-1
+Added Pin To Net: NetName=GND Pin=Cdec-2
+Added Pin To Net: NetName=GND Pin=J1-3
+Added Pin To Net: NetName=GND Pin=J_POWER-1
+Added Pin To Net: NetName=GND Pin=P_Uart-1
+Added Pin To Net: NetName=GND Pin=R2_Div-1
+Added Pin To Net: NetName=GND Pin=TP1_GND-1
+Added Pin To Net: NetName=GND Pin=TP2_GND-1
+Added Pin To Net: NetName=GND Pin=U0-12
+Added Pin To Net: NetName=GND Pin=U0-31
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Net: Name=GND
+Added Pin To Net: NetName=MCLR Pin=C_dec_capteur-1
+Added Pin To Net: NetName=MCLR Pin=Cdec-1
+Added Pin To Net: NetName=MCLR Pin=J1-1
+Added Pin To Net: NetName=MCLR Pin=J1-2
+Added Pin To Net: NetName=MCLR Pin=J_POWER-2
+Added Pin To Net: NetName=MCLR Pin=R1_Div-2
+Added Pin To Net: NetName=MCLR Pin=R_CLK-2
+Added Pin To Net: NetName=MCLR Pin=R_PB-1
+Added Pin To Net: NetName=MCLR Pin=R_SDA-1
+Added Pin To Net: NetName=MCLR Pin=RMCLR-2
+Added Pin To Net: NetName=MCLR Pin=U0-11
+Added Pin To Net: NetName=MCLR Pin=U0-32
+Added Pin To Net: NetName=MCLR Pin=U1-3
+Added Net: Name=MCLR
+Added Pin To Net: NetName=NetC_VCore_2 Pin=C_VCore-2
+Added Net: Name=NetC_VCore_2
+Added Pin To Net: NetName=NetRMCLR_1 Pin=RMCLR-1
+Added Pin To Net: NetName=NetRMCLR_1 Pin=U0-1
+Added Net: Name=NetRMCLR_1
+Added Pin To Net: NetName=PGC Pin=J1-5
+Added Pin To Net: NetName=PGC Pin=U0-39
+Added Net: Name=PGC
+Added Pin To Net: NetName=PGD Pin=J1-4
+Added Pin To Net: NetName=PGD Pin=U0-40
+Added Net: Name=PGD
+Added Pin To Net: NetName=RESET_LORA_RB1 Pin=U0-34
+Added Pin To Net: NetName=RESET_LORA_RB1 Pin=U1-12
+Added Net: Name=RESET_LORA_RB1
+Added Pin To Net: NetName=RX_SW_LORA_RB4 Pin=U0-37
+Added Pin To Net: NetName=RX_SW_LORA_RB4 Pin=U1-4
+Added Net: Name=RX_SW_LORA_RB4
+Added Pin To Net: NetName=RX_UART Pin=P_Uart-4
+Added Pin To Net: NetName=RX_UART Pin=U0-26
+Added Net: Name=RX_UART
+Added Pin To Net: NetName=SCLK_LORA_RD0 Pin=P_SPI-1
+Added Pin To Net: NetName=SCLK_LORA_RD0 Pin=U0-19
+Added Pin To Net: NetName=SCLK_LORA_RD0 Pin=U1-13
+Added Net: Name=SCLK_LORA_RD0
+Added Pin To Net: NetName=SDA_RC4 Pin=P_i2c-2
+Added Pin To Net: NetName=SDA_RC4 Pin=R_SDA-2
+Added Pin To Net: NetName=SDA_RC4 Pin=U0-23
+Added Net: Name=SDA_RC4
+Added Pin To Net: NetName=SDI_LORA_RD4 Pin=P_SPI-2
+Added Pin To Net: NetName=SDI_LORA_RD4 Pin=U0-27
+Added Pin To Net: NetName=SDI_LORA_RD4 Pin=U1-15
+Added Net: Name=SDI_LORA_RD4
+Added Pin To Net: NetName=SDO_LORA_RD1 Pin=P_SPI-3
+Added Pin To Net: NetName=SDO_LORA_RD1 Pin=U0-20
+Added Pin To Net: NetName=SDO_LORA_RD1 Pin=U1-14
+Added Net: Name=SDO_LORA_RD1
+Added Pin To Net: NetName=SW_PB_RD5 Pin=R_PB-2
+Added Pin To Net: NetName=SW_PB_RD5 Pin=SW1-2
+Added Pin To Net: NetName=SW_PB_RD5 Pin=U0-28
+Added Net: Name=SW_PB_RD5
+Added Pin To Net: NetName=TX_SW_LORA_RB3 Pin=U0-36
+Added Pin To Net: NetName=TX_SW_LORA_RB3 Pin=U1-5
+Added Net: Name=TX_SW_LORA_RB3
+Added Pin To Net: NetName=TX_UART Pin=P_Uart-5
+Added Pin To Net: NetName=TX_UART Pin=U0-25
+Added Net: Name=TX_UART
+Added Class: Name=PCB_Vigne_Periph
+Added Room: Name=PCB_Vigne_Periph

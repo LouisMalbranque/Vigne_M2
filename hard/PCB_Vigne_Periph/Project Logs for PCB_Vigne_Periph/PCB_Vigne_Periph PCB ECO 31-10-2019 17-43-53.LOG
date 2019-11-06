@@ -1,0 +1,7 @@
+Added Component: Designator=HIH6031(HIH6031-Traversant)
+Added Pin To Net: NetName=NetC_VCore_2 Pin=HIH6031-1
+Added Pin To Net: NetName=GND Pin=HIH6031-2
+Added Pin To Net: NetName=CLK_RC3 Pin=HIH6031-3
+Added Pin To Net: NetName=SDA_RC4 Pin=HIH6031-4
+Added Pin To Net: NetName=MCLR Pin=HIH6031-8
+Added Member To Class: ClassName=PCB_Vigne_Periph Member=Component HIH6031

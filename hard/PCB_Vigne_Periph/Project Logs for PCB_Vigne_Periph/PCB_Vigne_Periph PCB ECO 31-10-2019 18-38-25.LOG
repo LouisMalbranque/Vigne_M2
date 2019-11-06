@@ -1,0 +1,5 @@
+Added Pin To Net: NetName=SW_PB_RB5 Pin=R_PB-2
+Added Pin To Net: NetName=SW_PB_RB5 Pin=SW1-2
+Added Pin To Net: NetName=SW_PB_RB5 Pin=U0-38
+Added Net: Name=SW_PB_RB5
+Added Room: Name=PCB_Vigne_Periph
