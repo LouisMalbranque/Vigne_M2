@@ -28,18 +28,38 @@ void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, u
         
         uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
         uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
+        uint8_t b_battery_voltage = (uint8_t)((battery_voltage - 2.75) * 1000);
         uint8_t txMsg[PAYLOAD_LENGTH_1];
         
         WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
         WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_1);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
 
-        txMsg[0] = 1;
+        txMsg[0] = id_trame;
         txMsg[1] = id_node;
         txMsg[2] = id_reseau;
         txMsg[3] = b_battery_voltage;
         txMsg[4] = b_temperature;
         txMsg[5] = b_humidity;
+        
+        for (int i = 0; i < PAYLOAD_LENGTH_1; i++) {
+            WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
+        }
+}
+
+void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage){
+        
+
+        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 10));
+        uint8_t txMsg[PAYLOAD_LENGTH_0];
+        
+        WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
+        WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_0);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
+
+        txMsg[0] = id_trame;
+        txMsg[1] = id_node;
+        txMsg[2] = id_reseau;
+        txMsg[3] = b_battery_voltage;
+        
         for (int i = 0; i < PAYLOAD_LENGTH_1; i++) {
             WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
         }

@@ -43,7 +43,7 @@
 
 void init_LORA_communication();
 void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity);
-
+void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage);
 void set_TX_and_transmit(void);
 void wait_for_transmission(void);
 void reset_IRQs(void);

@@ -181,58 +181,30 @@ int main(int argc, char** argv) {
     
     UARTInit(19200);            // init UART @ 19200 bps
     
-    // ***** I2C configuration *****
+    init_F46K22();
+    
+    // ***** LoRa & I2C configuration *****
     init_LORA_communication();
-
     i2c_init();
     ei();                         // enable interrupt
     
+    measure_battery();
     
+    // load fifo
+    load_FIFO_with_init_values(0, 0xFF, 0xFF, battery_voltage);
     
-    
-    /*Sending the 1st frame after switching on*/
-    txMsg[0] = idT;
-    txMsg[1] = idN;
-    txMsg[2] = idR;
-    txMsg[3] = battery_voltage_int;
-    
-    WriteSXRegister(REG_FIFO_ADDR_PTR, ReadSXRegister(REG_FIFO_TX_BASE_ADDR));      // FifiAddrPtr takes value of FifoTxBaseAddr
-    WriteSXRegister(REG_PAYLOAD_LENGTH_LORA, PAYLOAD_LENGTH_0);                       // set the number of bytes to transmit (PAYLOAD_LENGTH is defined in RF_LoRa868_SO.h)
-    
-    for (i = 0; i < PAYLOAD_LENGTH_0; i++) {
-        WriteSXRegister(REG_FIFO, txMsg[i]);         // load FIFO with data to transmit  
-    }
-    __delay_ms(1);
+    // set Lora mode in TX mode to send data
+    set_TX_and_transmit();
         
-    // set mode to LoRa TX
-    WriteSXRegister(REG_OP_MODE, LORA_TX_MODE);
-    __delay_ms(100);                                    // delay required to start oscillator and PLL
+    // wait for the end of transmission
+    wait_for_transmission();
         
-    // wait end of transmission
-    reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-    while (reg_val & 0x08 == 0x00) {                    // wait for end of transmission (wait until TxDone is set)
-        reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-    }
-    __delay_ms(200);        // delay is required before checking mode: it takes some time to go from TX mode to STDBY mode
-        
-    // reset all IRQs
-    UARTWriteStrLn(" ");
-    UARTWriteStrLn("step 4: clear flags");
-    reg_val = ReadSXRegister(REG_IRQ_FLAGS);
-    UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-    UARTWriteByteHex(reg_val);
-        
-    WriteSXRegister(REG_IRQ_FLAGS, 0xFF);           // clear flags: writing 1 clears flag
-    
-    /*Here, we have to check if the sensor is already known by the central station. */
-    /*1st, we have to check if the sensor's id is already stored in the*/
+    // reset interrupts 
+    reset_IRQs();
     
     while(1){
-        measure_humidity_temp_HIH6021();
-        
-
-        
-        //measure_battery();
+        measure_humidity_temp_HIH6021();        
+        measure_battery();
         
         // load fifo with data
         load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);

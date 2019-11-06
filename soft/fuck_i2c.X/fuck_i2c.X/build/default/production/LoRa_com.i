@@ -9876,7 +9876,7 @@ void AntennaTX(void);
 
 void init_LORA_communication();
 void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity);
-
+void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage);
 void set_TX_and_transmit(void);
 void wait_for_transmission(void);
 void reset_IRQs(void);
@@ -9910,18 +9910,38 @@ void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, u
 
         uint8_t b_temperature = (uint8_t)(((temperature + 30) * 255) / 70);
         uint8_t b_humidity = (uint8_t)((humidity * 255) / 100);
-        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
+        uint8_t b_battery_voltage = (uint8_t)((battery_voltage - 2.75) * 1000);
         uint8_t txMsg[6];
 
         WriteSXRegister(0x0D, ReadSXRegister(0x0E));
         WriteSXRegister(0x22, 6);
 
-        txMsg[0] = 1;
+        txMsg[0] = id_trame;
         txMsg[1] = id_node;
         txMsg[2] = id_reseau;
         txMsg[3] = b_battery_voltage;
         txMsg[4] = b_temperature;
         txMsg[5] = b_humidity;
+
+        for (int i = 0; i < 6; i++) {
+            WriteSXRegister(0x00, txMsg[i]);
+        }
+}
+
+void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage){
+
+
+        uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 10));
+        uint8_t txMsg[4];
+
+        WriteSXRegister(0x0D, ReadSXRegister(0x0E));
+        WriteSXRegister(0x22, 4);
+
+        txMsg[0] = id_trame;
+        txMsg[1] = id_node;
+        txMsg[2] = id_reseau;
+        txMsg[3] = b_battery_voltage;
+
         for (int i = 0; i < 6; i++) {
             WriteSXRegister(0x00, txMsg[i]);
         }

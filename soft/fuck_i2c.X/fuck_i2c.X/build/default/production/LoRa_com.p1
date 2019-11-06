@@ -847,9 +847,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _b_humidity `uc ~T0 @X0 1 a ]
 [e = _b_humidity -> / * _humidity -> -> 255 `i `d -> -> 100 `i `d `uc ]
 "31
-[; ;LoRa_com.c: 31:         uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 255) / 3);
+[; ;LoRa_com.c: 31:         uint8_t b_battery_voltage = (uint8_t)((battery_voltage - 2.75) * 1000);
 [v _b_battery_voltage `uc ~T0 @X0 1 a ]
-[e = _b_battery_voltage -> / * _battery_voltage -> -> 255 `i `d -> -> 3 `i `d `uc ]
+[e = _b_battery_voltage -> * - _battery_voltage .2.75 -> -> 1000 `i `d `uc ]
 "32
 [; ;LoRa_com.c: 32:         uint8_t txMsg[6];
 [v _txMsg `uc ~T0 @X0 -> 6 `i a ]
@@ -860,8 +860,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LoRa_com.c: 35:         WriteSXRegister(0x22, 6);
 [e ( _WriteSXRegister (2 , -> -> 34 `i `uc -> -> 6 `i `uc ]
 "37
-[; ;LoRa_com.c: 37:         txMsg[0] = 1;
-[e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux -> -> 1 `i `uc ]
+[; ;LoRa_com.c: 37:         txMsg[0] = id_trame;
+[e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_trame ]
 "38
 [; ;LoRa_com.c: 38:         txMsg[1] = id_node;
 [e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
@@ -877,8 +877,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "42
 [; ;LoRa_com.c: 42:         txMsg[5] = b_humidity;
 [e = *U + &U _txMsg * -> -> -> 5 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_humidity ]
-"43
-[; ;LoRa_com.c: 43:         for (int i = 0; i < 6; i++) {
+"44
+[; ;LoRa_com.c: 44:         for (int i = 0; i < 6; i++) {
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -886,76 +886,134 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e $U 860  ]
 [e :U 859 ]
 {
-"44
-[; ;LoRa_com.c: 44:             WriteSXRegister(0x00, txMsg[i]);
-[e ( _WriteSXRegister (2 , -> -> 0 `i `uc *U + &U _txMsg * -> -> _i `ui `ux -> -> # *U &U _txMsg `ui `ux ]
 "45
-[; ;LoRa_com.c: 45:         }
+[; ;LoRa_com.c: 45:             WriteSXRegister(0x00, txMsg[i]);
+[e ( _WriteSXRegister (2 , -> -> 0 `i `uc *U + &U _txMsg * -> -> _i `ui `ux -> -> # *U &U _txMsg `ui `ux ]
+"46
+[; ;LoRa_com.c: 46:         }
 }
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 6 `i 859  ]
 [e :U 860 ]
 }
-"46
-[; ;LoRa_com.c: 46: }
+"47
+[; ;LoRa_com.c: 47: }
 [e :UE 858 ]
 }
-"48
-[; ;LoRa_com.c: 48: void set_TX_and_transmit(void){
+"49
+[; ;LoRa_com.c: 49: void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage){
+[v _load_FIFO_with_init_values `(v ~T0 @X0 1 ef4`uc`uc`uc`d ]
+{
+[e :U _load_FIFO_with_init_values ]
+[v _id_trame `uc ~T0 @X0 1 r1 ]
+[v _id_reseau `uc ~T0 @X0 1 r2 ]
+[v _id_node `uc ~T0 @X0 1 r3 ]
+[v _battery_voltage `d ~T0 @X0 1 r4 ]
+[f ]
+"52
+[; ;LoRa_com.c: 52:         uint8_t b_battery_voltage = (uint8_t)((battery_voltage * 10));
+[v _b_battery_voltage `uc ~T0 @X0 1 a ]
+[e = _b_battery_voltage -> * _battery_voltage -> -> 10 `i `d `uc ]
+"53
+[; ;LoRa_com.c: 53:         uint8_t txMsg[4];
+[v _txMsg `uc ~T0 @X0 -> 4 `i a ]
+"55
+[; ;LoRa_com.c: 55:         WriteSXRegister(0x0D, ReadSXRegister(0x0E));
+[e ( _WriteSXRegister (2 , -> -> 13 `i `uc ( _ReadSXRegister (1 -> -> 14 `i `uc ]
+"56
+[; ;LoRa_com.c: 56:         WriteSXRegister(0x22, 4);
+[e ( _WriteSXRegister (2 , -> -> 34 `i `uc -> -> 4 `i `uc ]
+"58
+[; ;LoRa_com.c: 58:         txMsg[0] = id_trame;
+[e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_trame ]
+"59
+[; ;LoRa_com.c: 59:         txMsg[1] = id_node;
+[e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
+"60
+[; ;LoRa_com.c: 60:         txMsg[2] = id_reseau;
+[e = *U + &U _txMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_reseau ]
+"61
+[; ;LoRa_com.c: 61:         txMsg[3] = b_battery_voltage;
+[e = *U + &U _txMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_battery_voltage ]
+"63
+[; ;LoRa_com.c: 63:         for (int i = 0; i < 6; i++) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 6 `i 863  ]
+[e $U 864  ]
+[e :U 863 ]
+{
+"64
+[; ;LoRa_com.c: 64:             WriteSXRegister(0x00, txMsg[i]);
+[e ( _WriteSXRegister (2 , -> -> 0 `i `uc *U + &U _txMsg * -> -> _i `ui `ux -> -> # *U &U _txMsg `ui `ux ]
+"65
+[; ;LoRa_com.c: 65:         }
+}
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 6 `i 863  ]
+[e :U 864 ]
+}
+"66
+[; ;LoRa_com.c: 66: }
+[e :UE 862 ]
+}
+"68
+[; ;LoRa_com.c: 68: void set_TX_and_transmit(void){
 [v _set_TX_and_transmit `(v ~T0 @X0 1 ef ]
 {
 [e :U _set_TX_and_transmit ]
 [f ]
-"50
-[; ;LoRa_com.c: 50:         WriteSXRegister(0x01, 0x83);
+"70
+[; ;LoRa_com.c: 70:         WriteSXRegister(0x01, 0x83);
 [e ( _WriteSXRegister (2 , -> -> 1 `i `uc -> -> 131 `i `uc ]
-"51
-[; ;LoRa_com.c: 51:         _delay((unsigned long)((100)*(8000000UL/4000.0)));
+"71
+[; ;LoRa_com.c: 71:         _delay((unsigned long)((100)*(8000000UL/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 8000000 `ul `d .4000.0 `ul ]
-"53
-[; ;LoRa_com.c: 53: }
-[e :UE 862 ]
+"73
+[; ;LoRa_com.c: 73: }
+[e :UE 866 ]
 }
-"55
-[; ;LoRa_com.c: 55: void wait_for_transmission(){
+"75
+[; ;LoRa_com.c: 75: void wait_for_transmission(){
 [v _wait_for_transmission `(v ~T0 @X0 1 ef ]
 {
 [e :U _wait_for_transmission ]
 [f ]
-"57
-[; ;LoRa_com.c: 57:     uint8_t reg_val = ReadSXRegister(0x12);
+"77
+[; ;LoRa_com.c: 77:     uint8_t reg_val = ReadSXRegister(0x12);
 [v _reg_val `uc ~T0 @X0 1 a ]
 [e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"58
-[; ;LoRa_com.c: 58:     while (reg_val & 0x08 == 0x00) {
-[e $U 864  ]
-[e :U 865 ]
+"78
+[; ;LoRa_com.c: 78:     while (reg_val & 0x08 == 0x00) {
+[e $U 868  ]
+[e :U 869 ]
 {
-"59
-[; ;LoRa_com.c: 59:         reg_val = ReadSXRegister(0x12);
+"79
+[; ;LoRa_com.c: 79:         reg_val = ReadSXRegister(0x12);
 [e = _reg_val ( _ReadSXRegister (1 -> -> 18 `i `uc ]
-"60
-[; ;LoRa_com.c: 60:     }
+"80
+[; ;LoRa_com.c: 80:     }
 }
-[e :U 864 ]
-"58
-[; ;LoRa_com.c: 58:     while (reg_val & 0x08 == 0x00) {
-[e $ != & -> _reg_val `i -> == -> 8 `i -> 0 `i `i -> 0 `i 865  ]
-[e :U 866 ]
-"61
-[; ;LoRa_com.c: 61: }
-[e :UE 863 ]
+[e :U 868 ]
+"78
+[; ;LoRa_com.c: 78:     while (reg_val & 0x08 == 0x00) {
+[e $ != & -> _reg_val `i -> == -> 8 `i -> 0 `i `i -> 0 `i 869  ]
+[e :U 870 ]
+"81
+[; ;LoRa_com.c: 81: }
+[e :UE 867 ]
 }
-"63
-[; ;LoRa_com.c: 63: void reset_IRQs(){
+"83
+[; ;LoRa_com.c: 83: void reset_IRQs(){
 [v _reset_IRQs `(v ~T0 @X0 1 ef ]
 {
 [e :U _reset_IRQs ]
 [f ]
-"65
-[; ;LoRa_com.c: 65:     WriteSXRegister(0x12, 0xFF);
+"85
+[; ;LoRa_com.c: 85:     WriteSXRegister(0x12, 0xFF);
 [e ( _WriteSXRegister (2 , -> -> 18 `i `uc -> -> 255 `i `uc ]
-"66
-[; ;LoRa_com.c: 66: }
-[e :UE 867 ]
+"86
+[; ;LoRa_com.c: 86: }
+[e :UE 871 ]
 }

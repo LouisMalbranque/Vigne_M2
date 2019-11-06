@@ -9942,7 +9942,7 @@ void AntennaTX(void);
 
 void init_LORA_communication();
 void load_FIFO_with_temp_humidity_voltage(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage, double temperature, double humidity);
-
+void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_node, double battery_voltage);
 void set_TX_and_transmit(void);
 void wait_for_transmission(void);
 void reset_IRQs(void);
@@ -10055,58 +10055,30 @@ int main(int argc, char** argv) {
 
     UARTInit(19200);
 
+    init_F46K22();
+
 
     init_LORA_communication();
-
     i2c_init();
     (INTCONbits.GIE = 1);
 
+    measure_battery();
 
 
+    load_FIFO_with_init_values(0, 0xFF, 0xFF, battery_voltage);
 
 
-    txMsg[0] = idT;
-    txMsg[1] = idN;
-    txMsg[2] = idR;
-    txMsg[3] = battery_voltage_int;
-
-    WriteSXRegister(0x0D, ReadSXRegister(0x0E));
-    WriteSXRegister(0x22, 4);
-
-    for (i = 0; i < 4; i++) {
-        WriteSXRegister(0x00, txMsg[i]);
-    }
-    _delay((unsigned long)((1)*(8000000UL/4000.0)));
+    set_TX_and_transmit();
 
 
-    WriteSXRegister(0x01, 0x83);
-    _delay((unsigned long)((100)*(8000000UL/4000.0)));
+    wait_for_transmission();
 
 
-    reg_val = ReadSXRegister(0x12);
-    while (reg_val & 0x08 == 0x00) {
-        reg_val = ReadSXRegister(0x12);
-    }
-    _delay((unsigned long)((200)*(8000000UL/4000.0)));
-
-
-    UARTWriteStrLn(" ");
-    UARTWriteStrLn("step 4: clear flags");
-    reg_val = ReadSXRegister(0x12);
-    UARTWriteStr("before clear: REG_IRQ_FLAGS = 0x");
-    UARTWriteByteHex(reg_val);
-
-    WriteSXRegister(0x12, 0xFF);
-
-
-
+    reset_IRQs();
 
     while(1){
         measure_humidity_temp_HIH6021();
-
-
-
-
+        measure_battery();
 
 
         load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);
@@ -10152,10 +10124,10 @@ void measure_battery(void)
 
 
     ADC_result = (ADRESH << 8 )|ADRESL;
-# 299 "test_i2c.c"
+# 271 "test_i2c.c"
     volts = (2.048/1023)*ADC_result;
     battery_voltage = volts *(2.115);
-# 313 "test_i2c.c"
+# 285 "test_i2c.c"
     accu_v = (UINT16_T)(battery_voltage * 100);
     accu_v2 = (UINT16_T)(battery_voltage*100);
     bat_voltage_unit = (accu_v/100);
