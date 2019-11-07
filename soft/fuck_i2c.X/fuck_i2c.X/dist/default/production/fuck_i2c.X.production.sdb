@@ -105,9 +105,9 @@
 [v _PrintSXRegContent PrintSXRegContent `(v  1 e 1 0 ]
 "170 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 [v _main main `(i  1 e 2 0 ]
-"246
+"247
 [v _measure_battery measure_battery `(v  1 e 1 0 ]
-"310
+"311
 [v _measure_humidity_temp_HIH6021 measure_humidity_temp_HIH6021 `(v  1 e 1 0 ]
 "16 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\uart.c
 [v _UARTInit UARTInit `(v  1 e 1 0 ]
@@ -894,7 +894,7 @@
 "170
 [v _main main `(i  1 e 2 0 ]
 {
-"244
+"245
 } 0
 "4 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\EEPROM.c
 [v _writeEEPROM writeEEPROM `(v  1 e 1 0 ]
@@ -929,18 +929,18 @@
 [v readEEPROM@address address `uc  1 a 1 0 ]
 "38
 } 0
-"310 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+"311 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 [v _measure_humidity_temp_HIH6021 measure_humidity_temp_HIH6021 `(v  1 e 1 0 ]
 {
-"314
+"315
 [v measure_humidity_temp_HIH6021@temperature_HIH6021_L temperature_HIH6021_L `uc  1 a 1 86 ]
-"313
+"314
 [v measure_humidity_temp_HIH6021@temperature_HIH6021_H temperature_HIH6021_H `uc  1 a 1 85 ]
-"312
+"313
 [v measure_humidity_temp_HIH6021@humidity_HIH6021_L humidity_HIH6021_L `uc  1 a 1 84 ]
-"311
+"312
 [v measure_humidity_temp_HIH6021@humidity_HIH6021_H humidity_HIH6021_H `uc  1 a 1 83 ]
-"351
+"352
 } 0
 "177 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
 [v _i2c_write i2c_write `(v  1 e 1 0 ]
@@ -983,10 +983,10 @@
 {
 "138
 } 0
-"246 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+"247 C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 [v _measure_battery measure_battery `(v  1 e 1 0 ]
 {
-"304
+"305
 } 0
 "10 C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]

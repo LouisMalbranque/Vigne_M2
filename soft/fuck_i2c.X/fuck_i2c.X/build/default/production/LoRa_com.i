@@ -9937,8 +9937,8 @@ void load_FIFO_with_init_values(uint8_t id_trame, uint8_t id_reseau, uint8_t id_
         WriteSXRegister(0x22, 4);
 
         txMsg[0] = id_trame;
-        txMsg[1] = id_node;
-        txMsg[2] = id_reseau;
+        txMsg[1] = id_reseau;
+        txMsg[2] = id_node;
         txMsg[3] = b_battery_voltage;
 
         for (int i = 0; i < 6; i++) {

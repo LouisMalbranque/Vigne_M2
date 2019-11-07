@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\louis\AppData\Local\Temp\s27o.o
+$C:\Users\louis\AppData\Local\Temp\s6do.o
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 0 0 4 1
 config CONFIG 0 300000 300000 E 1
@@ -803,19 +803,19 @@ EE7C text15 CODE >41:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\
 EE9A text15 CODE >42:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 EE9C text15 CODE >43:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
 EEAC text15 CODE >44:C:\Program Files (x86)\Microchip\xc8\v2.10\pic\sources\c99\common\xxtofl.c
-E9D4 text14 CODE >246:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E9D4 text14 CODE >254:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E9D6 text14 CODE >256:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E9E4 text14 CODE >257:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E9E6 text14 CODE >262:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E9FE text14 CODE >281:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EA44 text14 CODE >282:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EA78 text14 CODE >295:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EAB8 text14 CODE >296:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EAF8 text14 CODE >297:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB10 text14 CODE >299:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB5E text14 CODE >303:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB64 text14 CODE >304:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9D4 text14 CODE >247:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9D4 text14 CODE >255:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9D6 text14 CODE >257:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9E4 text14 CODE >258:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9E6 text14 CODE >263:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9FE text14 CODE >282:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EA44 text14 CODE >283:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EA78 text14 CODE >296:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EAB8 text14 CODE >297:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EAF8 text14 CODE >298:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB10 text14 CODE >300:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB5E text14 CODE >304:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB64 text14 CODE >305:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 DE46 text13 CODE >125:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
 DE46 text13 CODE >134:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
 DE48 text13 CODE >135:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
@@ -858,32 +858,32 @@ DEF6 text7 CODE >186:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuc
 DEF8 text7 CODE >187:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
 DEFC text7 CODE >188:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
 DF0A text7 CODE >189:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\i2c.c
-EB66 text6 CODE >310:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 EB66 text6 CODE >311:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 EB66 text6 CODE >312:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB6A text6 CODE >313:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB6E text6 CODE >314:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB72 text6 CODE >317:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB76 text6 CODE >319:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB7C text6 CODE >320:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB80 text6 CODE >322:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB90 text6 CODE >325:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB94 text6 CODE >326:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB9A text6 CODE >328:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EB9C text6 CODE >329:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBA2 text6 CODE >330:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBA6 text6 CODE >331:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBAC text6 CODE >332:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBB0 text6 CODE >333:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBB6 text6 CODE >334:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBBA text6 CODE >335:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBC0 text6 CODE >336:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBC4 text6 CODE >337:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBC8 text6 CODE >341:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EBE2 text6 CODE >342:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EC00 text6 CODE >348:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-EC6A text6 CODE >349:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-ECF8 text6 CODE >351:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB66 text6 CODE >313:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB6A text6 CODE >314:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB6E text6 CODE >315:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB72 text6 CODE >318:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB76 text6 CODE >320:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB7C text6 CODE >321:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB80 text6 CODE >323:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB90 text6 CODE >326:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB94 text6 CODE >327:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB9A text6 CODE >329:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EB9C text6 CODE >330:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBA2 text6 CODE >331:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBA6 text6 CODE >332:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBAC text6 CODE >333:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBB0 text6 CODE >334:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBB6 text6 CODE >335:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBBA text6 CODE >336:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBC0 text6 CODE >337:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBC4 text6 CODE >338:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBC8 text6 CODE >342:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EBE2 text6 CODE >343:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EC00 text6 CODE >349:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+EC6A text6 CODE >350:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+ECF8 text6 CODE >352:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 DE06 text5 CODE >31:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\EEPROM.c
 DE08 text5 CODE >32:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\EEPROM.c
 DE0C text5 CODE >33:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\EEPROM.c
@@ -939,57 +939,57 @@ E8A8 text0 CODE >204:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuc
 E8C6 text0 CODE >207:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 E8CA text0 CODE >210:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
 E8CE text0 CODE >213:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E8D2 text0 CODE >216:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E8D6 text0 CODE >217:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E8DA text0 CODE >220:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E918 text0 CODE >223:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E91C text0 CODE >226:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E920 text0 CODE >229:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E924 text0 CODE >231:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E93C text0 CODE >234:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E954 text0 CODE >235:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E96C text0 CODE >236:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E984 text0 CODE >237:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E99C text0 CODE >238:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E9B4 text0 CODE >239:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
-E0FC cinit CODE >5875:C:\Users\louis\AppData\Local\Temp\s27o.s
-E0FC cinit CODE >5877:C:\Users\louis\AppData\Local\Temp\s27o.s
-E0FC cinit CODE >5880:C:\Users\louis\AppData\Local\Temp\s27o.s
-E0FC cinit CODE >6048:C:\Users\louis\AppData\Local\Temp\s27o.s
-E0FE cinit CODE >6049:C:\Users\louis\AppData\Local\Temp\s27o.s
-E100 cinit CODE >6050:C:\Users\louis\AppData\Local\Temp\s27o.s
-E102 cinit CODE >6051:C:\Users\louis\AppData\Local\Temp\s27o.s
-E104 cinit CODE >6052:C:\Users\louis\AppData\Local\Temp\s27o.s
-E106 cinit CODE >6053:C:\Users\louis\AppData\Local\Temp\s27o.s
-E108 cinit CODE >6054:C:\Users\louis\AppData\Local\Temp\s27o.s
-E10C cinit CODE >6055:C:\Users\louis\AppData\Local\Temp\s27o.s
-E110 cinit CODE >6056:C:\Users\louis\AppData\Local\Temp\s27o.s
-E110 cinit CODE >6057:C:\Users\louis\AppData\Local\Temp\s27o.s
-E112 cinit CODE >6058:C:\Users\louis\AppData\Local\Temp\s27o.s
-E116 cinit CODE >6059:C:\Users\louis\AppData\Local\Temp\s27o.s
-E118 cinit CODE >6060:C:\Users\louis\AppData\Local\Temp\s27o.s
-E11A cinit CODE >6061:C:\Users\louis\AppData\Local\Temp\s27o.s
-E11C cinit CODE >6065:C:\Users\louis\AppData\Local\Temp\s27o.s
-E120 cinit CODE >6066:C:\Users\louis\AppData\Local\Temp\s27o.s
-E124 cinit CODE >6067:C:\Users\louis\AppData\Local\Temp\s27o.s
-E124 cinit CODE >6068:C:\Users\louis\AppData\Local\Temp\s27o.s
-E126 cinit CODE >6069:C:\Users\louis\AppData\Local\Temp\s27o.s
-E128 cinit CODE >6070:C:\Users\louis\AppData\Local\Temp\s27o.s
-E12A cinit CODE >6071:C:\Users\louis\AppData\Local\Temp\s27o.s
-E12C cinit CODE >6072:C:\Users\louis\AppData\Local\Temp\s27o.s
-E12E cinit CODE >6073:C:\Users\louis\AppData\Local\Temp\s27o.s
-E130 cinit CODE >6076:C:\Users\louis\AppData\Local\Temp\s27o.s
-E134 cinit CODE >6077:C:\Users\louis\AppData\Local\Temp\s27o.s
-E136 cinit CODE >6078:C:\Users\louis\AppData\Local\Temp\s27o.s
-E136 cinit CODE >6079:C:\Users\louis\AppData\Local\Temp\s27o.s
-E138 cinit CODE >6080:C:\Users\louis\AppData\Local\Temp\s27o.s
-E13A cinit CODE >6081:C:\Users\louis\AppData\Local\Temp\s27o.s
-E13C cinit CODE >6084:C:\Users\louis\AppData\Local\Temp\s27o.s
-E13E cinit CODE >6090:C:\Users\louis\AppData\Local\Temp\s27o.s
-E13E cinit CODE >6093:C:\Users\louis\AppData\Local\Temp\s27o.s
-E140 cinit CODE >6094:C:\Users\louis\AppData\Local\Temp\s27o.s
-E142 cinit CODE >6095:C:\Users\louis\AppData\Local\Temp\s27o.s
-E144 cinit CODE >6096:C:\Users\louis\AppData\Local\Temp\s27o.s
+E8D2 text0 CODE >217:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E8D6 text0 CODE >218:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E8DA text0 CODE >221:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E918 text0 CODE >224:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E91C text0 CODE >227:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E920 text0 CODE >230:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E924 text0 CODE >232:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E93C text0 CODE >235:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E954 text0 CODE >236:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E96C text0 CODE >237:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E984 text0 CODE >238:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E99C text0 CODE >239:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E9B4 text0 CODE >240:C:\Users\louis\Desktop\Projets\Vigne_M2\soft\fuck_i2c.X\fuck_i2c.X\test_i2c.c
+E0FC cinit CODE >5875:C:\Users\louis\AppData\Local\Temp\s6do.s
+E0FC cinit CODE >5877:C:\Users\louis\AppData\Local\Temp\s6do.s
+E0FC cinit CODE >5880:C:\Users\louis\AppData\Local\Temp\s6do.s
+E0FC cinit CODE >6048:C:\Users\louis\AppData\Local\Temp\s6do.s
+E0FE cinit CODE >6049:C:\Users\louis\AppData\Local\Temp\s6do.s
+E100 cinit CODE >6050:C:\Users\louis\AppData\Local\Temp\s6do.s
+E102 cinit CODE >6051:C:\Users\louis\AppData\Local\Temp\s6do.s
+E104 cinit CODE >6052:C:\Users\louis\AppData\Local\Temp\s6do.s
+E106 cinit CODE >6053:C:\Users\louis\AppData\Local\Temp\s6do.s
+E108 cinit CODE >6054:C:\Users\louis\AppData\Local\Temp\s6do.s
+E10C cinit CODE >6055:C:\Users\louis\AppData\Local\Temp\s6do.s
+E110 cinit CODE >6056:C:\Users\louis\AppData\Local\Temp\s6do.s
+E110 cinit CODE >6057:C:\Users\louis\AppData\Local\Temp\s6do.s
+E112 cinit CODE >6058:C:\Users\louis\AppData\Local\Temp\s6do.s
+E116 cinit CODE >6059:C:\Users\louis\AppData\Local\Temp\s6do.s
+E118 cinit CODE >6060:C:\Users\louis\AppData\Local\Temp\s6do.s
+E11A cinit CODE >6061:C:\Users\louis\AppData\Local\Temp\s6do.s
+E11C cinit CODE >6065:C:\Users\louis\AppData\Local\Temp\s6do.s
+E120 cinit CODE >6066:C:\Users\louis\AppData\Local\Temp\s6do.s
+E124 cinit CODE >6067:C:\Users\louis\AppData\Local\Temp\s6do.s
+E124 cinit CODE >6068:C:\Users\louis\AppData\Local\Temp\s6do.s
+E126 cinit CODE >6069:C:\Users\louis\AppData\Local\Temp\s6do.s
+E128 cinit CODE >6070:C:\Users\louis\AppData\Local\Temp\s6do.s
+E12A cinit CODE >6071:C:\Users\louis\AppData\Local\Temp\s6do.s
+E12C cinit CODE >6072:C:\Users\louis\AppData\Local\Temp\s6do.s
+E12E cinit CODE >6073:C:\Users\louis\AppData\Local\Temp\s6do.s
+E130 cinit CODE >6076:C:\Users\louis\AppData\Local\Temp\s6do.s
+E134 cinit CODE >6077:C:\Users\louis\AppData\Local\Temp\s6do.s
+E136 cinit CODE >6078:C:\Users\louis\AppData\Local\Temp\s6do.s
+E136 cinit CODE >6079:C:\Users\louis\AppData\Local\Temp\s6do.s
+E138 cinit CODE >6080:C:\Users\louis\AppData\Local\Temp\s6do.s
+E13A cinit CODE >6081:C:\Users\louis\AppData\Local\Temp\s6do.s
+E13C cinit CODE >6084:C:\Users\louis\AppData\Local\Temp\s6do.s
+E13E cinit CODE >6090:C:\Users\louis\AppData\Local\Temp\s6do.s
+E13E cinit CODE >6093:C:\Users\louis\AppData\Local\Temp\s6do.s
+E140 cinit CODE >6094:C:\Users\louis\AppData\Local\Temp\s6do.s
+E142 cinit CODE >6095:C:\Users\louis\AppData\Local\Temp\s6do.s
+E144 cinit CODE >6096:C:\Users\louis\AppData\Local\Temp\s6do.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -1016,7 +1016,7 @@ __CFG_IESO$OFF 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\fuck_i2c.X.production.o
 _SSP1STATbits FC7 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\fuck_i2c.X.production.o
-__mediumconst FCF4 0 MEDIUMCONST 0 mediumconst C:\Users\louis\AppData\Local\Temp\s27o.o
+__mediumconst FCF4 0 MEDIUMCONST 0 mediumconst C:\Users\louis\AppData\Local\Temp\s6do.o
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\fuck_i2c.X.production.o
 _i2c_init DFDE 0 CODE 0 text46 dist/default/production\fuck_i2c.X.production.o
 _i2c_read DF4A 0 CODE 0 text10 dist/default/production\fuck_i2c.X.production.o
@@ -1031,13 +1031,13 @@ __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\fuck_i2c.X.pro
 _PEIE 7F96 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 _RCIE 7CED 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 _RCIF 7CF5 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\louis\AppData\Local\Temp\s27o.o
+___sp 0 0 STACK 2 stack C:\Users\louis\AppData\Local\Temp\s6do.o
 _main E84C 0 CODE 0 text0 dist/default/production\fuck_i2c.X.production.o
 _var1 B6 0 BANK0 1 dataBANK0 dist/default/production\fuck_i2c.X.production.o
 _var2 B5 0 BANK0 1 dataBANK0 dist/default/production\fuck_i2c.X.production.o
 _panel_voltage0 88 0 BANK0 1 bssBANK0 dist/default/production\fuck_i2c.X.production.o
 _panel_voltage1 89 0 BANK0 1 bssBANK0 dist/default/production\fuck_i2c.X.production.o
-start 0 0 CODE 0 init C:\Users\louis\AppData\Local\Temp\s27o.o
+start 0 0 CODE 0 init C:\Users\louis\AppData\Local\Temp\s6do.o
 ___flmul@aexp 39 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
 ___flmul@bexp 3A 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
 ___flmul@prod 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
@@ -1068,11 +1068,11 @@ _bat_voltage_unit 5F 0 COMRAM 1 bssCOMRAM dist/default/production\fuck_i2c.X.pro
 __CFG_CCP3MX$PORTB5 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 _i2c_waitForIdle DFB2 0 CODE 0 text11 dist/default/production\fuck_i2c.X.production.o
 _InitModule E4FC 0 CODE 0 text28 dist/default/production\fuck_i2c.X.production.o
-__accesstop 60 0 ABS 0 - C:\Users\louis\AppData\Local\Temp\s27o.o
-intlevel0 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s27o.o
-intlevel1 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s27o.o
-intlevel2 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s27o.o
-intlevel3 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s27o.o
+__accesstop 60 0 ABS 0 - C:\Users\louis\AppData\Local\Temp\s6do.o
+intlevel0 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s6do.o
+intlevel1 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s6do.o
+intlevel2 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s6do.o
+intlevel3 0 0 CODE 0 text C:\Users\louis\AppData\Local\Temp\s6do.o
 _InitRFLoRaPins DDAC 0 CODE 0 text27 dist/default/production\fuck_i2c.X.production.o
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\fuck_i2c.X.production.o
 _OSCCONbits FD3 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
@@ -1107,8 +1107,8 @@ _ANSELD F3B 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 _ANSELE F3C 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 __size_of_reset_IRQs 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 ___awdiv@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
-___inthi_sp 0 0 STACK 2 stack C:\Users\louis\AppData\Local\Temp\s27o.o
-___intlo_sp 0 0 STACK 2 stack C:\Users\louis\AppData\Local\Temp\s27o.o
+___inthi_sp 0 0 STACK 2 stack C:\Users\louis\AppData\Local\Temp\s6do.o
+___intlo_sp 0 0 STACK 2 stack C:\Users\louis\AppData\Local\Temp\s6do.o
 _EECON1bits FA6 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 _i2c_ACK DE46 0 CODE 0 text13 dist/default/production\fuck_i2c.X.production.o
 _i2c_NAK DE5C 0 CODE 0 text12 dist/default/production\fuck_i2c.X.production.o
@@ -1243,7 +1243,7 @@ __Hbank15 0 0 ABS 0 bank15 dist/default/production\fuck_i2c.X.production.o
 __size_of___xxtofl 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\fuck_i2c.X.production.o
 __Hbigram 0 0 ABS 0 bigram dist/default/production\fuck_i2c.X.production.o
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\louis\AppData\Local\Temp\s27o.o
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\louis\AppData\Local\Temp\s6do.o
 ___xxtofl@arg B 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
 ___xxtofl@exp A 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
 ___xxtofl@val 1 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o
@@ -1481,8 +1481,8 @@ __size_of_init_F46K22 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.
 _id_node BC 0 BANK0 1 dataBANK0 dist/default/production\fuck_i2c.X.production.o
 _CCP5CONbits F54 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 __size_of_load_FIFO_with_init_values 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
-stackhi F37 0 ABS 0 - C:\Users\louis\AppData\Local\Temp\s27o.o
-stacklo 200 0 ABS 0 - C:\Users\louis\AppData\Local\Temp\s27o.o
+stackhi F37 0 ABS 0 - C:\Users\louis\AppData\Local\Temp\s6do.o
+stacklo 200 0 ABS 0 - C:\Users\louis\AppData\Local\Temp\s6do.o
 __Lintcode 0 0 CODE 0 intcode dist/default/production\fuck_i2c.X.production.o
 __size_of_InitRFLoRaPins 0 0 ABS 0 - dist/default/production\fuck_i2c.X.production.o
 __Lintret 0 0 ABS 0 intret dist/default/production\fuck_i2c.X.production.o
@@ -1581,7 +1581,7 @@ __Ltext44 0 0 ABS 0 text44 dist/default/production\fuck_i2c.X.production.o
 __Ltext45 0 0 ABS 0 text45 dist/default/production\fuck_i2c.X.production.o
 __Ltext46 0 0 ABS 0 text46 dist/default/production\fuck_i2c.X.production.o
 __Ltext47 0 0 ABS 0 text47 dist/default/production\fuck_i2c.X.production.o
-__ramtop 1000 0 RAM 0 ramtop C:\Users\louis\AppData\Local\Temp\s27o.o
+__ramtop 1000 0 RAM 0 ramtop C:\Users\louis\AppData\Local\Temp\s6do.o
 __end_of_ResetRFModule DF8E 0 CODE 0 text26 dist/default/production\fuck_i2c.X.production.o
 __Lpowerup 0 0 CODE 0 powerup dist/default/production\fuck_i2c.X.production.o
 ?___xxtofl 1 0 COMRAM 1 cstackCOMRAM dist/default/production\fuck_i2c.X.production.o

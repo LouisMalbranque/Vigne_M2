@@ -927,11 +927,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;LoRa_com.c: 58:         txMsg[0] = id_trame;
 [e = *U + &U _txMsg * -> -> -> 0 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_trame ]
 "59
-[; ;LoRa_com.c: 59:         txMsg[1] = id_node;
-[e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
+[; ;LoRa_com.c: 59:         txMsg[1] = id_reseau;
+[e = *U + &U _txMsg * -> -> -> 1 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_reseau ]
 "60
-[; ;LoRa_com.c: 60:         txMsg[2] = id_reseau;
-[e = *U + &U _txMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_reseau ]
+[; ;LoRa_com.c: 60:         txMsg[2] = id_node;
+[e = *U + &U _txMsg * -> -> -> 2 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _id_node ]
 "61
 [; ;LoRa_com.c: 61:         txMsg[3] = b_battery_voltage;
 [e = *U + &U _txMsg * -> -> -> 3 `i `ui `ux -> -> # *U &U _txMsg `ui `ux _b_battery_voltage ]

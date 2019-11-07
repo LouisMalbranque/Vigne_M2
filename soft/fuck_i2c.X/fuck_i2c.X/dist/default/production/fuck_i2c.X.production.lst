@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.10 build 88905656 
-                                                                                               Wed Nov 06 15:41:41 2019
+                                                                                               Thu Nov 07 11:07:22 2019
 
 Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1 
      1                           	processor	18F46K22
@@ -1791,10 +1791,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1766  00E8A2  0E01               	movlw	1
   1767  00E8A4  EC24  F070         	call	_writeEEPROM
   1768  00E8A8                     
-  1769                           ;test_i2c.c: 204:     load_FIFO_with_init_values(0, id_node, id_reseau, battery_voltage)
+  1769                           ;test_i2c.c: 204:     load_FIFO_with_init_values(0, id_reseau, id_node, battery_voltage)
       +                          ;
-  1770  00E8A8  C0BC  F092         	movff	_id_node,load_FIFO_with_init_values@id_reseau
-  1771  00E8AC  C0BA  F093         	movff	_id_reseau,load_FIFO_with_init_values@id_node
+  1770  00E8A8  C0BA  F092         	movff	_id_reseau,load_FIFO_with_init_values@id_reseau
+  1771  00E8AC  C0BC  F093         	movff	_id_node,load_FIFO_with_init_values@id_node
   1772  00E8B0  C0B1  F094         	movff	_battery_voltage,load_FIFO_with_init_values@battery_voltage
   1773  00E8B4  C0B2  F095         	movff	_battery_voltage+1,load_FIFO_with_init_values@battery_voltage+1
   1774  00E8B8  C0B3  F096         	movff	_battery_voltage+2,load_FIFO_with_init_values@battery_voltage+2
@@ -1812,16 +1812,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1786  00E8CE  ECDB  F06E         	call	_reset_IRQs	;wreg free
   1787  00E8D2                     l3652:
   1788                           
-  1789                           ;test_i2c.c: 216:         measure_humidity_temp_HIH6021();
+  1789                           ;test_i2c.c: 217:         measure_humidity_temp_HIH6021();
   1790  00E8D2  ECB3  F075         	call	_measure_humidity_temp_HIH6021	;wreg free
   1791  00E8D6                     
-  1792                           ;test_i2c.c: 217:         measure_battery();
+  1792                           ;test_i2c.c: 218:         measure_battery();
   1793  00E8D6  ECEA  F074         	call	_measure_battery	;wreg free
   1794  00E8DA                     
-  1795                           ;test_i2c.c: 220:         load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, ba
+  1795                           ;test_i2c.c: 221:         load_FIFO_with_temp_humidity_voltage(1, id_reseau, id_node, ba
       +                          ttery_voltage, temperature, humidity);
-  1796  00E8DA  C0BC  F092         	movff	_id_node,load_FIFO_with_temp_humidity_voltage@id_reseau
-  1797  00E8DE  C0BA  F093         	movff	_id_reseau,load_FIFO_with_temp_humidity_voltage@id_node
+  1796  00E8DA  C0BA  F092         	movff	_id_reseau,load_FIFO_with_temp_humidity_voltage@id_reseau
+  1797  00E8DE  C0BC  F093         	movff	_id_node,load_FIFO_with_temp_humidity_voltage@id_node
   1798  00E8E2  C0B1  F094         	movff	_battery_voltage,load_FIFO_with_temp_humidity_voltage@battery_voltage
   1799  00E8E6  C0B2  F095         	movff	_battery_voltage+1,load_FIFO_with_temp_humidity_voltage@battery_voltage+1
   1800  00E8EA  C0B3  F096         	movff	_battery_voltage+2,load_FIFO_with_temp_humidity_voltage@battery_voltage+2
@@ -1837,16 +1837,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1810  00E912  0E01               	movlw	1
   1811  00E914  EC57  F077         	call	_load_FIFO_with_temp_humidity_voltage
   1812  00E918                     
-  1813                           ;test_i2c.c: 223:         set_TX_and_transmit();
+  1813                           ;test_i2c.c: 224:         set_TX_and_transmit();
   1814  00E918  ECC7  F06F         	call	_set_TX_and_transmit	;wreg free
   1815  00E91C                     
-  1816                           ;test_i2c.c: 226:         wait_for_transmission();
+  1816                           ;test_i2c.c: 227:         wait_for_transmission();
   1817  00E91C  ECCD  F06E         	call	_wait_for_transmission	;wreg free
   1818  00E920                     
-  1819                           ;test_i2c.c: 229:         reset_IRQs();
+  1819                           ;test_i2c.c: 230:         reset_IRQs();
   1820  00E920  ECDB  F06E         	call	_reset_IRQs	;wreg free
   1821  00E924                     
-  1822                           ;test_i2c.c: 231:         _delay((unsigned long)((200)*(8000000UL/4000.0)));
+  1822                           ;test_i2c.c: 232:         _delay((unsigned long)((200)*(8000000UL/4000.0)));
   1823  00E924  0E03               	movlw	3
   1824  00E926  6E5E               	movwf	(??_main+1)^0,c
   1825  00E928  0E08               	movlw	8
@@ -1861,7 +1861,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1834  00E938  D7FA               	bra	u2657
   1835  00E93A  F000               	nop	
   1836  00E93C                     
-  1837                           ;test_i2c.c: 234:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+  1837                           ;test_i2c.c: 235:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
   1838  00E93C  0E66               	movlw	102
   1839  00E93E  6E5E               	movwf	(??_main+1)^0,c
   1840  00E940  0E76               	movlw	118
@@ -1876,7 +1876,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1849  00E950  D7FA               	bra	u2667
   1850  00E952  F000               	nop	
   1851  00E954                     
-  1852                           ;test_i2c.c: 235:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+  1852                           ;test_i2c.c: 236:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
   1853  00E954  0E66               	movlw	102
   1854  00E956  6E5E               	movwf	(??_main+1)^0,c
   1855  00E958  0E76               	movlw	118
@@ -1891,7 +1891,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1864  00E968  D7FA               	bra	u2677
   1865  00E96A  F000               	nop	
   1866  00E96C                     
-  1867                           ;test_i2c.c: 236:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+  1867                           ;test_i2c.c: 237:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
   1868  00E96C  0E66               	movlw	102
   1869  00E96E  6E5E               	movwf	(??_main+1)^0,c
   1870  00E970  0E76               	movlw	118
@@ -1906,7 +1906,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1879  00E980  D7FA               	bra	u2687
   1880  00E982  F000               	nop	
   1881  00E984                     
-  1882                           ;test_i2c.c: 237:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+  1882                           ;test_i2c.c: 238:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
   1883  00E984  0E66               	movlw	102
   1884  00E986  6E5E               	movwf	(??_main+1)^0,c
   1885  00E988  0E76               	movlw	118
@@ -1921,7 +1921,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1894  00E998  D7FA               	bra	u2697
   1895  00E99A  F000               	nop	
   1896  00E99C                     
-  1897                           ;test_i2c.c: 238:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+  1897                           ;test_i2c.c: 239:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
   1898  00E99C  0E66               	movlw	102
   1899  00E99E  6E5E               	movwf	(??_main+1)^0,c
   1900  00E9A0  0E76               	movlw	118
@@ -1936,7 +1936,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   1909  00E9B0  D7FA               	bra	u2707
   1910  00E9B2  F000               	nop	
   1911  00E9B4                     
-  1912                           ;test_i2c.c: 239:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
+  1912                           ;test_i2c.c: 240:         _delay((unsigned long)((10000)*(8000000UL/4000.0)));
   1913  00E9B4  0E66               	movlw	102
   1914  00E9B6  6E5E               	movwf	(??_main+1)^0,c
   1915  00E9B8  0E76               	movlw	118
@@ -2273,7 +2273,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2221                           
   2222 ;; *************** function _measure_humidity_temp_HIH6021 *****************
   2223 ;; Defined at:
-  2224 ;;		line 310 in file "test_i2c.c"
+  2224 ;;		line 311 in file "test_i2c.c"
   2225 ;; Parameters:    Size  Location     Type
   2226 ;;		None
   2227 ;; Auto vars:     Size  Location     Type
@@ -2324,29 +2324,29 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2267  00EB66                     _measure_humidity_temp_HIH6021:
   2268                           	opt callstack 28
   2269  00EB66                     
-  2270                           ;test_i2c.c: 312:     UINT8_T humidity_HIH6021_L = 0;
+  2270                           ;test_i2c.c: 313:     UINT8_T humidity_HIH6021_L = 0;
   2271  00EB66  0E00               	movlw	0
   2272  00EB68  6E55               	movwf	measure_humidity_temp_HIH6021@humidity_HIH6021_L^0,c
   2273                           
-  2274                           ;test_i2c.c: 313:     UINT8_T temperature_HIH6021_H = 0;
+  2274                           ;test_i2c.c: 314:     UINT8_T temperature_HIH6021_H = 0;
   2275  00EB6A  0E00               	movlw	0
   2276  00EB6C  6E56               	movwf	measure_humidity_temp_HIH6021@temperature_HIH6021_H^0,c
   2277                           
-  2278                           ;test_i2c.c: 314:     UINT8_T temperature_HIH6021_L = 0;
+  2278                           ;test_i2c.c: 315:     UINT8_T temperature_HIH6021_L = 0;
   2279  00EB6E  0E00               	movlw	0
   2280  00EB70  6E57               	movwf	measure_humidity_temp_HIH6021@temperature_HIH6021_L^0,c
   2281  00EB72                     
-  2282                           ;test_i2c.c: 317:     i2c_start();
+  2282                           ;test_i2c.c: 318:     i2c_start();
   2283  00EB72  ECF9  F06E         	call	_i2c_start	;wreg free
   2284  00EB76                     
-  2285                           ;test_i2c.c: 319:     i2c_write((0x27) << 1 | 0 );
+  2285                           ;test_i2c.c: 320:     i2c_write((0x27) << 1 | 0 );
   2286  00EB76  0E4E               	movlw	78
   2287  00EB78  EC78  F06F         	call	_i2c_write
   2288  00EB7C                     
-  2289                           ;test_i2c.c: 320:     i2c_stop();
+  2289                           ;test_i2c.c: 321:     i2c_stop();
   2290  00EB7C  EC45  F06F         	call	_i2c_stop	;wreg free
   2291  00EB80                     
-  2292                           ;test_i2c.c: 322:     _delay((unsigned long)((40)*(8000000UL/4000.0)));
+  2292                           ;test_i2c.c: 323:     _delay((unsigned long)((40)*(8000000UL/4000.0)));
   2293  00EB80  0E68               	movlw	104
   2294  00EB82  6E51               	movwf	??_measure_humidity_temp_HIH6021^0,c
   2295  00EB84  0EE4               	movlw	228
@@ -2357,48 +2357,48 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2300  00EB8C  D7FC               	bra	u2737
   2301  00EB8E  D000               	nop2	
   2302  00EB90                     
-  2303                           ;test_i2c.c: 325:     i2c_start();
+  2303                           ;test_i2c.c: 326:     i2c_start();
   2304  00EB90  ECF9  F06E         	call	_i2c_start	;wreg free
   2305  00EB94                     
-  2306                           ;test_i2c.c: 326:     i2c_write((0x27) << 1 | 1);
+  2306                           ;test_i2c.c: 327:     i2c_write((0x27) << 1 | 1);
   2307  00EB94  0E4F               	movlw	79
   2308  00EB96  EC78  F06F         	call	_i2c_write
   2309  00EB9A                     
-  2310                           ;test_i2c.c: 328:     __nop();
+  2310                           ;test_i2c.c: 329:     __nop();
   2311  00EB9A  F000               	nop	
   2312  00EB9C                     
-  2313                           ;test_i2c.c: 329:     humidity_HIH6021_H = i2c_read();
+  2313                           ;test_i2c.c: 330:     humidity_HIH6021_H = i2c_read();
   2314  00EB9C  ECA5  F06F         	call	_i2c_read	;wreg free
   2315  00EBA0  6E54               	movwf	measure_humidity_temp_HIH6021@humidity_HIH6021_H^0,c
   2316  00EBA2                     
-  2317                           ;test_i2c.c: 330:     i2c_ACK();
+  2317                           ;test_i2c.c: 331:     i2c_ACK();
   2318  00EBA2  EC23  F06F         	call	_i2c_ACK	;wreg free
   2319  00EBA6                     
-  2320                           ;test_i2c.c: 331:     humidity_HIH6021_L = i2c_read();
+  2320                           ;test_i2c.c: 332:     humidity_HIH6021_L = i2c_read();
   2321  00EBA6  ECA5  F06F         	call	_i2c_read	;wreg free
   2322  00EBAA  6E55               	movwf	measure_humidity_temp_HIH6021@humidity_HIH6021_L^0,c
   2323  00EBAC                     
-  2324                           ;test_i2c.c: 332:     i2c_ACK();
+  2324                           ;test_i2c.c: 333:     i2c_ACK();
   2325  00EBAC  EC23  F06F         	call	_i2c_ACK	;wreg free
   2326  00EBB0                     
-  2327                           ;test_i2c.c: 333:     temperature_HIH6021_H = i2c_read();
+  2327                           ;test_i2c.c: 334:     temperature_HIH6021_H = i2c_read();
   2328  00EBB0  ECA5  F06F         	call	_i2c_read	;wreg free
   2329  00EBB4  6E56               	movwf	measure_humidity_temp_HIH6021@temperature_HIH6021_H^0,c
   2330  00EBB6                     
-  2331                           ;test_i2c.c: 334:     i2c_ACK();
+  2331                           ;test_i2c.c: 335:     i2c_ACK();
   2332  00EBB6  EC23  F06F         	call	_i2c_ACK	;wreg free
   2333  00EBBA                     
-  2334                           ;test_i2c.c: 335:     temperature_HIH6021_L = i2c_read();
+  2334                           ;test_i2c.c: 336:     temperature_HIH6021_L = i2c_read();
   2335  00EBBA  ECA5  F06F         	call	_i2c_read	;wreg free
   2336  00EBBE  6E57               	movwf	measure_humidity_temp_HIH6021@temperature_HIH6021_L^0,c
   2337  00EBC0                     
-  2338                           ;test_i2c.c: 336:     i2c_NAK();
+  2338                           ;test_i2c.c: 337:     i2c_NAK();
   2339  00EBC0  EC2E  F06F         	call	_i2c_NAK	;wreg free
   2340  00EBC4                     
-  2341                           ;test_i2c.c: 337:     i2c_stop();
+  2341                           ;test_i2c.c: 338:     i2c_stop();
   2342  00EBC4  EC45  F06F         	call	_i2c_stop	;wreg free
   2343  00EBC8                     
-  2344                           ;test_i2c.c: 341:     humidityHL = ((humidity_HIH6021_H & 0b00111111) << 8) | humidity_H
+  2344                           ;test_i2c.c: 342:     humidityHL = ((humidity_HIH6021_H & 0b00111111) << 8) | humidity_H
       +                          IH6021_L;
   2345  00EBC8  C054  F051         	movff	measure_humidity_temp_HIH6021@humidity_HIH6021_H,??_measure_humidity_temp_HIH6021
   2346  00EBCC  0E3F               	movlw	63
@@ -2414,7 +2414,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2356  00EBE0  6F77               	movwf	(_humidityHL+1)& (0+255),b
   2357  00EBE2                     
   2358                           ; BSR set to: 0
-  2359                           ;test_i2c.c: 342:     temperatureHL = (temperature_HIH6021_H << 6 | temperature_HIH6021_
+  2359                           ;test_i2c.c: 343:     temperatureHL = (temperature_HIH6021_H << 6 | temperature_HIH6021_
       +                          L);
   2360  00EBE2  5056               	movf	measure_humidity_temp_HIH6021@temperature_HIH6021_H^0,w,c
   2361  00EBE4  6E51               	movwf	??_measure_humidity_temp_HIH6021^0,c
@@ -2433,7 +2433,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2374  00EBFE  6F79               	movwf	(_temperatureHL+1)& (0+255),b
   2375  00EC00                     
   2376                           ; BSR set to: 0
-  2377                           ;test_i2c.c: 348:     humidity = ( ( (double)humidityHL ) / 16382 )*100;
+  2377                           ;test_i2c.c: 349:     humidity = ( ( (double)humidityHL ) / 16382 )*100;
   2378  00EC00  0E00               	movlw	0
   2379  00EC02  6E13               	movwf	___fldiv@a^0,c
   2380  00EC04  0EF8               	movlw	248
@@ -2471,7 +2471,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2412  00EC62  C02A  F070         	movff	?___flmul+2,_humidity+2
   2413  00EC66  C02B  F071         	movff	?___flmul+3,_humidity+3
   2414  00EC6A                     
-  2415                           ;test_i2c.c: 349:     temperature = ( ( ( (double)temperatureHL ) /16382 )*165 ) - 40;
+  2415                           ;test_i2c.c: 350:     temperature = ( ( ( (double)temperatureHL ) /16382 )*165 ) - 40;
   2416  00EC6A  0E00               	movlw	0
   2417  00EC6C  6E2C               	movwf	___flmul@a^0,c
   2418  00EC6E  0E00               	movlw	0
@@ -2961,7 +2961,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2867                           
   2868 ;; *************** function _measure_battery *****************
   2869 ;; Defined at:
-  2870 ;;		line 246 in file "test_i2c.c"
+  2870 ;;		line 247 in file "test_i2c.c"
   2871 ;; Parameters:    Size  Location     Type
   2872 ;;		None
   2873 ;; Auto vars:     Size  Location     Type
@@ -3004,7 +3004,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2905  00E9D4                     _measure_battery:
   2906                           	opt callstack 29
   2907  00E9D4                     
-  2908                           ;test_i2c.c: 254:     ADCON0bits.GO = 1;
+  2908                           ;test_i2c.c: 255:     ADCON0bits.GO = 1;
   2909  00E9D4  82C2               	bsf	194,1,c	;volatile
   2910  00E9D6                     l208:
   2911  00E9D6  B2C2               	btfsc	194,1,c	;volatile
@@ -3014,10 +3014,10 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2915  00E9E0  EFEB  F074         	goto	l208
   2916  00E9E4                     u2590:
   2917  00E9E4                     
-  2918                           ;test_i2c.c: 257:     PIR1bits.ADIF = 0;
+  2918                           ;test_i2c.c: 258:     PIR1bits.ADIF = 0;
   2919  00E9E4  9C9E               	bcf	158,6,c	;volatile
   2920  00E9E6                     
-  2921                           ;test_i2c.c: 262:     ADC_result = (ADRESH << 8 )|ADRESL;
+  2921                           ;test_i2c.c: 263:     ADC_result = (ADRESH << 8 )|ADRESL;
   2922  00E9E6  50C3               	movf	195,w,c	;volatile
   2923  00E9E8  CFC4 F05B          	movff	4036,??_measure_battery	;volatile
   2924  00E9EC  6A5C               	clrf	(??_measure_battery+1)^0,c
@@ -3030,7 +3030,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2931  00E9FC  6F91               	movwf	(_ADC_result+1)& (0+255),b
   2932  00E9FE                     
   2933                           ; BSR set to: 0
-  2934                           ;test_i2c.c: 281:     volts = (2.048/1023)*ADC_result;
+  2934                           ;test_i2c.c: 282:     volts = (2.048/1023)*ADC_result;
   2935  00E9FE  C090  F001         	movff	_ADC_result,___xxtofl@val
   2936  00EA02  C091  F002         	movff	_ADC_result+1,___xxtofl@val+1
   2937  00EA06  6A03               	clrf	(___xxtofl@val+2)^0,c
@@ -3055,16 +3055,16 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2956  00EA3C  C02A  F074         	movff	?___flmul+2,_volts+2
   2957  00EA40  C02B  F075         	movff	?___flmul+3,_volts+3
   2958  00EA44                     
-  2959                           ;test_i2c.c: 282:     battery_voltage = volts *(2.115);
+  2959                           ;test_i2c.c: 283:     battery_voltage = volts *(2.36);
   2960  00EA44  C072  F028         	movff	_volts,___flmul@b
   2961  00EA48  C073  F029         	movff	_volts+1,___flmul@b+1
   2962  00EA4C  C074  F02A         	movff	_volts+2,___flmul@b+2
   2963  00EA50  C075  F02B         	movff	_volts+3,___flmul@b+3
-  2964  00EA54  0E29               	movlw	41
+  2964  00EA54  0E3D               	movlw	61
   2965  00EA56  6E2C               	movwf	___flmul@a^0,c
-  2966  00EA58  0E5C               	movlw	92
+  2966  00EA58  0E0A               	movlw	10
   2967  00EA5A  6E2D               	movwf	(___flmul@a+1)^0,c
-  2968  00EA5C  0E07               	movlw	7
+  2968  00EA5C  0E17               	movlw	23
   2969  00EA5E  6E2E               	movwf	(___flmul@a+2)^0,c
   2970  00EA60  0E40               	movlw	64
   2971  00EA62  6E2F               	movwf	(___flmul@a+3)^0,c
@@ -3074,7 +3074,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2975  00EA70  C02A  F0B3         	movff	?___flmul+2,_battery_voltage+2
   2976  00EA74  C02B  F0B4         	movff	?___flmul+3,_battery_voltage+3
   2977  00EA78                     
-  2978                           ;test_i2c.c: 295:     accu_v = (UINT16_T)(battery_voltage * 100);
+  2978                           ;test_i2c.c: 296:     accu_v = (UINT16_T)(battery_voltage * 100);
   2979  00EA78  0E00               	movlw	0
   2980  00EA7A  6E2C               	movwf	___flmul@a^0,c
   2981  00EA7C  0E00               	movlw	0
@@ -3096,7 +3096,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   2997  00EAB0  C051  F084         	movff	?___fltol,_accu_v
   2998  00EAB4  C052  F085         	movff	?___fltol+1,_accu_v+1
   2999  00EAB8                     
-  3000                           ;test_i2c.c: 296:     accu_v2 = (UINT16_T)(battery_voltage*100);
+  3000                           ;test_i2c.c: 297:     accu_v2 = (UINT16_T)(battery_voltage*100);
   3001  00EAB8  0E00               	movlw	0
   3002  00EABA  6E2C               	movwf	___flmul@a^0,c
   3003  00EABC  0E00               	movlw	0
@@ -3118,7 +3118,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3019  00EAF0  C051  F082         	movff	?___fltol,_accu_v2
   3020  00EAF4  C052  F083         	movff	?___fltol+1,_accu_v2+1
   3021  00EAF8                     
-  3022                           ;test_i2c.c: 297:     bat_voltage_unit = (accu_v/100);
+  3022                           ;test_i2c.c: 298:     bat_voltage_unit = (accu_v/100);
   3023  00EAF8  C084  F001         	movff	_accu_v,___lwdiv@dividend
   3024  00EAFC  C085  F002         	movff	_accu_v+1,___lwdiv@dividend+1
   3025  00EB00  0E00               	movlw	0
@@ -3129,7 +3129,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3030  00EB0C  5001               	movf	?___lwdiv^0,w,c
   3031  00EB0E  6E5F               	movwf	_bat_voltage_unit^0,c
   3032  00EB10                     
-  3033                           ;test_i2c.c: 299:     bat_voltage_decim_part = ((accu_v2/10)%10 << 4) | (accu_v2 % 10);
+  3033                           ;test_i2c.c: 300:     bat_voltage_decim_part = ((accu_v2/10)%10 << 4) | (accu_v2 % 10);
   3034  00EB10  C082  F008         	movff	_accu_v2,___lwmod@dividend
   3035  00EB14  C083  F009         	movff	_accu_v2+1,___lwmod@dividend+1
   3036  00EB18  0E00               	movlw	0
@@ -3160,7 +3160,7 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   3061  00EB5C  6F8B               	movwf	_bat_voltage_decim_part& (0+255),b
   3062  00EB5E                     
   3063                           ; BSR set to: 0
-  3064                           ;test_i2c.c: 303:     _delay((unsigned long)((0.03)*(8000000UL/4000.0)));
+  3064                           ;test_i2c.c: 304:     _delay((unsigned long)((0.03)*(8000000UL/4000.0)));
   3065  00EB5E  0E14               	movlw	20
   3066  00EB60                     u2747:
   3067  00EB60  2EE8               	decfsz	wreg,f,c
@@ -5070,11 +5070,11 @@ Microchip MPLAB XC8 C Compiler v2.10 (Free license) build 20190730164152 Og1
   4926                           ;LoRa_com.c: 58:         txMsg[0] = id_trame;
   4927  00E3E4  C098  F099         	movff	load_FIFO_with_init_values@id_trame,load_FIFO_with_init_values@txMsg
   4928  00E3E8                     
-  4929                           ;LoRa_com.c: 59:         txMsg[1] = id_node;
-  4930  00E3E8  C093  F09A         	movff	load_FIFO_with_init_values@id_node,load_FIFO_with_init_values@txMsg+1
+  4929                           ;LoRa_com.c: 59:         txMsg[1] = id_reseau;
+  4930  00E3E8  C092  F09A         	movff	load_FIFO_with_init_values@id_reseau,load_FIFO_with_init_values@txMsg+1
   4931  00E3EC                     
-  4932                           ;LoRa_com.c: 60:         txMsg[2] = id_reseau;
-  4933  00E3EC  C092  F09B         	movff	load_FIFO_with_init_values@id_reseau,load_FIFO_with_init_values@txMsg+2
+  4932                           ;LoRa_com.c: 60:         txMsg[2] = id_node;
+  4933  00E3EC  C093  F09B         	movff	load_FIFO_with_init_values@id_node,load_FIFO_with_init_values@txMsg+2
   4934  00E3F0                     
   4935                           ;LoRa_com.c: 61:         txMsg[3] = b_battery_voltage;
   4936  00E3F0  C09D  F09C         	movff	load_FIFO_with_init_values@b_battery_voltage,load_FIFO_with_init_values@txMsg+3
@@ -8766,7 +8766,7 @@ CODE                 0      0       0       0        0.0%
 
 
 Microchip Technology PIC18 Macro Assembler V2.10 build 88905656 
-Symbol Table                                                                                   Wed Nov 06 15:41:41 2019
+Symbol Table                                                                                   Thu Nov 07 11:07:22 2019
 
                                __end_of_InitRFLoRaPins DDB6  
                                 __end_of_ResetRFModule DF8E  

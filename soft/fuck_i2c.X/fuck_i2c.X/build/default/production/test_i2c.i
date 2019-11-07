@@ -10080,7 +10080,7 @@ int main(int argc, char** argv) {
 
 
 
-    load_FIFO_with_init_values(0, id_node, id_reseau, battery_voltage);
+    load_FIFO_with_init_values(0, id_reseau, id_node, battery_voltage);
 
 
     set_TX_and_transmit();
@@ -10092,11 +10092,12 @@ int main(int argc, char** argv) {
     reset_IRQs();
 
     while(1){
+
         measure_humidity_temp_HIH6021();
         measure_battery();
 
 
-        load_FIFO_with_temp_humidity_voltage(1, id_node, id_reseau, battery_voltage, temperature, humidity);
+        load_FIFO_with_temp_humidity_voltage(1, id_reseau, id_node, battery_voltage, temperature, humidity);
 
 
         set_TX_and_transmit();
@@ -10139,10 +10140,10 @@ void measure_battery(void)
 
 
     ADC_result = (ADRESH << 8 )|ADRESL;
-# 281 "test_i2c.c"
+# 282 "test_i2c.c"
     volts = (2.048/1023)*ADC_result;
-    battery_voltage = volts *(2.115);
-# 295 "test_i2c.c"
+    battery_voltage = volts *(2.36);
+# 296 "test_i2c.c"
     accu_v = (UINT16_T)(battery_voltage * 100);
     accu_v2 = (UINT16_T)(battery_voltage*100);
     bat_voltage_unit = (accu_v/100);

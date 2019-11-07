@@ -213,6 +213,7 @@ int main(int argc, char** argv) {
     reset_IRQs();
     
     while(1){
+        // mesure 
         measure_humidity_temp_HIH6021();        
         measure_battery();
         
@@ -279,7 +280,7 @@ void measure_battery(void)
     
     /* **************Just multiply the ADC_result by the 1 LSB value (the one from the F.V.R *********** */
     volts = (2.048/1023)*ADC_result; 
-    battery_voltage = volts *(2.115); //Real measured voltage, roughly approximated
+    battery_voltage = volts *(2.36); //Real measured voltage, roughly approximated
     /*volts = (8.8 / 1023) * ADC_result;
     volts = (3.3/1023);
     volts = volts * (560/220);
